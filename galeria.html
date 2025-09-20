@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Jonathan Buitrago - Galería</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="img/principal.jpg" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header elegante -->
+    <header class="sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <h1 class="text-3xl font-bold bg-gradient-to-r from-yellow-500 to-amber-600 bg-clip-text text-transparent">
+                    <a href="index.html">Chef Jonathan Buitrago</a>
+                </h1>
+                <span class="text-sm text-gray-400 hidden md:block">Cursos y Asesorías Gastronómicas</span>
+            </div>
+        <div class="hidden md:flex items-center space-x-10">
+            <nav class="space-x-10">
+                <a href="index.html">Inicio</a>
+                <a href="informacion.html">Información</a>
+                <a href="reservas.html">Reservas</a>
+                <a href="galeria.html">Galería</a>
+            </nav>
+            
+        </div>
+            <button onclick="toggleMobileMenu()" class="md:hidden text-white focus:outline-none p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Menú móvil elegante -->
+        <div id="mobile-menu" class="hidden bg-gradient-to-b from-gray-800 to-gray-900 border-t border-gray-600 py-5 px-6 md:hidden">
+            <a href="index.html" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">Inicio</a>
+            <a href="informacion.html" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">Información</a>
+            <a href="reservas.html" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">Reservas</a>
+            <a href="galeria.html" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">Galería</a>
+            
+        </div>
+    </header>
+
+    <!-- Sección de Galería -->
+    <section id="galeria" class="py-24 bg-gray-900 reveal">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-4xl font-bold mb-16 text-white">Galería</h3>
+            <div class="flex justify-center space-x-4 mb-8">
+                <button class="menu-filter active" data-filter="all">Todos</button>
+                <button class="menu-filter" data-filter="photos">Fotos</button>
+                <button class="menu-filter" data-filter="videos">Videos</button>
+            </div>
+            <div id="gallery-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Las imágenes y videos se insertarán aquí dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer elegante -->
+    <footer class="py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-2xl font-bold bg-gradient-to-r from-amber-400 to-orange-600 bg-clip-text text-transparent mb-8">Chef Jonathan Buitrago</p>
+            <div class="decorative-line mx-auto w-32"></div>
+            <p class="text-gray-400 mt-8 mb-6">© 2023 Chef Jonathan Buitrago. Todos los derechos reservados.</p>
+            <div class="flex justify-center space-x-8">
+                <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Facebook</a>
+                <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Instagram</a>
+                <a href="https://wa.me/573001234567" target="_blank" class="text-gray-400 hover:text-amber-500 transition-colors">Youtube</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Gallery filtering
+        const filterButtons = document.querySelectorAll('.menu-filter');
+        const galleryContainer = document.getElementById('gallery-container');
+
+        const images = [
+            '1.png',
+            '2.jpg',
+            'chef_jonathan_buitrago_post_1_11_2019_10_17_482167628441391144723.jpg',
+            'chef_jonathan_buitrago_post_1_11_2022_20_21_562962286713972990795.jpg',
+            'chef_jonathan_buitrago_post_1_2_2019_11_53_051969812630223039170.jpg',
+            'chef_jonathan_buitrago_post_1_8_2019_10_18_582100949666859784443.jpg',
+            'chef_jonathan_buitrago_post_10_1_2019_9_40_511953801005171047268.jpg',
+            'chef_jonathan_buitrago_post_10_12_2018_12_16_161931411184570146776.jpg',
+            'chef_jonathan_buitrago_post_10_5_2019_12_28_342040858511489146865.jpg',
+            'chef_jonathan_buitrago_post_10_5_2022_10_22_072835149063106197541.jpg',
+            'chef_jonathan_buitrago_post_10_6_2019_8_15_472063199328593552473.jpg',
+            'chef_jonathan_buitrago_post_10_7_2020_10_08_032350267020289195445.jpg',
+            'chef_jonathan_buitrago_post_10_7_2020_10_08_032350267020314264093.jpg',
+            'chef_jonathan_buitrago_post_10_8_2018_17_33_481843148363035598609.jpg',
+            'chef_jonathan_buitrago_post_10_9_2019_10_43_152129952918024479006.jpg',
+            'chef_jonathan_buitrago_post_11_12_2018_12_48_381932152246859432246.jpg',
+            'chef_jonathan_buitrago_post_11_3_2019_17_32_351997524979281209345.jpg',
+            'chef_jonathan_buitrago_post_11_3_2019_17_32_351997524979289487121.jpg',
+            'chef_jonathan_buitrago_post_11_3_2019_17_32_351997524979306390146.jpg',
+            'chef_jonathan_buitrago_post_11_6_2019_10_06_242063979779784468929.jpg',
+            'chef_jonathan_buitrago_post_12_1_2019_11_43_261955312255726078388.jpg',
+            'chef_jonathan_buitrago_post_12_5_2024_10_07_303366402308047578586.jpg',
+            'chef_jonathan_buitrago_post_12_5_2024_10_07_303366402308047624270.jpg',
+            'chef_jonathan_buitrago_post_12_5_2024_10_07_303366402308080947431.jpg',
+            'chef_jonathan_buitrago_post_12_6_2019_10_03_322064703107700636601.jpg',
+            'chef_jonathan_buitrago_post_12_8_2019_9_59_422108912499442521896.jpg',
+            'chef_jonathan_buitrago_post_12_9_2019_15_33_412131548645804514660.jpg',
+            'chef_jonathan_buitrago_post_12_9_2019_8_46_522131343889580551158.jpg',
+            'chef_jonathan_buitrago_post_13_1_2020_16_58_162220738637617105444.jpg',
+            'chef_jonathan_buitrago_post_13_11_2024_17_20_043500703538442053759.jpg',
+            'chef_jonathan_buitrago_post_13_12_2019_11_00_492198090671999733654.jpg',
+            'chef_jonathan_buitrago_post_13_12_2019_11_00_492198090672008088699.jpg',
+            'chef_jonathan_buitrago_post_13_12_2019_11_00_492198090672016676971.jpg',
+            'chef_jonathan_buitrago_post_13_12_2019_11_00_492198090672033241382.jpg',
+            'chef_jonathan_buitrago_post_13_12_2019_11_00_492198090672041796069.jpg',
+            'chef_jonathan_buitrago_post_13_12_2019_11_00_492198090672050227152.jpg',
+            'chef_jonathan_buitrago_post_13_2_2019_7_59_471978392514902066699.jpg',
+            'chef_jonathan_buitrago_post_13_4_2020_8_13_292286429094480767373.jpg',
+            'chef_jonathan_buitrago_post_13_6_2019_15_45_292065599993315869734.jpg',
+            'chef_jonathan_buitrago_post_13_7_2020_10_24_452352449752029134874.jpg',
+            'chef_jonathan_buitrago_post_13_8_2018_8_24_351845046255581342935.jpg',
+            'chef_jonathan_buitrago_post_13_9_2020_16_35_252397572411859382135.jpg',
+            'chef_jonathan_buitrago_post_14_2_2019_13_12_591979274925655415892.jpg',
+            'chef_jonathan_buitrago_post_14_2_2020_19_53_572244019877061323654.jpg',
+            'chef_jonathan_buitrago_post_14_4_2020_14_08_082287332372265690750.jpg',
+            'chef_jonathan_buitrago_post_14_6_2019_9_55_352066148657419667378.jpg',
+            'chef_jonathan_buitrago_post_15_4_2019_8_12_502022610400253988899.jpg',
+            'chef_jonathan_buitrago_post_15_7_2020_13_56_422354005984070079941.jpg',
+            'chef_jonathan_buitrago_post_16_4_2019_9_57_262023387818887534521.jpg',
+            'chef_jonathan_buitrago_post_17_10_2020_12_05_342422078963655704068.jpg',
+            'chef_jonathan_buitrago_post_18_2_2019_9_13_391982053570392125791.jpg',
+            'chef_jonathan_buitrago_post_2_11_2020_15_13_372433770025336052051.jpg',
+            'chef_jonathan_buitrago_post_2_6_2023_17_43_153116584070891706074.jpg',
+            'chef_jonathan_buitrago_post_20_1_2020_9_00_292225571586040520276.jpg',
+            'chef_jonathan_buitrago_post_20_1_2020_9_00_292225571586065652280.jpg',
+            'chef_jonathan_buitrago_post_20_1_2020_9_00_292225571586074079507.jpg',
+            'chef_jonathan_buitrago_post_20_1_2020_9_00_292225571586090979228.jpg',
+            'chef_jonathan_buitrago_post_21_3_2019_9_24_052004526860972952866.jpg',
+            'chef_jonathan_buitrago_post_21_3_2019_9_24_052004526861014933779.jpg',
+            'chef_jonathan_buitrago_post_22_4_2019_9_51_092027733313487414429.jpg',
+            'chef_jonathan_buitrago_post_22_4_2020_15_24_002293168757488895179.jpg',
+            'chef_jonathan_buitrago_post_22_7_2020_18_02_442359203246669001727.jpg',
+            'chef_jonathan_buitrago_post_23_10_2020_12_52_322426451252350512879.jpg',
+            'chef_jonathan_buitrago_post_25_5_2019_10_14_032051662441081050124.jpg',
+            'chef_jonathan_buitrago_post_25_5_2022_15_17_132846169223974457187.jpg',
+            'chef_jonathan_buitrago_post_26_12_2020_9_43_492472741914821278266.jpg',
+            'chef_jonathan_buitrago_post_27_11_2021_8_01_582716215304088577816.jpg',
+            'chef_jonathan_buitrago_post_27_2_2020_22_31_592253521506215100863.jpg',
+            'chef_jonathan_buitrago_post_27_8_2019_10_50_142119809570575937697.jpg',
+            'chef_jonathan_buitrago_post_28_4_2020_15_42_592297526968413256634.jpg',
+            'chef_jonathan_buitrago_post_28_4_2020_15_42_592297526968438453021.jpg',
+            'chef_jonathan_buitrago_post_28_6_2018_7_35_391811681946767793328.jpg',
+            'chef_jonathan_buitrago_post_29_1_2019_8_02_591967522485293710796.jpg',
+            'chef_jonathan_buitrago_post_29_11_2022_19_53_052982565912246495800.jpg',
+            'chef_jonathan_buitrago_post_29_12_2021_8_36_232739425447496136534.jpg',
+            'chef_jonathan_buitrago_post_29_3_2020_20_22_272275924360875716676.jpg',
+            'chef_jonathan_buitrago_post_29_6_2022_9_09_082871351111354686464.jpg',
+            'chef_jonathan_buitrago_post_3_1_2019_10_29_141948751925134989137.jpg',
+            'chef_jonathan_buitrago_post_3_12_2019_8_35_512190769951858886302.jpg',
+            'chef_jonathan_buitrago_post_3_12_2019_8_35_512190769951884101148.jpg',
+            'chef_jonathan_buitrago_post_3_12_2019_8_35_512190769951934448958.jpg',
+            'chef_jonathan_buitrago_post_3_3_2024_14_38_103315804245716263325.jpg',
+            'chef_jonathan_buitrago_post_3_3_2024_14_38_103315804245783313851.jpg',
+            'chef_jonathan_buitrago_post_3_6_2019_18_18_292058429244205456898.jpg',
+            'chef_jonathan_buitrago_post_3_7_2018_9_14_541815355778485678942.jpg',
+            'chef_jonathan_buitrago_post_30_11_2019_9_14_432188615187947719412.jpg',
+            'chef_jonathan_buitrago_post_30_3_2019_16_10_002011254153401344034.jpg',
+            'chef_jonathan_buitrago_post_30_9_2019_9_26_322144409815389356246.jpg',
+            'chef_jonathan_buitrago_post_31_1_2019_8_14_541968978031674666525.jpg',
+            'chef_jonathan_buitrago_post_4_3_2020_13_49_092257607012938729400.jpg',
+            'chef_jonathan_buitrago_post_4_4_2020_8_43_452279921341839152818.jpg',
+            'chef_jonathan_buitrago_post_4_4_2022_9_39_522809035873826020287.jpg',
+            'chef_jonathan_buitrago_post_4_8_2020_8_32_122368338172194389049.jpg',
+            'chef_jonathan_buitrago_post_5_7_2019_14_55_082081519712904515788.jpg',
+            'chef_jonathan_buitrago_post_5_8_2019_10_31_132103854930378134149.jpg',
+            'chef_jonathan_buitrago_post_6_10_2019_8_53_332148741870684377761.jpg',
+            'chef_jonathan_buitrago_post_6_4_2019_12_19_382016211634477316424.jpg',
+            'chef_jonathan_buitrago_post_6_5_2020_16_55_032303361445882305805.jpg',
+            'chef_jonathan_buitrago_post_6_5_2020_16_55_032303361445974694346.jpg',
+            'chef_jonathan_buitrago_post_6_7_2019_11_04_572082128637932671312.jpg',
+            'chef_jonathan_buitrago_post_7_12_2019_10_06_042193714463065329130.jpg',
+            'chef_jonathan_buitrago_post_7_2_2020_18_08_572238893600985650833.jpg',
+            'chef_jonathan_buitrago_post_7_4_2020_10_37_172282152810116348925.jpg',
+            'chef_jonathan_buitrago_post_7_9_2019_13_12_242127853654200792322.jpg',
+            'chef_jonathan_buitrago_post_8_5_2019_8_47_082039297491759109078.jpg',
+            'chef_jonathan_buitrago_post_9_1_2020_16_07_402217814059798462224.jpg',
+            'chef_jonathan_buitrago_post_9_12_2019_10_20_192195171183516001557.jpg',
+            'chef_jonathan_buitrago_post_9_2_2019_7_02_191975464482360824034.jpg',
+            'chef_jonathan_buitrago_post_9_7_2019_13_26_402084374291690250074.jpg',
+            'chef_jonathan_buitrago_post_9_9_2020_9_31_572394460168422629491.jpg',
+            'chef.jpg',
+            'coffeestylers_post_20_6_2024_12_43_003394746831251892634.jpg',
+            'coffeestylers_post_20_6_2024_12_43_003394746831260268644.jpg',
+            'coffeestylers_post_20_6_2024_12_43_003394746831302036934.jpg',
+            'coffeestylers_post_20_6_2024_12_43_003394746831302155751.jpg',
+            'principal.jpg'
+        ];
+
+        const videos = [
+            'chef_jonathan_buitrago_post_10_3_2022_19_04_202791200534338808938.mp4',
+            'chef_jonathan_buitrago_post_10_8_2020_13_08_072372825558169254686.mp4',
+            'chef_jonathan_buitrago_post_12_5_2024_10_07_303366399040458093057.mp4',
+            'chef_jonathan_buitrago_post_13_6_2019_11_07_382065459854069026471.mp4',
+            'chef_jonathan_buitrago_post_14_3_2020_8_23_232264690745793600683.mp4',
+            'chef_jonathan_buitrago_post_19_9_2020_17_04_382401935457238927886.mp4',
+            'chef_jonathan_buitrago_post_2_12_2020_10_21_132455365279763791798.mp4',
+            'chef_jonathan_buitrago_post_21_6_2019_11_34_022071271337751352537.mp4',
+            'chef_jonathan_buitrago_post_21_8_2020_8_41_072380662151160624487.mp4',
+            'chef_jonathan_buitrago_post_22_4_2020_15_24_002293167647768437559.mp4',
+            'chef_jonathan_buitrago_post_27_1_2020_8_08_122230617947714845408.mp4',
+            'chef_jonathan_buitrago_post_27_11_2021_8_01_582716215171892792391.mp4',
+            'chef_jonathan_buitrago_post_28_3_2019_8_12_472009563048834237802.mp4',
+            'chef_jonathan_buitrago_post_29_11_2021_7_25_202717645943937590776.mp4',
+            'chef_jonathan_buitrago_post_29_4_2023_12_06_053091771626601550214.mp4',
+            'chef_jonathan_buitrago_post_29_4_2023_12_06_053091771833044926938.mp4',
+            'chef_jonathan_buitrago_post_4_7_2020_15_39_012346083304423706931.mp4',
+            'chef_jonathan_buitrago_post_5_6_2019_15_51_172059804612220652495.mp4',
+            'chef_jonathan_buitrago_post_6_3_2019_9_43_591993662531314707168.mp4',
+            'chef_jonathan_buitrago_post_6_8_2020_20_11_322370138757574973853.mp4',
+            'chef_jonathan_buitrago_post_7_9_2020_12_42_102393105564468396452.mp4',
+            'chef_jonathan_buitrago_post_8_10_2019_8_18_022150166776181578273.mp4',
+            'chef_jonathan_buitrago_post_8_4_2020_14_00_362282979395388264754.mp4',
+            'chef_jonathan_buitrago_post_9_10_2020_9_27_352416200797603088032.mp4',
+            'chef_jonathan_buitrago_post_9_4_2020_16_30_122283778061384377642.mp4',
+            'chef_jonathan_buitrago_reel_10_3_2025_8_48_073585242426877946168.mp4',
+            'chef_jonathan_buitrago_reel_12_6_2025_10_49_423653433888656160515.mp4',
+            'chef_jonathan_buitrago_reel_13_10_2021_19_02_582683931436744310907.mp4',
+            'chef_jonathan_buitrago_reel_13_2_2023_17_34_483037577386282970111.mp4',
+            'chef_jonathan_buitrago_reel_13_5_2022_17_58_172837552699030129209.mp4',
+            'chef_jonathan_buitrago_reel_14_3_2024_12_28_233323710452989957297.mp4',
+            'chef_jonathan_buitrago_reel_15_7_2025_11_02_193677356737661411844.mp4',
+            'chef_jonathan_buitrago_reel_15_9_2025_10_59_343722289600753739768.mp4',
+            'chef_jonathan_buitrago_reel_18_8_2021_19_08_152643345833447013026.mp4',
+            'chef_jonathan_buitrago_reel_19_5_2022_17_38_582841890366958267012.mp4',
+            'chef_jonathan_buitrago_reel_2_3_2022_19_29_452785413639352624780.mp4',
+            'chef_jonathan_buitrago_reel_2_9_2022_17_14_432918704212435328865.mp4',
+            'chef_jonathan_buitrago_reel_22_2_2022_17_21_512779552035029632453.mp4',
+            'chef_jonathan_buitrago_reel_22_4_2025_17_23_573616667717300074141.mp4',
+            'chef_jonathan_buitrago_reel_24_4_2025_10_18_583617904127024664095.mp4',
+            'chef_jonathan_buitrago_reel_27_11_2024_18_31_413510886023376402153.mp4',
+            'chef_jonathan_buitrago_reel_30_4_2022_17_21_432828112192738757797.mp4',
+            'chef_jonathan_buitrago_reel_4_10_2024_16_32_163471687881782197819.mp4',
+            'chef_jonathan_buitrago_reel_4_11_2021_19_18_092699885242351063005.mp4',
+            'chef_jonathan_buitrago_reel_5_4_2022_19_29_302810054209881044152.mp4',
+            'chef_jonathan_buitrago_reel_7_6_2022_18_26_152855685054932585233.mp4',
+            'chef_jonathan_buitrago_reel_8_11_2022_17_01_122967258612439044653.mp4',
+            'chef_jonathan_buitrago_reel_8_9_2025_9_03_513717160318184327147.mp4',
+            'chef_jonathan_buitrago_reel_9_1_2025_8_56_473541759346393990316.mp4',
+            'chef_jonathan_buitrago_reel_9_6_2022_13_01_492856972241481421392.mp4'
+        ];
+
+        function createGalleryItem(src, type) {
+            const item = document.createElement('div');
+            item.classList.add('gallery-item', 'p-2', 'bg-gray-800', 'rounded-lg');
+            item.dataset.type = type;
+
+            if (type === 'photos') {
+                const img = document.createElement('img');
+                img.src = 'img/' + src;
+                img.alt = 'Foto de la galería';
+                img.classList.add('w-full', 'h-auto', 'rounded-md');
+                item.appendChild(img);
+            } else if (type === 'videos') {
+                const video = document.createElement('video');
+                video.src = 'video/' + src;
+                video.controls = true;
+                video.classList.add('w-full', 'h-auto', 'rounded-md');
+                item.appendChild(video);
+            }
+
+            return item;
+        }
+
+        function renderGallery(filter = 'all') {
+            if (!galleryContainer) return;
+            galleryContainer.innerHTML = '';
+            const items = [];
+
+            if (filter === 'all' || filter === 'photos') {
+                images.forEach(src => items.push(createGalleryItem(src, 'photos')));
+            }
+
+            if (filter === 'all' || filter === 'videos') {
+                videos.forEach(src => items.push(createGalleryItem(src, 'videos')));
+            }
+
+            // Shuffle items for a dynamic look
+            items.sort(() => Math.random() - 0.5);
+
+            items.forEach(item => galleryContainer.appendChild(item));
+        }
+
+        if (filterButtons.length > 0) {
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    renderGallery(this.dataset.filter);
+                });
+            });
+        }
+
+        // Initial render
+        renderGallery();
+    });
+    </script>
+            <!-- Botones flotantes -->
+    <div class="fixed bottom-8 right-8 flex space-x-4">
+        <!-- WhatsApp flotante -->
+        <a href="https://wa.me/573001234567" target="_blank" class="bg-green-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.487 5.235 3.487 8.413 0 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.447-4.433-9.886-9.889-9.886-5.448 0-9.886 4.434-9.889 9.885.002 2.021.59 3.995 1.698 5.617l-1.202 4.383 4.536-1.187z"/></svg>
+        </a>
+        <!-- Instagram flotante -->
+        <a href="https://www.instagram.com/chef_jonathan_buitrago?igsh=cGp1NmY4cmh0ZnA5" target="_blank" class="bg-pink-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-pink-600 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.644-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z"/></svg>
+        </a>
+    </div>
+</body>
+</html>
