@@ -67,6 +67,7 @@ header {
     box-sizing: border-box;
     background-size: 150% 150%;
     background-position: 50% 50%;
+    min-height: 100vh;
 }
 
 .hero-bg::before {
