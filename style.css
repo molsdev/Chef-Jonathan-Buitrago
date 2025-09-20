@@ -1,0 +1,275 @@
+/* Estilos base */
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #2a2a2a 100%);
+    color: #e5e7eb;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Estilos para modo oscuro más bonito */
+header {
+    background: linear-gradient(90deg, #1e1e1e 0%, #2d2d2d 100%);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #404040;
+}
+
+.product-card {
+    background: linear-gradient(145deg, #2d2d2d 0%, #1f1f1f 100%);
+    border: 1px solid #404040;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    word-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(139, 69, 19, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.product-card:hover::before {
+    left: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border-color: #8B4513;
+}
+
+.hero-bg {
+    background: linear-gradient(135deg, #2d2d2d 0%, #363636 20%, #404040 40%, #4d4d4d 60%, #5a5a5a 80%, #702f2f 100%);
+    position: relative;
+    overflow: hidden;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+}
+
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 80%, rgba(139, 69, 19, 0.3) 0%, transparent 70%);
+    animation: pulse 8s ease-in-out infinite;
+}
+
+.hero-bg::after {
+    content: '';
+    position: absolute;
+    top: -200%;
+    left: -200%;
+    width: 400%;
+    height: 400%;
+    background: repeating-conic-gradient(from 0deg, rgba(255,255,255,0.02) 0deg 90deg, rgba(0,0,0,0.05) 90deg 180deg);
+    animation: rotate 30s linear infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.fade-in {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.menu-filter {
+    border: 2px solid #5a5a5a;
+    color: #d1d5db;
+    background: linear-gradient(145deg, #3a3a3a 0%, #2d2d2d 100%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.menu-filter::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(139, 69, 19, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.menu-filter:hover::after,
+.menu-filter.active::after {
+    left: 100%;
+}
+
+.menu-filter.active,
+.menu-filter:hover {
+    background: linear-gradient(145deg, #8B4513 0%, #654321 100%);
+    color: #ffffff;
+    border-color: #8B4513;
+    transform: translateY(-2px);
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    filter: contrast(1.1) brightness(0.8);
+}
+
+a {
+    color: #d1d5db;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+a:hover {
+    color: #8B4513;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #8B4513;
+    transition: width 0.3s ease;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+/* Estilos para formularios */
+input, textarea {
+    background: linear-gradient(145deg, #3a3a3a 0%, #2d2d2d 100%);
+    border: 1px solid #5a5a5a;
+    color: #e5e7eb;
+    transition: all 0.3s ease;
+    padding: 12px 16px;
+    border-radius: 8px;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+    border-color: #8B4513;
+    box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.2);
+    outline: none;
+}
+
+button {
+    background: linear-gradient(145deg, #8B4513 0%, #654321 100%);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+button:hover::before {
+    left: 100%;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(139, 69, 19, 0.3);
+}
+
+/* Estilos para pie de página */
+footer {
+    background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
+    border-top: 1px solid #404040;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+}
+
+/* Botones decorativos */
+.decorative-line {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #8B4513, transparent);
+    margin: 20px 0;
+}
+
+/* Asegurar imágenes normales */
+img {
+    filter: none !important;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Scroll Reveal Animation */
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Button Gradient Animation */
+button:hover {
+    background-size: 200% auto;
+    background-position: right center;
+    transition: background-position 0.5s ease;
+}
+
+/* Social Media Icons Hover Effect */
+footer a:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}

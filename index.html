@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Jonathan Buitrago - Cursos y Asesorías Gastronómicas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="img/principal.jpg" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header elegante -->
+    <header class="sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <h1 class="text-3xl font-bold bg-gradient-to-r from-yellow-500 to-amber-600 bg-clip-text text-transparent">
+                    Chef Jonathan Buitrago
+                </h1>
+                <span class="text-sm text-gray-400 hidden md:block">Cursos y Asesorías Gastronómicas</span>
+            </div>
+        <div class="hidden md:flex items-center space-x-10">
+            <nav class="space-x-10">
+                <a href="#inicio">Inicio</a>
+                <a href="#cursos">Cursos</a>
+                <a href="#asesorias">Asesorías</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            
+        </div>
+            <button onclick="toggleMobileMenu()" class="md:hidden text-white focus:outline-none p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Menú móvil elegante -->
+        <div id="mobile-menu" class="hidden bg-gradient-to-b from-gray-800 to-gray-900 border-t border-gray-600 py-5 px-6 md:hidden">
+            <a href="#inicio" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">Inicio</a>
+            <a href="#cursos" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">Cursos</a>
+            <a href="#asesorias" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">Asesorías</a>
+            <a href="#nosotros" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">Nosotros</a>
+            <a href="#faq" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">FAQ</a>
+            <a href="#contacto" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">Contacto</a>
+            
+        </div>
+    </header>
+
+    <!-- Encabezado hero mejorado -->
+    <section id="inicio" class="hero-bg text-center py-24 relative">
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-3xl sm:text-4xl md:text-7xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-6 sm:mb-8 fade-in">
+                Bienvenidos a Chef Jonathan Buitrago
+            </h2>
+            <p class="text-base sm:text-lg md:text-2xl text-gray-300 mb-6 sm:mb-10 fade-in max-w-full sm:max-w-3xl mx-auto px-4 sm:px-0" style="animation-delay: 0.3s;">
+                Descubre el arte de la gastronomía con nuestros cursos especializados y asesorías personalizadas, donde el conocimiento y la pasión se unen en cada experiencia culinaria
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 md:space-x-8 fade-in" style="animation-delay: 0.6s;">
+                <button onclick="smoothScroll('#cursos')" class="bg-gradient-to-r from-amber-600 to-orange-600 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-full font-semibold shadow-xl transform hover:scale-110 transition-all">
+                    Ver Nuestros Cursos
+                </button>
+                <a href="#contacto" class="w-full sm:w-auto">
+                    <button class="border-2 border-amber-600 text-white hover:bg-amber-600 px-6 sm:px-10 py-3 sm:py-4 rounded-full font-semibold shadow-xl hover:scale-110 transition-all w-full sm:w-auto">
+                        Solicitar Asesoría
+                    </button>
+                </a>
+            </div>
+            <div class="mt-12 sm:mt-16 fade-in" style="animation-delay: 0.9s;">
+        </div>
+    </section>
+
+        <!-- Sección Sobre Nosotros mejorada -->
+    <section id="nosotros" class="parallax py-24 bg-cover reveal" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0bcf634e-b4c5-4bca-837d-350d5d81b537.png');">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h3 class="text-4xl font-bold mb-4 text-shadow-lg">Conoce al Chef Jonathan Buitrago</h3>
+            <p class="text-lg mb-2">Ganador del premio "Mejor Chocolatero de Colombia" en 2018</p>
+            <p class="text-lg mb-16 max-w-3xl mx-auto">Con más de 10 años de experiencia, he dedicado mi carrera a innovar y crear experiencias gastronómicas únicas, y a apoyar a emprendedores a alcanzar el éxito.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="fade-in">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d7ea5a79-67f4-4288-adaf-ffd683e1ef67.png" alt="Chef Jonathan Buitrago enseñando técnicas culinarias avanzadas" class="w-40 h-40 rounded-full mx-auto mb-6 shadow-2xl border-4 border-amber-500" />
+                    <h4 class="text-2xl font-semibold mb-4">Pastelero & Chocolatero Especializado</h4>
+                    <div class="decorative-line mx-auto w-24"></div>
+                    <p class="text-gray-300">Especialista en pastelería y chocolatería con enfoque en técnicas profesionales. Experto en fundamentos clásicos y técnicas avanzadas.</p>
+                </div>
+                <div class="fade-in" style="animation-delay: 0.2s;">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ecd9bd24-d36a-478f-b033-1ba2785143e1.png" alt="Chef Jonathan Buitrago creando platos innovadores en su cocina profesional" class="w-40 h-40 rounded-full mx-auto mb-6 shadow-2xl border-4 border-amber-500" />
+                    <h4 class="text-2xl font-semibold mb-4">Educador y Mentor Digital</h4>
+                    <div class="decorative-line mx-auto w-24"></div>
+                    <p class="text-gray-300">Combino maestría técnica con pedagogía avanzada para llevar a los aficionados al siguiente nivel, ofreciendo cursos estructurados y claros.</p>
+                </div>
+                <div class="fade-in" style="animation-delay: 0.4s;">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/67b7bebe-dc5f-4a58-a96c-6d2ac90fb2b6.png" alt="Chef Jonathan Buitrago enseñando a estudiantes apasionados por la cocina" class="w-40 h-40 rounded-full mx-auto mb-6 shadow-2xl border-4 border-amber-500" />
+                    <h4 class="text-2xl font-semibold mb-4">Emprendedor Gastronómico</h4>
+                    <div class="decorative-line mx-auto w-24"></div>
+                    <p class="text-gray-300">Integro la técnica culinaria con la estrategia empresarial, ofreciendo consultoría para emprendedores y enseñando a monetizar el talento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios mejorados -->
+    <section id="testimonios" class="py-24 bg-gradient-to-b from-gray-800 to-gray-900 reveal">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent mb-16">Lo que dicen nuestros clientes</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="product-card bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-xl shadow-xl fade-in">
+                    <p class="text-gray-300 italic text-lg mb-6">"Los cursos de Chef Jonathan han transformado mi forma de cocinar. Las técnicas aprendidas son excepcionales."</p>
+                    <div class="mt-6 flex items-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/acb57fbb-6605-4c79-a5c0-897018578db6.png" alt="Retrato fuerte de una mujer joven con sonrisa amable, cabello rubio y atuendo casual urbano en fondo neutro" class="w-16 h-16 rounded-full mr-6 border-2 border-amber-500" />
+                        <div>
+                            <p class="font-bold text-white">Ana Gómez</p>
+                            <p class="text-sm text-amber-500">Estudiante de Cocina Básica</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-xl shadow-xl fade-in" style="animation-delay: 0.2s;">
+                    <p class="text-gray-300 italic text-lg mb-6">"La asesoría personalizada me ayudó a abrir mi propio restaurante. ¡Increíble experiencia!"</p>
+                    <div class="mt-6 flex items-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/acb57fbb-6605-4c79-a5c0-897018578db6.png" alt="Retrato de un cliente satisfecho" class="w-16 h-16 rounded-full mr-6 border-2 border-amber-500" />
+                        <div>
+                            <p class="font-bold text-white">Carlos Pérez</p>
+                            <p class="text-sm text-amber-500">Emprendedor Gastronómico</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-xl shadow-xl fade-in" style="animation-delay: 0.4s;">
+                    <p class="text-gray-300 italic text-lg mb-6">"Los mejores cursos que he tomado. El chef es un verdadero maestro y sus explicaciones son muy claras."</p>
+                    <div class="mt-6 flex items-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/acb57fbb-6605-4c79-a5c0-897018578db6.png" alt="Retrato de otra clienta satisfecha" class="w-16 h-16 rounded-full mr-6 border-2 border-amber-500" />
+                        <div>
+                            <p class="font-bold text-white">Laura Martínez</p>
+                            <p class="text-sm text-amber-500">Estudiante de Pastelería</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Cursos -->
+    <section id="cursos" class="py-24 bg-gray-900 reveal">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-4xl font-bold mb-16 text-white">Nuestros Cursos</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Curso 1 -->
+                <div class="product-card bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-xl shadow-xl fade-in">
+                    <h4 class="text-2xl font-semibold mb-4 text-white">Chocolatería Avanzada</h4>
+                    <p class="text-gray-300 mb-6">Domina las técnicas más sofisticadas del chocolate, desde el templado perfecto hasta la creación de bombones de autor.</p>
+                    <a href="#" class="text-amber-500 font-semibold hover:text-amber-400">Ver más detalles</a>
+                </div>
+                <!-- Curso 2 -->
+                <div class="product-card bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-xl shadow-xl fade-in" style="animation-delay: 0.2s;">
+                    <h4 class="text-2xl font-semibold mb-4 text-white">Pastelería de Vanguardia</h4>
+                    <p class="text-gray-300 mb-6">Explora las últimas tendencias de la pastelería mundial, aplicando técnicas innovadoras y creativas a tus postres.</p>
+                    <a href="#" class="text-amber-500 font-semibold hover:text-amber-400">Ver más detalles</a>
+                </div>
+                <!-- Curso 3 -->
+                <div class="product-card bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-xl shadow-xl fade-in" style="animation-delay: 0.4s;">
+                    <h4 class="text-2xl font-semibold mb-4 text-white">Gestión de Emprendimientos Gastronómicos</h4>
+                    <p class="text-gray-300 mb-6">Aprende a crear y gestionar tu propio negocio de pastelería, desde la planificación del menú hasta la estrategia de marketing.</p>
+                    <a href="#" class="text-amber-500 font-semibold hover:text-amber-400">Ver más detalles</a>
+                </div>
+            </div>
+            <p class="text-gray-400 mt-10">Todos nuestros cursos incluyen acceso de por vida a las lecciones en video, materiales descargables y sesiones en vivo.</p>
+        </div>
+    </section>
+
+    <!-- Sección de Asesorías -->
+    <section id="asesorias" class="py-24 bg-gray-800 reveal">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-4xl font-bold mb-16 text-white">Asesorías Personalizadas</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Asesoría 1 -->
+                <div class="product-card bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-xl shadow-xl fade-in">
+                    <h4 class="text-2xl font-semibold mb-4 text-white">Mentoría 1 a 1</h4>
+                    <p class="text-gray-300 mb-6">Una sesión intensiva y personalizada para resolver tus dudas, perfeccionar tus técnicas y llevar tus habilidades al siguiente nivel.</p>
+                    <a href="#contacto" class="text-amber-500 font-semibold hover:text-amber-400">Solicitar Información</a>
+                </div>
+                <!-- Asesoría 2 -->
+                <div class="product-card bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-xl shadow-xl fade-in" style="animation-delay: 0.2s;">
+                    <h4 class="text-2xl font-semibold mb-4 text-white">Consultoría para Negocios</h4>
+                    <p class="text-gray-300 mb-6">Te ayudo a estructurar y hacer crecer tu emprendimiento gastronómico, desde el concepto hasta la operación diaria.</p>
+                    <a href="#contacto" class="text-amber-500 font-semibold hover:text-amber-400">Solicitar Información</a>
+                </div>
+                <!-- Asesoría 3 -->
+                <div class="product-card bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-xl shadow-xl fade-in" style="animation-delay: 0.4s;">
+                    <h4 class="text-2xl font-semibold mb-4 text-white">Asesoría sobre Recetas</h4>
+                    <p class="text-gray-300 mb-6">Desarrollo y estandarización de recetas para tu negocio, asegurando la calidad y consistencia de tus productos.</p>
+                    <a href="#contacto" class="text-amber-500 font-semibold hover:text-amber-400">Solicitar Información</a>
+                </div>
+            </div>
+            <p class="text-gray-400 mt-10">Todas las asesorías se realizan por videollamada. ¡Contáctame para crear un paquete a tu medida!</p>
+        </div>
+    </section>
+
+    <!-- Sección de FAQ -->
+    <section id="faq" class="py-24 bg-gray-900 reveal">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center mb-16 text-white">Preguntas Frecuentes</h3>
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-4">
+                    <!-- Pregunta 1 -->
+                    <div class="bg-gray-800 rounded-lg p-6">
+                        <h4 class="text-xl font-semibold text-white">¿Cómo accedo a los cursos que compré?</h4>
+                        <p class="text-gray-400 mt-2">Una vez que completes la compra, recibirás un correo electrónico con un enlace para acceder a tu área privada de estudiante. Allí encontrarás todos tus cursos.</p>
+                    </div>
+                    <!-- Pregunta 2 -->
+                    <div class="bg-gray-800 rounded-lg p-6">
+                        <h4 class="text-xl font-semibold text-white">¿Por cuánto tiempo tengo acceso a los cursos?</h4>
+                        <p class="text-gray-400 mt-2">El acceso a todos nuestros cursos es de por vida. Podrás ver las lecciones cuantas veces quieras, a tu propio ritmo.</p>
+                    </div>
+                    <!-- Pregunta 3 -->
+                    <div class="bg-gray-800 rounded-lg p-6">
+                        <h4 class="text-xl font-semibold text-white">¿Qué métodos de pago aceptan?</h4>
+                        <p class="text-gray-400 mt-2">Aceptamos la mayoría de las tarjetas de crédito y débito, así como PayPal y Nequi.</p>
+                    </div>
+                    <!-- Pregunta 4 -->
+                    <div class="bg-gray-800 rounded-lg p-6">
+                        <h4 class="text-xl font-semibold text-white">¿Cómo agendo una asesoría?</h4>
+                        <p class="text-gray-400 mt-2">Para agendar una asesoría, por favor contáctanos a través del formulario de contacto o por WhatsApp. Nos pondremos en contacto contigo para coordinar la fecha y hora.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-24 bg-gradient-to-t from-black to-gray-900 reveal">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent mb-16">Contáctanos y Reserva Cursos o Asesorías</h3>
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                    <div class="space-y-6">
+                        <h4 class="text-3xl font-semibold mb-8 text-white text-center lg:text-left">Información de Contacto</h4>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-3 h-3 bg-amber-500 rounded-full"></div>
+                            <p class="text-gray-300"><span class="font-semibold">Dirección:</span> Calle Cacao 123, Ciudad Sabrosa</p>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-3 h-3 bg-amber-500 rounded-full"></div>
+                            <p class="text-gray-300"><span class="font-semibold">Teléfono:</span> +1 (555) 123-4567</p>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-3 h-3 bg-amber-500 rounded-full"></div>
+                            <p class="text-gray-300"><span class="font-semibold">Email:</span> info@cacao.com</p>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-3 h-3 bg-amber-500 rounded-full"></div>
+                            <p class="text-gray-300"><span class="font-semibold">Horarios:</span> Lunes-Domingo: 7am-10pm</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-3xl font-semibold mb-8 text-white text-center lg:text-left">Reservar Cursos o Asesorías</h4>
+                        <form id="reservation-form" class="bg-gray-800 p-8 rounded-xl shadow-xl" onsubmit="handleReservation(event)">
+                            <div class="mb-6">
+                                <label for="reservation-name" class="block text-white font-semibold mb-2">Nombre Completo</label>
+                                <input type="text" id="reservation-name" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-500 focus:outline-none" placeholder="Tu nombre completo" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="reservation-email" class="block text-white font-semibold mb-2">Correo Electrónico</label>
+                                <input type="email" id="reservation-email" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-500 focus:outline-none" placeholder="tuemail@ejemplo.com" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="reservation-idtype" class="block text-white font-semibold mb-2">Tipo de Identidad</label>
+                                <select id="reservation-idtype" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-500 focus:outline-none" required onchange="handleIdTypeChange()">
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="cedula">Cédula</option>
+                                    <option value="tarjeta">Tarjeta de Identidad</option>
+                                    <option value="pasaporte">Pasaporte</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="mb-6" id="other-idtype-container" style="display: none;">
+                                <label for="other-idtype" class="block text-white font-semibold mb-2">Por favor especifica</label>
+                                <input type="text" id="other-idtype" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-500 focus:outline-none" placeholder="Especifica otro tipo de identidad">
+                            </div>
+                            <div class="mb-6">
+                                <label for="reservation-idnumber" class="block text-white font-semibold mb-2">Número de Identidad</label>
+                                <input type="text" id="reservation-idnumber" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-500 focus:outline-none" placeholder="Número de documento" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="reservation-phone" class="block text-white font-semibold mb-2">Número de Celular</label>
+                                <input type="tel" id="reservation-phone" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-500 focus:outline-none" placeholder="+57 300 1234567" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="reservation-type" class="block text-white font-semibold mb-2">Tipo de Reserva</label>
+                                <select id="reservation-type" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-500 focus:outline-none" required>
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="curso">Curso</option>
+                                    <option value="asesoria">Asesoría</option>
+                                </select>
+                            </div>
+                            <div class="mb-6" id="course-selection" style="display: none;">
+                                <label for="course-select" class="block text-white font-semibold mb-2">Selecciona un Curso</label>
+                                <select id="course-select" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-500 focus:outline-none">
+                                    <option value="">Selecciona un curso</option>
+                                    <option value="Cocina Básica">Cocina Básica - $150.00</option>
+                                    <option value="Gastronomía Avanzada">Gastronomía Avanzada - $300.00</option>
+                                    <option value="Pastelería Profesional">Pastelería Profesional - $250.00</option>
+                                    <option value="Técnicas de Corte">Técnicas de Corte - $120.00</option>
+                                    <option value="Cocina Molecular">Cocina Molecular - $350.00</option>
+                                    <option value="Cocina Internacional">Cocina Internacional - $280.00</option>
+                                </select>
+                            </div>
+                            <div class="mb-6" id="advisory-selection" style="display: none;">
+                                <label for="advisory-select" class="block text-white font-semibold mb-2">Selecciona una Asesoría</label>
+                                <select id="advisory-select" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-500 focus:outline-none">
+                                    <option value="">Selecciona una asesoría</option>
+                                    <option value="Consulta Individual">Consulta Individual - $80.00/hora</option>
+                                    <option value="Eventos Especiales">Eventos Especiales - $200.00</option>
+                                    <option value="Emprendimiento Gastronómico">Emprendimiento Gastronómico - $150.00/hora</option>
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label for="reservation-date" class="block text-white font-semibold mb-2">Fecha Preferida</label>
+                                <input type="date" id="reservation-date" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-500 focus:outline-none" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="reservation-message" class="block text-white font-semibold mb-2">Mensaje Adicional</label>
+                                <textarea id="reservation-message" rows="4" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-500 focus:outline-none" placeholder="Describe tus necesidades específicas..."></textarea>
+                            </div>
+                            <div class="text-center flex justify-center space-x-4">
+                                <button type="submit" class="bg-gradient-to-r from-amber-600 to-orange-600 text-white px-8 py-3 rounded-full font-semibold shadow-xl hover:scale-105 transition-all">
+                                    Reservar Ahora
+                                </button>
+                                <button id="my-purchases-btn" type="button" class="bg-gray-700 text-white px-8 py-3 rounded-full font-semibold shadow-xl hover:bg-gray-600 transition-all">
+                                    Mis Compras
+                                </button>
+                            </div>
+                            <p id="reservation-message-display" class="mt-4 text-center text-green-400 hidden">Reserva enviada exitosamente. Te contactaremos pronto.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer elegante -->
+    <footer class="py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-2xl font-bold bg-gradient-to-r from-amber-400 to-orange-600 bg-clip-text text-transparent mb-8">Chef Jonathan Buitrago</p>
+            <div class="decorative-line mx-auto w-32"></div>
+            <p class="text-gray-400 mt-8 mb-6">© 2023 Chef Jonathan Buitrago. Todos los derechos reservados.</p>
+            <div class="flex justify-center space-x-8">
+                <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Facebook</a>
+                <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Instagram</a>
+                <a href="https://wa.me/573001234567" target="_blank" class="text-gray-400 hover:text-amber-500 transition-colors">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    
+
+    
+
+    <script src="script.js"></script>
+            <!-- Botones flotantes -->
+    <div class="fixed bottom-8 right-8 flex space-x-4">
+        <!-- WhatsApp flotante -->
+        <a href="https://wa.me/573001234567" target="_blank" class="bg-green-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.487 5.235 3.487 8.413 0 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.447-4.433-9.886-9.889-9.886-5.448 0-9.886 4.434-9.889 9.885.002 2.021.59 3.995 1.698 5.617l-1.202 4.383 4.536-1.187z"/></svg>
+        </a>
+        <!-- Instagram flotante -->
+        <a href="https://www.instagram.com/chef_jonathan_buitrago?igsh=cGp1NmY4cmh0ZnA5" target="_blank" class="bg-pink-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-pink-600 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.644-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z"/></svg>
+        </a>
+    </div>
+</body>
+</html>
