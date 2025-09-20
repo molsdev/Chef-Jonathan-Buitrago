@@ -48,8 +48,7 @@
         <div class="container mx-auto px-6 text-center">
             <h3 class="text-4xl font-bold mb-16 text-white">Galería</h3>
             <div class="flex justify-center space-x-4 mb-8">
-                <button class="menu-filter active" data-filter="all">Todos</button>
-                <button class="menu-filter" data-filter="photos">Fotos</button>
+                <button class="menu-filter active" data-filter="photos">Fotos</button>
                 <button class="menu-filter" data-filter="videos">Videos</button>
             </div>
             <div id="gallery-container" class="flex flex-wrap justify-center gap-4">
@@ -266,28 +265,25 @@
                 const video = document.createElement('video');
                 video.src = 'video/' + src;
                 video.controls = true;
-                video.classList.add('w-full', 'h-auto', 'rounded-md');
+                video.classList.add('w-full', 'h-auto', 'rounded-md', 'video-item');
                 item.appendChild(video);
             }
 
             return item;
         }
 
-        function renderGallery(filter = 'all') {
+        function renderGallery(filter = 'photos') {
             if (!galleryContainer) return;
             galleryContainer.innerHTML = '';
             const items = [];
 
-            if (filter === 'all' || filter === 'photos') {
+            if (filter === 'photos') {
                 images.forEach(src => items.push(createGalleryItem(src, 'photos')));
             }
 
-            if (filter === 'all' || filter === 'videos') {
+            if (filter === 'videos') {
                 videos.forEach(src => items.push(createGalleryItem(src, 'videos')));
             }
-
-            // Shuffle items for a dynamic look
-            items.sort(() => Math.random() - 0.5);
 
             items.forEach(item => galleryContainer.appendChild(item));
         }
