@@ -17,9 +17,11 @@ h1, h2, h3, h4 {
 
 /* Estilos para modo oscuro más bonito */
 header {
-    background: linear-gradient(90deg, #1e1e1e 0%, #2d2d2d 100%);
+    background: rgba(30, 30, 30, 0.8);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid #404040;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .product-card {
@@ -63,6 +65,8 @@ header {
     padding-left: 1rem;
     padding-right: 1rem;
     box-sizing: border-box;
+    background-size: 150% 150%;
+    background-position: 50% 50%;
 }
 
 .hero-bg::before {
@@ -118,26 +122,17 @@ header {
     word-wrap: break-word;
     max-width: 100%;
     box-sizing: border-box;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.menu-filter::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(139, 69, 19, 0.2), transparent);
-    transition: left 0.5s;
-}
-
-.menu-filter:hover::after,
-.menu-filter.active::after {
-    left: 100%;
-}
-
-.menu-filter.active,
 .menu-filter:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.menu-filter.active {
     background: linear-gradient(145deg, #8B4513 0%, #654321 100%);
     color: #ffffff;
     border-color: #8B4513;
