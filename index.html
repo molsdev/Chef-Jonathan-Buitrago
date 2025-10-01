@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-language" content="es">
     <title>Chef Jonathan Buitrago - Cursos y Asesorías Gastronómicas</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="img/principal.jpg" rel="stylesheet">
@@ -22,7 +23,10 @@
             <nav class="space-x-10">
                 <a href="index.html">Inicio</a>
                 <a href="informacion.html">Información</a>
+                <a href="catalogo.html">Cursos</a>
                 <a href="reservas.html">Reservas</a>
+                <a href="faq.html">FAQ</a>
+                <a href="registro.html">Mi Cuenta</a>
             </nav>
             
         </div>
@@ -36,8 +40,10 @@
         <div id="mobile-menu" class="hidden bg-gradient-to-b from-gray-800 to-gray-900 border-t border-gray-600 py-5 px-6 md:hidden">
             <a href="index.html" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">Inicio</a>
             <a href="informacion.html" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">Información</a>
+            <a href="catalogo.html" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">Cursos</a>
             <a href="reservas.html" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">Reservas</a>
-            
+            <a href="faq.html" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">FAQ</a>
+            <a href="registro.html" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">Mi Cuenta</a>
         </div>
     </header>
 
@@ -51,7 +57,7 @@
                 Descubre el arte de la gastronomía con nuestros cursos especializados y asesorías personalizadas, donde el conocimiento y la pasión se unen en cada experiencia culinaria
             </p>
             <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 md:space-x-8 fade-in" style="animation-delay: 0.6s;">
-                <a href="reservas.html#cursos" class="bg-gradient-to-r from-amber-600 to-orange-600 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-full font-semibold shadow-xl transform hover:scale-110 transition-all">
+                <a href="catalogo.html" class="bg-gradient-to-r from-amber-600 to-orange-600 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-full font-semibold shadow-xl transform hover:scale-110 transition-all">
                     Ver Nuestros Cursos
                 </a>
                 <a href="reservas.html#contacto" class="w-full sm:w-auto">
@@ -61,6 +67,53 @@
                 </a>
             </div>
             <div class="mt-12 sm:mt-16 fade-in" style="animation-delay: 0.9s;">
+        </div>
+    </section>
+
+    <!-- Sección de Cursos Destacados -->
+    <section class="py-24 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center mb-16 text-white">Nuestros Cursos Populares</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Curso 1 -->
+                <div class="product-card bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-xl shadow-xl fade-in">
+                    <h4 class="text-2xl font-semibold mb-4 text-white">Chocolatería Avanzada</h4>
+                    <p class="text-gray-300 mb-6">Domina las técnicas más sofisticadas del chocolate, desde el templado perfecto hasta la creación de bombones de autor.</p>
+                    <a href="catalogo.html" class="text-amber-500 font-semibold hover:text-amber-400">Ver más detalles</a>
+                </div>
+                <!-- Curso 2 -->
+                <div class="product-card bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-xl shadow-xl fade-in" style="animation-delay: 0.2s;">
+                    <h4 class="text-2xl font-semibold mb-4 text-white">Pastelería de Vanguardia</h4>
+                    <p class="text-gray-300 mb-6">Explora las últimas tendencias de la pastelería mundial, aplicando técnicas innovadoras y creativas a tus postres.</p>
+                    <a href="catalogo.html" class="text-amber-500 font-semibold hover:text-amber-400">Ver más detalles</a>
+                </div>
+                <!-- Curso 3 -->
+                <div class="product-card bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-xl shadow-xl fade-in" style="animation-delay: 0.4s;">
+                    <h4 class="text-2xl font-semibold mb-4 text-white">Gestión de Emprendimientos Gastronómicos</h4>
+                    <p class="text-gray-300 mb-6">Aprende a crear y gestionar tu propio negocio de pastelería, desde la planificación del menú hasta la estrategia de marketing.</p>
+                    <a href="catalogo.html" class="text-amber-500 font-semibold hover:text-amber-400">Ver más detalles</a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="catalogo.html" class="inline-block bg-gradient-to-r from-amber-600 to-orange-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:opacity-90 transition-opacity">
+                    Ver Todos los Cursos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Misión -->
+    <section class="py-24 bg-gradient-to-r from-gray-800 to-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-4xl font-bold mb-8 text-white">Nuestra Misión</h3>
+                <p class="text-xl text-gray-300 mb-8">
+                    Continuar innovando y creando experiencias gastronómicas únicas, apoyando y asesorando a emprendedores del sector gastronómico para que alcancen el éxito.
+                </p>
+                <a href="informacion.html" class="inline-block border-2 border-amber-600 text-amber-500 hover:bg-amber-600 hover:text-white px-8 py-3 rounded-full font-semibold shadow-lg transition-colors">
+                    Conoce Más Sobre Nosotros
+                </a>
+            </div>
         </div>
     </section>
 

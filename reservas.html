@@ -99,108 +99,90 @@
 
     <section id="contacto" class="py-24 bg-gradient-to-t from-black to-gray-900 reveal">
         <div class="container mx-auto px-6">
-            <h3 class="text-4xl font-bold text-center bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent mb-16">Contáctanos y Reserva Cursos o Asesorías</h3>
-            <div class="max-w-6xl mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-                    <div class="space-y-6">
-                        <h4 class="text-3xl font-semibold mb-8 text-white text-center lg:text-left">Información de Contacto</h4>
-                        <div class="flex items-center space-x-4">
-                            <div class="w-3 h-3 bg-amber-500 rounded-full"></div>
-                            <p class="text-gray-300"><span class="font-semibold">Dirección:</span> Calle Cacao 123, Ciudad Sabrosa</p>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="w-3 h-3 bg-amber-500 rounded-full"></div>
-                            <p class="text-gray-300"><span class="font-semibold">Teléfono:</span> +1 (555) 123-4567</p>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="w-3 h-3 bg-amber-500 rounded-full"></div>
-                            <p class="text-gray-300"><span class="font-semibold">Email:</span> info@cacao.com</p>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="w-3 h-3 bg-amber-500 rounded-full"></div>
-                            <p class="text-gray-300"><span class="font-semibold">Horarios:</span> Lunes-Domingo: 7am-10pm</p>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="text-3xl font-semibold mb-8 text-white text-center lg:text-left">Reservar Cursos o Asesorías</h4>
-                        <form id="reservation-form" class="bg-gray-800 p-8 rounded-xl shadow-xl" onsubmit="handleReservation(event)">
-                            <div class="mb-6">
-                                <label for="reservation-name" class="block text-white font-semibold mb-2">Nombre Completo</label>
-                                <input type="text" id="reservation-name" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-500 focus:outline-none" placeholder="Tu nombre completo" required>
+            <h3 class="text-4xl font-bold text-center mb-16 text-white">Reserva tu Curso o Asesoría</h3>
+            <div class="max-w-4xl mx-auto">
+                <div class="product-card p-8 rounded-xl">
+                    <form id="reservation-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="reservation-name" class="block text-gray-300 mb-2">Nombre Completo</label>
+                                <input type="text" id="reservation-name" class="w-full" required>
                             </div>
-                            <div class="mb-6">
-                                <label for="reservation-email" class="block text-white font-semibold mb-2">Correo Electrónico</label>
-                                <input type="email" id="reservation-email" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-500 focus:outline-none" placeholder="tuemail@ejemplo.com" required>
+                            <div>
+                                <label for="reservation-email" class="block text-gray-300 mb-2">Correo Electrónico</label>
+                                <input type="email" id="reservation-email" class="w-full" required>
                             </div>
-                            <div class="mb-6">
-                                <label for="reservation-idtype" class="block text-white font-semibold mb-2">Tipo de Identidad</label>
-                                <select id="reservation-idtype" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-500 focus:outline-none" required onchange="handleIdTypeChange()">
-                                    <option value="">Selecciona una opción</option>
-                                    <option value="cedula">Cédula</option>
-                                    <option value="tarjeta">Tarjeta de Identidad</option>
-                                    <option value="pasaporte">Pasaporte</option>
-                                    <option value="otro">Otro</option>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="reservation-type" class="block text-gray-300 mb-2">Tipo de Reserva</label>
+                            <select id="reservation-type" class="w-full">
+                                <option value="">Selecciona una opción</option>
+                                <option value="curso">Curso</option>
+                                <option value="asesoria">Asesoría</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Selección de curso -->
+                        <div id="course-selection" class="mb-6 hidden">
+                            <label for="course-type" class="block text-gray-300 mb-2">Selecciona un Curso</label>
+                            <select id="course-type" class="w-full">
+                                <option value="">Selecciona un curso</option>
+                                <option value="chocolateria">Chocolatería Avanzada</option>
+                                <option value="pasteleria">Pastelería de Vanguardia</option>
+                                <option value="negocios">Gestión de Emprendimientos Gastronómicos</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Selección de asesoría -->
+                        <div id="advisory-selection" class="mb-6 hidden">
+                            <label for="advisory-type" class="block text-gray-300 mb-2">Selecciona una Asesoría</label>
+                            <select id="advisory-type" class="w-full">
+                                <option value="">Selecciona una asesoría</option>
+                                <option value="mentoria">Mentoría 1 a 1</option>
+                                <option value="consultoria">Consultoría para Negocios</option>
+                                <option value="recetas">Asesoría sobre Recetas</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Selección de fecha y hora -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="reservation-date" class="block text-gray-300 mb-2">Fecha Preferida</label>
+                                <input type="date" id="reservation-date" class="w-full" required>
+                            </div>
+                            <div>
+                                <label for="reservation-time" class="block text-gray-300 mb-2">Hora Preferida</label>
+                                <select id="reservation-time" class="w-full">
+                                    <option value="">Selecciona una hora</option>
+                                    <option value="09:00">09:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="14:00">02:00 PM</option>
+                                    <option value="16:00">04:00 PM</option>
                                 </select>
                             </div>
-                            <div class="mb-6" id="other-idtype-container" style="display: none;">
-                                <label for="other-idtype" class="block text-white font-semibold mb-2">Por favor especifica</label>
-                                <input type="text" id="other-idtype" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-500 focus:outline-none" placeholder="Especifica otro tipo de identidad">
-                            </div>
-                            <div class="mb-6">
-                                <label for="reservation-idnumber" class="block text-white font-semibold mb-2">Número de Identidad</label>
-                                <input type="text" id="reservation-idnumber" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-500 focus:outline-none" placeholder="Número de documento" required>
-                            </div>
-                            <div class="mb-6">
-                                <label for="reservation-phone" class="block text-white font-semibold mb-2">Número de Celular</label>
-                                <input type="tel" id="reservation-phone" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-500 focus:outline-none" placeholder="+57 300 1234567" required>
-                            </div>
-                            <div class="mb-6">
-                                <label for="reservation-type" class="block text-white font-semibold mb-2">Tipo de Reserva</label>
-                                <select id="reservation-type" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-500 focus:outline-none" required>
-                                    <option value="">Selecciona una opción</option>
-                                    <option value="curso">Curso</option>
-                                    <option value="asesoria">Asesoría</option>
-                                </select>
-                            </div>
-                            <div class="mb-6" id="course-selection" style="display: none;">
-                                <label for="course-select" class="block text-white font-semibold mb-2">Selecciona un Curso</label>
-                                <select id="course-select" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-500 focus:outline-none">
-                                    <option value="">Selecciona un curso</option>
-                                    <option value="Cocina Básica">Cocina Básica - $150.00</option>
-                                    <option value="Gastronomía Avanzada">Gastronomía Avanzada - $300.00</option>
-                                    <option value="Pastelería Profesional">Pastelería Profesional - $250.00</option>
-                                    <option value="Técnicas de Corte">Técnicas de Corte - $120.00</option>
-                                    <option value="Cocina Molecular">Cocina Molecular - $350.00</option>
-                                    <option value="Cocina Internacional">Cocina Internacional - $280.00</option>
-                                </select>
-                            </div>
-                            <div class="mb-6" id="advisory-selection" style="display: none;">
-                                <label for="advisory-select" class="block text-white font-semibold mb-2">Selecciona una Asesoría</label>
-                                <select id="advisory-select" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-500 focus:outline-none">
-                                    <option value="">Selecciona una asesoría</option>
-                                    <option value="Consulta Individual">Consulta Individual - $80.00/hora</option>
-                                    <option value="Eventos Especiales">Eventos Especiales - $200.00</option>
-                                    <option value="Emprendimiento Gastronómico">Emprendimiento Gastronómico - $150.00/hora</option>
-                                </select>
-                            </div>
-                            <div class="mb-6">
-                                <label for="reservation-date" class="block text-white font-semibold mb-2">Fecha Preferida</label>
-                                <input type="date" id="reservation-date" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-500 focus:outline-none" required>
-                            </div>
-                            <div class="mb-6">
-                                <label for="reservation-message" class="block text-white font-semibold mb-2">Mensaje Adicional</label>
-                                <textarea id="reservation-message" rows="4" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-500 focus:outline-none" placeholder="Describe tus necesidades específicas..."></textarea>
-                            </div>
-                            <div class="text-center flex justify-center space-x-4">
-                                <button type="submit" class="bg-gradient-to-r from-amber-600 to-orange-600 text-white px-8 py-3 rounded-full font-semibold shadow-xl hover:scale-105 transition-all">
-                                    Reservar Ahora
-                                </button>
-                                <button id="my-purchases-btn" type="button" class="bg-gray-700 text-white px-8 py-3 rounded-full font-semibold shadow-xl hover:bg-gray-600 transition-all">
-                                    Mis Compras
-                                </button>
-                            </div>
-                            <p id="reservation-message-display" class="mt-4 text-center text-green-400 hidden">Reserva enviada exitosamente. Te contactaremos pronto.</p>
-                        </form>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="reservation-message" class="block text-gray-300 mb-2">Mensaje (Opcional)</label>
+                            <textarea id="reservation-message" rows="4" class="w-full"></textarea>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded bg-gray-700 border-gray-600 text-amber-600 focus:ring-amber-500" required>
+                                <span class="ml-2 text-gray-300">Acepto los <a href="#" class="text-amber-500 hover:text-amber-400">Términos y Condiciones</a></span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-gradient-to-r from-amber-600 to-orange-600 text-white py-3 rounded-lg font-semibold shadow-lg hover:opacity-90 transition-opacity">
+                            Enviar Reserva
+                        </button>
+                    </form>
+                    
+                    <!-- Mensaje de confirmación -->
+                    <div id="reservation-message-display" class="hidden mt-6 p-4 bg-green-900 text-green-200 rounded-lg">
+                        ¡Gracias por tu reserva! Te contactaremos pronto para confirmar los detalles.
                     </div>
                 </div>
             </div>
