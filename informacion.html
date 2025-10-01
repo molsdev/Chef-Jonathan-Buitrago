@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-language" content="es">
     <title>Chef Jonathan Buitrago - Información</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="img/principal.jpg" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <!-- Agregamos animate.css para animaciones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <!-- Header elegante -->
@@ -22,7 +24,9 @@
             <nav class="space-x-10">
                 <a href="index.html">Inicio</a>
                 <a href="informacion.html">Información</a>
+                <a href="catalogo.html">Cursos</a>
                 <a href="reservas.html">Reservas</a>
+                <a href="faq.html">FAQ</a>
             </nav>
             
         </div>
@@ -41,72 +45,146 @@
         </div>
     </header>
 
-    <!-- Sección de Misión, Visión y Valores -->
-    <section class="py-24 bg-gray-900 reveal">
+    <!-- Sección de Información -->
+    <section class="py-24 bg-gray-900 min-h-screen">
         <div class="container mx-auto px-6">
-            <h3 class="text-4xl font-bold text-center mb-16 text-white">Nuestra Filosofía</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <!-- Misión -->
-                <div class="product-card p-8 rounded-xl text-center">
-                    <div class="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <h3 class="text-4xl font-bold text-center mb-16 text-white animate__animated animate__fadeInDown">Sobre el Chef Jonathan Buitrago</h3>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+                <div class="animate__animated animate__fadeInLeft">
+                    <img src="img/chef.jpg" alt="Chef Jonathan Buitrago" class="rounded-xl shadow-2xl w-full">
+                </div>
+                <div class="animate__animated animate__fadeInRight">
+                    <h4 class="text-3xl font-semibold mb-6 text-white">Biografía</h4>
+                    <p class="text-gray-300 mb-6">
+                        Jonathan Buitrago es un reconocido chef pastelero y chocolatero colombiano con más de 10 años de experiencia en el sector gastronómico. Su pasión por la repostería lo ha llevado a convertirse en una figura destacada en el mundo de la pastelería nacional e internacional.
+                    </p>
+                    <p class="text-gray-300 mb-6">
+                        En 2018 fue galardonado como el "Mejor Chocolatero de Colombia", un reconocimiento que respalda su maestría en el arte del chocolate. Su enfoque combina la tradición con la innovación, creando obras gastronómicas que deleitan los sentidos.
+                    </p>
+                    <p class="text-gray-300">
+                        Además de su labor como chef, Jonathan se dedica a la formación de nuevos talentos culinarios, compartiendo su conocimiento a través de cursos especializados y asesorías personalizadas.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Misión, Visión y Valores -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+                <div class="product-card p-8 rounded-xl animate__animated animate__fadeInUp">
+                    <div class="text-amber-500 text-5xl mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                         </svg>
                     </div>
-                    <h4 class="text-2xl font-semibold mb-4 text-white">Misión</h4>
-                    <p class="text-gray-300">Continuar innovando y creando experiencias gastronómicas únicas.</p>
+                    <h4 class="text-2xl font-semibold mb-4 text-white text-center">Misión</h4>
+                    <p class="text-gray-300 text-center">
+                        Continuar innovando y creando experiencias gastronómicas únicas, apoyando y asesorando a emprendedores del sector gastronómico para que alcancen el éxito.
+                    </p>
                 </div>
                 
-                <!-- Visión -->
-                <div class="product-card p-8 rounded-xl text-center">
-                    <div class="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div class="product-card p-8 rounded-xl animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="text-amber-500 text-5xl mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                         </svg>
                     </div>
-                    <h4 class="text-2xl font-semibold mb-4 text-white">Visión</h4>
-                    <p class="text-gray-300">Ser un referente en formación y asesoría en repostería y chocolatería.</p>
+                    <h4 class="text-2xl font-semibold mb-4 text-white text-center">Visión</h4>
+                    <p class="text-gray-300 text-center">
+                        Ser un referente en formación y asesoría en repostería y chocolatería a nivel nacional, reconocido por la calidad de nuestros cursos y el impacto positivo en la comunidad gastronómica.
+                    </p>
                 </div>
                 
-                <!-- Valores -->
-                <div class="product-card p-8 rounded-xl text-center">
-                    <div class="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div class="product-card p-8 rounded-xl animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="text-amber-500 text-5xl mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                         </svg>
                     </div>
-                    <h4 class="text-2xl font-semibold mb-4 text-white">Valores</h4>
-                    <p class="text-gray-300">Apoyar y asesorar a emprendedores del sector gastronómico para que alcancen el éxito.</p>
+                    <h4 class="text-2xl font-semibold mb-4 text-white text-center">Valores</h4>
+                    <ul class="text-gray-300 list-disc pl-5 space-y-2">
+                        <li>Excelencia en la enseñanza</li>
+                        <li>Innovación constante</li>
+                        <li>Compromiso con el aprendizaje</li>
+                        <li>Pasión por la gastronomía</li>
+                        <li>Respeto por la tradición</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Sección Sobre Nosotros mejorada -->
-    <section id="nosotros" class="parallax py-24 bg-cover reveal" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0bcf634e-b4c5-4bca-837d-350d5d81b537.png');">
-        <div class="container mx-auto px-4 text-center text-white">
-            <h3 class="text-4xl font-bold mb-4 text-shadow-lg">Conoce al Chef Jonathan Buitrago</h3>
-            <p class="text-lg mb-2">Ganador del premio "Mejor Chocolatero de Colombia" en 2018</p>
-            <p class="text-lg mb-16 max-w-3xl mx-auto">Con más de 10 años de experiencia, he dedicado mi carrera a innovar y crear experiencias gastronómicas únicas, y a apoyar a emprendedores a alcanzar el éxito.</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="fade-in">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d7ea5a79-67f4-4288-adaf-ffd683e1ef67.png" alt="Chef Jonathan Buitrago enseñando técnicas culinarias avanzadas" class="w-40 h-40 rounded-full mx-auto mb-6 shadow-2xl border-4 border-amber-500" />
-                    <h4 class="text-2xl font-semibold mb-4">Pastelero & Chocolatero Especializado</h4>
-                    <div class="decorative-line mx-auto w-24"></div>
-                    <p class="text-gray-300">Especialista en pastelería y chocolatería con enfoque en técnicas profesionales. Experto en fundamentos clásicos y técnicas avanzadas.</p>
+            <!-- Galería de imágenes -->
+            <div class="mb-20">
+                <h4 class="text-3xl font-semibold mb-12 text-white text-center animate__animated animate__fadeInUp">Nuestro Trabajo</h4>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div class="overflow-hidden rounded-xl animate__animated animate__fadeInUp">
+                        <img src="img/chef_jonathan_buitrago_post_10_1_2019_9_40_511953801005171047268.jpg" alt="Trabajo del Chef" class="w-full h-48 object-cover transform hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="overflow-hidden rounded-xl animate__animated animate__fadeInUp animate__delay-1s">
+                        <img src="img/chef_jonathan_buitrago_post_10_5_2019_12_28_342040858511489146865.jpg" alt="Trabajo del Chef" class="w-full h-48 object-cover transform hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="overflow-hidden rounded-xl animate__animated animate__fadeInUp animate__delay-2s">
+                        <img src="img/chef_jonathan_buitrago_post_10_5_2022_10_22_072835149063106197541.jpg" alt="Trabajo del Chef" class="w-full h-48 object-cover transform hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="overflow-hidden rounded-xl animate__animated animate__fadeInUp animate__delay-3s">
+                        <img src="img/chef_jonathan_buitrago_post_10_6_2019_8_15_472063199328593552473.jpg" alt="Trabajo del Chef" class="w-full h-48 object-cover transform hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="overflow-hidden rounded-xl animate__animated animate__fadeInUp">
+                        <img src="img/chef_jonathan_buitrago_post_10_7_2020_10_08_032350267020289195445.jpg" alt="Trabajo del Chef" class="w-full h-48 object-cover transform hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="overflow-hidden rounded-xl animate__animated animate__fadeInUp animate__delay-1s">
+                        <img src="img/chef_jonathan_buitrago_post_10_7_2020_10_08_032350267020314264093.jpg" alt="Trabajo del Chef" class="w-full h-48 object-cover transform hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="overflow-hidden rounded-xl animate__animated animate__fadeInUp animate__delay-2s">
+                        <img src="img/chef_jonathan_buitrago_post_10_8_2018_17_33_481843148363035598609.jpg" alt="Trabajo del Chef" class="w-full h-48 object-cover transform hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="overflow-hidden rounded-xl animate__animated animate__fadeInUp animate__delay-3s">
+                        <img src="img/chef_jonathan_buitrago_post_10_9_2019_10_43_152129952918024479006.jpg" alt="Trabajo del Chef" class="w-full h-48 object-cover transform hover:scale-110 transition-transform duration-500">
+                    </div>
                 </div>
-                <div class="fade-in" style="animation-delay: 0.2s;">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ecd9bd24-d36a-478f-b033-1ba2785143e1.png" alt="Chef Jonathan Buitrago creando platos innovadores en su cocina profesional" class="w-40 h-40 rounded-full mx-auto mb-6 shadow-2xl border-4 border-amber-500" />
-                    <h4 class="text-2xl font-semibold mb-4">Educador y Mentor Digital</h4>
-                    <div class="decorative-line mx-auto w-24"></div>
-                    <p class="text-gray-300">Combino maestría técnica con pedagogía avanzada para llevar a los aficionados al siguiente nivel, ofreciendo cursos estructurados y claros.</p>
-                </div>
-                <div class="fade-in" style="animation-delay: 0.4s;">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/67b7bebe-dc5f-4a58-a96c-6d2ac90fb2b6.png" alt="Chef Jonathan Buitrago enseñando a estudiantes apasionados por la cocina" class="w-40 h-40 rounded-full mx-auto mb-6 shadow-2xl border-4 border-amber-500" />
-                    <h4 class="text-2xl font-semibold mb-4">Emprendedor Gastronómico</h4>
-                    <div class="decorative-line mx-auto w-24"></div>
-                    <p class="text-gray-300">Integro la técnica culinaria con la estrategia empresarial, ofreciendo consultoría para emprendedores y enseñando a monetizar el talento.</p>
+            </div>
+            
+            <!-- Sección de Preguntas Frecuentes -->
+            <div>
+                <h4 class="text-3xl font-semibold mb-12 text-white text-center animate__animated animate__fadeInUp">Preguntas Frecuentes</h4>
+                <div class="max-w-4xl mx-auto space-y-6">
+                    <!-- Pregunta 1 -->
+                    <div class="product-card rounded-xl overflow-hidden animate__animated animate__fadeInUp">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFAQ(this)">
+                            <h5 class="text-xl font-semibold text-white">¿Cuál es la metodología de enseñanza?</h5>
+                            <svg class="w-5 h-5 text-amber-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 text-gray-300 hidden">
+                            <p>Nuestra metodología combina clases teóricas con prácticas intensivas, permitiendo a los estudiantes aplicar inmediatamente los conocimientos adquiridos. Utilizamos una enseñanza personalizada y adaptada al ritmo de cada alumno.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Pregunta 2 -->
+                    <div class="product-card rounded-xl overflow-hidden animate__animated animate__fadeInUp animate__delay-1s">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFAQ(this)">
+                            <h5 class="text-xl font-semibold text-white">¿Qué materiales se proporcionan?</h5>
+                            <svg class="w-5 h-5 text-amber-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 text-gray-300 hidden">
+                            <p>Cada estudiante recibe un kit de bienvenida con utensilios básicos, recetarios digitales, acceso a nuestra plataforma de aprendizaje y materiales complementarios para profundizar en cada tema.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Pregunta 3 -->
+                    <div class="product-card rounded-xl overflow-hidden animate__animated animate__fadeInUp animate__delay-2s">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFAQ(this)">
+                            <h5 class="text-xl font-semibold text-white">¿Cómo puedo inscribirme a un curso?</h5>
+                            <svg class="w-5 h-5 text-amber-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 text-gray-300 hidden">
+                            <p>Puedes inscribirte directamente desde nuestra página web en la sección de catálogo de cursos. También puedes contactarnos a través de WhatsApp o correo electrónico para recibir asesoría personalizada sobre la elección del curso más adecuado para ti.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -7,6 +7,8 @@
     <title>Chef Jonathan Buitrago - Área de Miembros</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="style.css" rel="stylesheet">
+    <!-- Agregamos animate.css para animaciones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <!-- Header elegante -->
@@ -50,14 +52,14 @@
     <!-- Área de Miembros -->
     <section class="py-12 bg-gray-900 min-h-screen">
         <div class="container mx-auto px-6">
-            <h3 class="text-4xl font-bold text-center mb-12 text-white">Área de Miembros</h3>
+            <h3 class="text-4xl font-bold text-center mb-12 text-white animate__animated animate__fadeInDown">Área de Miembros</h3>
             
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
                 <!-- Menú lateral -->
                 <div class="lg:col-span-1">
-                    <div class="product-card p-6 rounded-xl sticky top-24">
+                    <div class="product-card p-6 rounded-xl sticky top-24 animate__animated animate__fadeInLeft">
                         <div class="flex items-center mb-8">
-                            <div class="w-12 h-12 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold mr-4">
+                            <div class="w-16 h-16 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold mr-4 text-2xl">
                                 U
                             </div>
                             <div>
@@ -80,26 +82,32 @@
                 <!-- Contenido principal -->
                 <div class="lg:col-span-3">
                     <!-- Sección de Cursos Inscritos -->
-                    <div class="product-card p-8 rounded-xl mb-8">
+                    <div class="product-card p-8 rounded-xl mb-8 animate__animated animate__fadeInRight">
                         <h4 class="text-2xl font-semibold mb-6 text-white">Mis Cursos</h4>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <!-- Curso 1 -->
-                            <div class="bg-gradient-to-br from-gray-700 to-gray-600 p-6 rounded-lg">
+                            <div class="bg-gradient-to-br from-gray-700 to-gray-600 p-6 rounded-lg animate__animated animate__fadeInUp">
+                                <div class="mb-4 overflow-hidden rounded-lg">
+                                    <img src="img/chef_jonathan_buitrago_post_1_11_2019_10_17_482167628441391144723.jpg" alt="Chocolatería Avanzada" class="w-full h-32 object-cover">
+                                </div>
                                 <h5 class="text-xl font-semibold text-white mb-2">Chocolatería Avanzada</h5>
                                 <p class="text-gray-300 text-sm mb-4">Progreso: 60%</p>
                                 <div class="w-full bg-gray-600 rounded-full h-2 mb-4">
-                                    <div class="bg-amber-500 h-2 rounded-full" style="width: 60%"></div>
+                                    <div class="bg-amber-500 h-2 rounded-full progress-fill" style="width: 60%"></div>
                                 </div>
                                 <a href="#" class="text-amber-500 font-semibold hover:text-amber-400 text-sm">Continuar aprendiendo →</a>
                             </div>
                             
                             <!-- Curso 2 -->
-                            <div class="bg-gradient-to-br from-gray-700 to-gray-600 p-6 rounded-lg">
+                            <div class="bg-gradient-to-br from-gray-700 to-gray-600 p-6 rounded-lg animate__animated animate__fadeInUp animate__delay-1s">
+                                <div class="mb-4 overflow-hidden rounded-lg">
+                                    <img src="img/chef_jonathan_buitrago_post_1_8_2019_10_18_582100949666859784443.jpg" alt="Pastelería de Vanguardia" class="w-full h-32 object-cover">
+                                </div>
                                 <h5 class="text-xl font-semibold text-white mb-2">Pastelería de Vanguardia</h5>
                                 <p class="text-gray-300 text-sm mb-4">Progreso: 25%</p>
                                 <div class="w-full bg-gray-600 rounded-full h-2 mb-4">
-                                    <div class="bg-amber-500 h-2 rounded-full" style="width: 25%"></div>
+                                    <div class="bg-amber-500 h-2 rounded-full progress-fill" style="width: 25%"></div>
                                 </div>
                                 <a href="#" class="text-amber-500 font-semibold hover:text-amber-400 text-sm">Continuar aprendiendo →</a>
                             </div>
@@ -107,7 +115,7 @@
                     </div>
                     
                     <!-- Historial de Compras -->
-                    <div class="product-card p-8 rounded-xl">
+                    <div class="product-card p-8 rounded-xl animate__animated animate__fadeInRight animate__delay-1s">
                         <h4 class="text-2xl font-semibold mb-6 text-white">Historial de Compras</h4>
                         
                         <div class="overflow-x-auto">
@@ -122,7 +130,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="border-b border-gray-800">
+                                    <tr class="border-b border-gray-800 animate__animated animate__fadeInUp">
                                         <td class="py-4 text-gray-400">15/03/2024</td>
                                         <td class="py-4 text-white">Chocolatería Avanzada</td>
                                         <td class="py-4 text-gray-400">$120.000</td>
@@ -133,7 +141,7 @@
                                             <a href="#" class="text-amber-500 hover:text-amber-400 text-sm">Ver factura</a>
                                         </td>
                                     </tr>
-                                    <tr class="border-b border-gray-800">
+                                    <tr class="border-b border-gray-800 animate__animated animate__fadeInUp animate__delay-1s">
                                         <td class="py-4 text-gray-400">22/02/2024</td>
                                         <td class="py-4 text-white">Pastelería de Vanguardia</td>
                                         <td class="py-4 text-gray-400">$150.000</td>
@@ -146,6 +154,46 @@
                                     </tr>
                                 </tbody>
                             </table>
+                        </div>
+                    </div>
+                    
+                    <!-- Certificados -->
+                    <div class="product-card p-8 rounded-xl mt-8 animate__animated animate__fadeInRight animate__delay-2s">
+                        <h4 class="text-2xl font-semibold mb-6 text-white">Mis Certificados</h4>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-gradient-to-br from-gray-700 to-gray-600 p-6 rounded-lg text-center">
+                                <div class="text-amber-500 text-5xl mb-4 flex justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                                    </svg>
+                                </div>
+                                <h5 class="text-lg font-semibold text-white mb-2">Chocolatería Avanzada</h5>
+                                <p class="text-gray-400 text-sm mb-4">Fecha: 15/03/2024</p>
+                                <a href="#" class="inline-block bg-amber-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-amber-700 transition-colors">Descargar</a>
+                            </div>
+                            
+                            <div class="bg-gradient-to-br from-gray-700 to-gray-600 p-6 rounded-lg text-center">
+                                <div class="text-amber-500 text-5xl mb-4 flex justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                                    </svg>
+                                </div>
+                                <h5 class="text-lg font-semibold text-white mb-2">Pastelería de Vanguardia</h5>
+                                <p class="text-gray-400 text-sm mb-4">Fecha: 22/02/2024</p>
+                                <a href="#" class="inline-block bg-amber-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-amber-700 transition-colors">Descargar</a>
+                            </div>
+                            
+                            <div class="bg-gradient-to-br from-gray-700 to-gray-600 p-6 rounded-lg text-center">
+                                <div class="text-amber-500 text-5xl mb-4 flex justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                    </svg>
+                                </div>
+                                <h5 class="text-lg font-semibold text-white mb-2">Curso Básico</h5>
+                                <p class="text-gray-400 text-sm mb-4">En progreso</p>
+                                <a href="#" class="inline-block bg-gray-600 text-gray-400 px-4 py-2 rounded-lg text-sm cursor-not-allowed">No disponible</a>
+                            </div>
                         </div>
                     </div>
                 </div>

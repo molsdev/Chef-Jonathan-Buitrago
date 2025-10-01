@@ -7,6 +7,8 @@
     <title>Chef Jonathan Buitrago - Preguntas Frecuentes</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="style.css" rel="stylesheet">
+    <!-- Agregamos animate.css para animaciones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <!-- Header elegante -->
@@ -47,12 +49,12 @@
     <!-- Preguntas Frecuentes -->
     <section class="py-24 bg-gray-900 min-h-screen">
         <div class="container mx-auto px-6">
-            <h3 class="text-4xl font-bold text-center mb-16 text-white">Preguntas Frecuentes</h3>
+            <h3 class="text-4xl font-bold text-center mb-16 text-white animate__animated animate__fadeInDown">Preguntas Frecuentes</h3>
             
             <div class="max-w-4xl mx-auto">
                 <div class="space-y-6">
                     <!-- Pregunta 1 -->
-                    <div class="product-card rounded-xl overflow-hidden">
+                    <div class="product-card rounded-xl overflow-hidden animate__animated animate__fadeInUp">
                         <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFAQ(this)">
                             <h4 class="text-xl font-semibold text-white">¿Cómo accedo a los cursos que compré?</h4>
                             <svg class="w-5 h-5 text-amber-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -65,7 +67,7 @@
                     </div>
                     
                     <!-- Pregunta 2 -->
-                    <div class="product-card rounded-xl overflow-hidden">
+                    <div class="product-card rounded-xl overflow-hidden animate__animated animate__fadeInUp animate__delay-1s">
                         <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFAQ(this)">
                             <h4 class="text-xl font-semibold text-white">¿Por cuánto tiempo tengo acceso a los cursos?</h4>
                             <svg class="w-5 h-5 text-amber-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,7 +80,7 @@
                     </div>
                     
                     <!-- Pregunta 3 -->
-                    <div class="product-card rounded-xl overflow-hidden">
+                    <div class="product-card rounded-xl overflow-hidden animate__animated animate__fadeInUp animate__delay-2s">
                         <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFAQ(this)">
                             <h4 class="text-xl font-semibold text-white">¿Qué métodos de pago aceptan?</h4>
                             <svg class="w-5 h-5 text-amber-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -91,7 +93,7 @@
                     </div>
                     
                     <!-- Pregunta 4 -->
-                    <div class="product-card rounded-xl overflow-hidden">
+                    <div class="product-card rounded-xl overflow-hidden animate__animated animate__fadeInUp animate__delay-3s">
                         <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFAQ(this)">
                             <h4 class="text-xl font-semibold text-white">¿Cómo agendo una asesoría?</h4>
                             <svg class="w-5 h-5 text-amber-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -104,7 +106,7 @@
                     </div>
                     
                     <!-- Pregunta 5 -->
-                    <div class="product-card rounded-xl overflow-hidden">
+                    <div class="product-card rounded-xl overflow-hidden animate__animated animate__fadeInUp">
                         <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFAQ(this)">
                             <h4 class="text-xl font-semibold text-white">¿Puedo obtener un certificado al completar un curso?</h4>
                             <svg class="w-5 h-5 text-amber-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -117,7 +119,7 @@
                     </div>
                     
                     <!-- Pregunta 6 -->
-                    <div class="product-card rounded-xl overflow-hidden">
+                    <div class="product-card rounded-xl overflow-hidden animate__animated animate__fadeInUp animate__delay-1s">
                         <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFAQ(this)">
                             <h4 class="text-xl font-semibold text-white">¿Los cursos incluyen materiales descargables?</h4>
                             <svg class="w-5 h-5 text-amber-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -130,7 +132,7 @@
                     </div>
                     
                     <!-- Pregunta 7 -->
-                    <div class="product-card rounded-xl overflow-hidden">
+                    <div class="product-card rounded-xl overflow-hidden animate__animated animate__fadeInUp animate__delay-2s">
                         <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFAQ(this)">
                             <h4 class="text-xl font-semibold text-white">¿Puedo regalar un curso a otra persona?</h4>
                             <svg class="w-5 h-5 text-amber-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -143,7 +145,7 @@
                     </div>
                     
                     <!-- Pregunta 8 -->
-                    <div class="product-card rounded-xl overflow-hidden">
+                    <div class="product-card rounded-xl overflow-hidden animate__animated animate__fadeInUp animate__delay-3s">
                         <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFAQ(this)">
                             <h4 class="text-xl font-semibold text-white">¿Ofrecen soporte técnico durante los cursos?</h4>
                             <svg class="w-5 h-5 text-amber-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -157,7 +159,7 @@
                 </div>
                 
                 <!-- Formulario de contacto adicional -->
-                <div class="product-card p-8 rounded-xl mt-12">
+                <div class="product-card p-8 rounded-xl mt-12 animate__animated animate__fadeInUp">
                     <h4 class="text-2xl font-semibold mb-6 text-white text-center">¿No encontraste tu pregunta?</h4>
                     <form class="space-y-6">
                         <div>
