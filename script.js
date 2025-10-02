@@ -187,10 +187,30 @@ function toggleMobileMenu() {
 function toggleFAQ(button) {
     const answer = button.nextElementSibling;
     const icon = button.querySelector('svg');
-    
-    // Toggle visibility of answer
-    answer.classList.toggle('hidden');
-    
-    // Rotate icon
-    icon.classList.toggle('rotate-180');
+    const isHidden = answer.classList.contains('hidden');
+
+    // Close all other answers
+    const allAnswers = document.querySelectorAll('.faq-answer');
+    const allIcons = document.querySelectorAll('.faq-question svg');
+
+    allAnswers.forEach(ans => {
+        if (ans !== answer) {
+            ans.classList.add('hidden');
+        }
+    });
+
+    allIcons.forEach(ic => {
+        if (ic !== icon) {
+            ic.classList.remove('rotate-180');
+        }
+    });
+
+    // Toggle the clicked answer
+    if (isHidden) {
+        answer.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+    } else {
+        answer.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+    }
 }

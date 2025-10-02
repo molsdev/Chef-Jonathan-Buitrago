@@ -12,21 +12,19 @@
 </head>
 <body>
     <!-- Header elegante -->
-    <header class="sticky top-0 z-50 shadow-lg">
+    <header class="shadow-lg">
         <div class="container mx-auto px-6 py-5 flex justify-between items-center">
             <div class="flex items-center space-x-4">
                 <h1 class="text-3xl font-bold bg-gradient-to-r from-yellow-500 to-amber-600 bg-clip-text text-transparent">
                     <a href="index.html">Chef Jonathan Buitrago</a>
                 </h1>
-                <span class="text-sm text-gray-400 hidden md:block">Cursos y Asesorías Gastronómicas</span>
             </div>
         <div class="hidden md:flex items-center space-x-10">
             <nav class="space-x-10">
                 <a href="index.html">Inicio</a>
                 <a href="informacion.html">Información</a>
-                <a href="catalogo.html">Cursos</a>
-                <a href="reservas.html">Reservas</a>
-                <a href="faq.html">FAQ</a>
+                <a href="catalogo.html">Catalogo</a>
+                <a href="registro.html">Mi Cuenta</a>
             </nav>
             
         </div>
@@ -40,13 +38,16 @@
         <div id="mobile-menu" class="hidden bg-gradient-to-b from-gray-800 to-gray-900 border-t border-gray-600 py-5 px-6 md:hidden">
             <a href="index.html" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">Inicio</a>
             <a href="informacion.html" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">Información</a>
-            <a href="reservas.html" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">Reservas</a>
-            
+            <a href="catalogo.html" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">Catalogo</a>
+            <a href="registro.html" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">Mi Cuenta</a>
         </div>
     </header>
 
+    <div class="seccion-header">
+    </div>
+
     <!-- Sección de Información -->
-    <section class="py-24 bg-gray-900 min-h-screen">
+    <section class="py-24 bg-gray-900 min-h-screen ">
         <div class="container mx-auto px-6">
             <h3 class="text-4xl font-bold text-center mb-16 text-white animate__animated animate__fadeInDown">Sobre el Chef Jonathan Buitrago</h3>
             
@@ -142,82 +143,6 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Sección de Preguntas Frecuentes -->
-            <div>
-                <h4 class="text-3xl font-semibold mb-12 text-white text-center animate__animated animate__fadeInUp">Preguntas Frecuentes</h4>
-                <div class="max-w-4xl mx-auto space-y-6">
-                    <!-- Pregunta 1 -->
-                    <div class="product-card rounded-xl overflow-hidden animate__animated animate__fadeInUp">
-                        <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFAQ(this)">
-                            <h5 class="text-xl font-semibold text-white">¿Cuál es la metodología de enseñanza?</h5>
-                            <svg class="w-5 h-5 text-amber-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div class="faq-answer px-6 pb-6 text-gray-300 hidden">
-                            <p>Nuestra metodología combina clases teóricas con prácticas intensivas, permitiendo a los estudiantes aplicar inmediatamente los conocimientos adquiridos. Utilizamos una enseñanza personalizada y adaptada al ritmo de cada alumno.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Pregunta 2 -->
-                    <div class="product-card rounded-xl overflow-hidden animate__animated animate__fadeInUp animate__delay-1s">
-                        <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFAQ(this)">
-                            <h5 class="text-xl font-semibold text-white">¿Qué materiales se proporcionan?</h5>
-                            <svg class="w-5 h-5 text-amber-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div class="faq-answer px-6 pb-6 text-gray-300 hidden">
-                            <p>Cada estudiante recibe un kit de bienvenida con utensilios básicos, recetarios digitales, acceso a nuestra plataforma de aprendizaje y materiales complementarios para profundizar en cada tema.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Pregunta 3 -->
-                    <div class="product-card rounded-xl overflow-hidden animate__animated animate__fadeInUp animate__delay-2s">
-                        <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFAQ(this)">
-                            <h5 class="text-xl font-semibold text-white">¿Cómo puedo inscribirme a un curso?</h5>
-                            <svg class="w-5 h-5 text-amber-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div class="faq-answer px-6 pb-6 text-gray-300 hidden">
-                            <p>Puedes inscribirte directamente desde nuestra página web en la sección de catálogo de cursos. También puedes contactarnos a través de WhatsApp o correo electrónico para recibir asesoría personalizada sobre la elección del curso más adecuado para ti.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección de FAQ -->
-    <section id="faq" class="py-24 bg-gray-900 reveal">
-        <div class="container mx-auto px-6">
-            <h3 class="text-4xl font-bold text-center mb-16 text-white">Preguntas Frecuentes</h3>
-            <div class="max-w-3xl mx-auto">
-                <div class="space-y-4">
-                    <!-- Pregunta 1 -->
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <h4 class="text-xl font-semibold text-white">¿Cómo accedo a los cursos que compré?</h4>
-                        <p class="text-gray-400 mt-2">Una vez que completes la compra, recibirás un correo electrónico con un enlace para acceder a tu área privada de estudiante. Allí encontrarás todos tus cursos.</p>
-                    </div>
-                    <!-- Pregunta 2 -->
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <h4 class="text-xl font-semibold text-white">¿Por cuánto tiempo tengo acceso a los cursos?</h4>
-                        <p class="text-gray-400 mt-2">El acceso a todos nuestros cursos es de por vida. Podrás ver las lecciones cuantas veces quieras, a tu propio ritmo.</p>
-                    </div>
-                    <!-- Pregunta 3 -->
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <h4 class="text-xl font-semibold text-white">¿Qué métodos de pago aceptan?</h4>
-                        <p class="text-gray-400 mt-2">Aceptamos la mayoría de las tarjetas de crédito y débito, así como PayPal y Nequi.</p>
-                    </div>
-                    <!-- Pregunta 4 -->
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <h4 class="text-xl font-semibold text-white">¿Cómo agendo una asesoría?</h4>
-                        <p class="text-gray-400 mt-2">Para agendar una asesoría, por favor contáctanos a través del formulario de contacto o por WhatsApp. Nos pondremos en contacto contigo para coordinar la fecha y hora.</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -260,11 +185,139 @@
         </div>
     </section>
 
+    <!-- Sección de Preguntas Frecuentes (FAQ) -->
+    <section class="py-24 bg-gray-900 min-h-screen">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center mb-16 text-white">Preguntas Frecuentes</h3>
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-6">
+                    <!-- Pregunta 1 -->
+                    <div class="product-card rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFAQ(this)">
+                            <h4 class="text-xl font-semibold text-white">¿Cómo accedo a los cursos que compré?</h4>
+                            <svg class="w-5 h-5 text-amber-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 text-gray-300 hidden">
+                            <p>Una vez que completes la compra, recibirás un correo electrónico con un enlace para acceder a tu área privada de estudiante. Allí encontrarás todos tus cursos. También puedes acceder iniciando sesión en tu cuenta desde la página de "Área de Miembros".</p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 2 -->
+                    <div class="product-card rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFAQ(this)">
+                            <h4 class="text-xl font-semibold text-white">¿Por cuánto tiempo tengo acceso a los cursos?</h4>
+                            <svg class="w-5 h-5 text-amber-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 text-gray-300 hidden">
+                            <p>El acceso a todos nuestros cursos es de por vida. Podrás ver las lecciones cuantas veces quieras, a tu propio ritmo. Esta es una de nuestras principales ventajas sobre otras plataformas educativas.</p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 3 -->
+                    <div class="product-card rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFAQ(this)">
+                            <h4 class="text-xl font-semibold text-white">¿Qué métodos de pago aceptan?</h4>
+                            <svg class="w-5 h-5 text-amber-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 text-gray-300 hidden">
+                            <p>Aceptamos la mayoría de las tarjetas de crédito y débito, así como PayPal, Nequi y otros métodos de pago electrónicos. Todos los pagos se procesan a través de pasarelas seguras para garantizar la protección de tus datos financieros.</p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 4 -->
+                    <div class="product-card rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFAQ(this)">
+                            <h4 class="text-xl font-semibold text-white">¿Cómo agendo una asesoría?</h4>
+                            <svg class="w-5 h-5 text-amber-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 text-gray-300 hidden">
+                            <p>Para agendar una asesoría, por favor contáctanos a través del formulario de contacto en la página de reservas o por WhatsApp. Nos pondremos en contacto contigo para coordinar la fecha y hora. También puedes hacerlo directamente desde tu área de miembros si ya tienes una cuenta.</p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 5 -->
+                    <div class="product-card rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFAQ(this)">
+                            <h4 class="text-xl font-semibold text-white">¿Puedo obtener un certificado al completar un curso?</h4>
+                            <svg class="w-5 h-5 text-amber-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 text-gray-300 hidden">
+                            <p>Sí, al completar cualquiera de nuestros cursos recibirás un certificado digital que podrás descargar e imprimir. Este certificado tiene validez como constancia de formación continua en gastronomía y está firmado por el Chef Jonathan Buitrago.</p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 6 -->
+                    <div class="product-card rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFAQ(this)">
+                            <h4 class="text-xl font-semibold text-white">¿Los cursos incluyen materiales descargables?</h4>
+                            <svg class="w-5 h-5 text-amber-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 text-gray-300 hidden">
+                            <p>Sí, todos nuestros cursos incluyen materiales descargables como recetarios, guías de estudio, plantillas y recursos adicionales que te ayudarán a profundizar en los temas tratados y aplicarlos en tu práctica profesional.</p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 7 -->
+                    <div class="product-card rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFAQ(this)">
+                            <h4 class="text-xl font-semibold text-white">¿Puedo regalar un curso a otra persona?</h4>
+                            <svg class="w-5 h-5 text-amber-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 text-gray-300 hidden">
+                            <p>Absolutamente. Durante el proceso de compra, puedes seleccionar la opción de regalo y proporcionar el correo electrónico del destinatario. Le enviaremos un bono digital que podrá canjear por el curso de su elección.</p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 8 -->
+                    <div class="product-card rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFAQ(this)">
+                            <h4 class="text-xl font-semibold text-white">¿Ofrecen soporte técnico durante los cursos?</h4>
+                            <svg class="w-5 h-5 text-amber-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 text-gray-300 hidden">
+                            <p>Sí, ofrecemos soporte técnico durante todo el tiempo que tengas acceso al curso. Puedes contactarnos por correo electrónico o WhatsApp para resolver cualquier duda técnica relacionada con el acceso a las lecciones, descarga de materiales o funcionamiento de la plataforma.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Formulario de contacto adicional -->
+                <div class="product-card p-8 rounded-xl mt-12">
+                    <h4 class="text-2xl font-semibold mb-6 text-white text-center">¿No encontraste tu pregunta?</h4>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="faq-name" class="block text-gray-300 mb-2">Nombre</label>
+                            <input type="text" id="faq-name" class="w-full">
+                        </div>
+                        <div>
+                            <label for="faq-email" class="block text-gray-300 mb-2">Correo Electrónico</label>
+                            <input type="email" id="faq-email" class="w-full">
+                        </div>
+                        <div>
+                            <label for="faq-question" class="block text-gray-300 mb-2">Tu Pregunta</label>
+                            <textarea id="faq-question" rows="4" class="w-full"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-amber-600 to-orange-600 text-white py-3 rounded-lg font-semibold shadow-lg hover:opacity-90 transition-opacity">
+                            Enviar Pregunta
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer elegante -->
     <footer class="bg-gray-800 rounded-lg shadow-sm m-4">
         <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
             <span class="text-sm text-gray-400 sm:text-center">
-                © 2023 <a href="index.html" class="hover:text-amber-500">Chef Jonathan Buitrago</a>. Todos los derechos reservados.
+                © 2025 <a href="index.html" class="hover:text-amber-500">Chef Jonathan Buitrago</a>. Todos los derechos reservados.
             </span>
             <ul class="flex space-x-6 items-center mt-3 text-sm sm:mt-0">
                 <li>
@@ -293,6 +346,36 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('svg');
+            const isOpen = answer.classList.contains('faq-open');
+            document.querySelectorAll('.faq-answer').forEach(ans => {
+                if (ans !== answer) {
+                    ans.classList.remove('faq-open');
+                    ans.style.maxHeight = null;
+                    ans.setAttribute('aria-hidden', 'true');
+                }
+            });
+            document.querySelectorAll('.faq-question svg').forEach(ic => {
+                if (ic !== icon) {
+                    ic.classList.remove('rotate-180');
+                }
+            });
+            if (!isOpen) {
+                answer.classList.add('faq-open');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                answer.setAttribute('aria-hidden', 'false');
+                icon.classList.add('rotate-180');
+            } else {
+                answer.classList.remove('faq-open');
+                answer.style.maxHeight = null;
+                answer.setAttribute('aria-hidden', 'true');
+                icon.classList.remove('rotate-180');
+            }
+        }
+    </script>
             <!-- Botones flotantes -->
     <div class="fixed bottom-8 right-8 flex space-x-4">
         <!-- WhatsApp flotante -->

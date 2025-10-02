@@ -1,7 +1,121 @@
+/* Unificación de animación y modo oscuro para selects y date */
+.custom-select, .custom-date .custom-textarea, input[type="date"], input[type="text"], input[type="email"], input[type="tel"], textarea {
+    background: linear-gradient(90deg, #232526 0%, #414345 100%);
+    color: #ffb86b44;
+    border: 1px solid #ffb86b44;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    font-family: inherit;
+    box-shadow: 0 2px 8px rgba(251,191,36,0.08);
+    transition: border 0.2s, box-shadow 0.2s, background 0.3s;
+    outline: none;
+}
+.custom-select:focus, .custom-date:focus, input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, textarea:focus {
+    border-color: #ffb86b44;
+    box-shadow: 0 0 0 2px #ffb86b44;
+    background: linear-gradient(90deg, #232526 0%, #232526 100%);
+}
+.custom-select option {
+    color: #232526;
+    background: #ffb86b44;
+}
+
+/* Forzar modo oscuro en el calendario nativo (Chrome/Edge/Webkit) */
+input[type="date"].custom-date::-webkit-calendar-picker-indicator {
+    filter: invert(1) brightness(0.8) sepia(1) hue-rotate(20deg) saturate(3);
+}
+input[type="date"].custom-date::-webkit-input-placeholder {
+    color: #ffb86b44;
+}
+input[type="date"].custom-date::-webkit-datetime-edit {
+    color: #ffb86b44;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(10deg);
+  background-color: #ffb86b44;
+  border-radius: 50%;
+}
+input[type="date"].custom-date {
+    color-scheme: dark;
+}
+/* Selectores personalizados para reservas */
+.custom-select {
+    background: linear-gradient(90deg, #232526 0%, #414345 100%);
+    color: #ffb86b44;
+    border: 1.5px solid #ffb86b44;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    font-family: inherit;
+    box-shadow: 0 2px 8px rgba(251,191,36,0.08);
+    transition: border 0.2s, box-shadow 0.2s;
+    appearance: none;
+    outline: none;
+}
+.custom-select:focus {
+    border-color: #ffb86b44;
+    box-shadow: 0 0 0 1px #fbbf24;
+}
+.custom-select option {
+    color: #ffb86b44;
+    background: #232526;
+}
+
+.custom-textarea {
+    background: linear-gradient(90deg, #232526 0%, #414345 100%);
+    color: #ffb86b44;
+    border: 1.5px solid #ffb86b44;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    font-family: inherit;
+    box-shadow: 0 2px 8px rgba(251,191,36,0.08);
+    transition: border 0.2s, box-shadow 0.2s;
+    appearance: none;
+    outline: none;
+}
+
+/* Calendario input de fecha personalizado */
+.custom-date {
+    background: linear-gradient(90deg, #232526 0%, #414345 100%);
+    color: #ffb86b44;
+    border: 0.3px solid #ffb86b44;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    font-family: inherit;
+    box-shadow: 0 2px 8px rgba(251,191,36,0.08);
+    transition: border 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+.custom-date:focus {
+    border-color: #ffb86b44;
+    box-shadow: 0 0 0 1px #ffb86b44;
+}
+/* FAQ animación y accesibilidad */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
+    will-change: max-height;
+}
+.faq-open {
+    max-height: 500px !important;
+}
+.faq-question:focus {
+    outline: 2px solid #f59e42;
+    outline-offset: 2px;
+}
+.rotate-180 {
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+}
 /* Estilos base */
+
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #2a2a2a 100%);
+    background: #1f2937;
     color: #e5e7eb;
     line-height: 1.6;
     margin: 0;
@@ -44,12 +158,15 @@ footer {
     background: rgba(30, 30, 30, 0.7);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    /* Eliminado border-radius para hacerlo rectangular */
     margin: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 0px solid rgba(30, 30, 30, 0.7);
     position: relative;
 }
+
+.seccion-header {
+      height: 50px; /* Reduce la altura a 200 píxeles */
+      background-color: #90eed600;
+    }
 
 .product-card {
     background: linear-gradient(145deg, #2d2d2d 0%, #1f1f1f 100%);
@@ -201,7 +318,7 @@ a:hover::after {
 }
 
 /* Estilos para formularios */
-input, textarea {
+input, select, textarea {
     background: linear-gradient(145deg, #3a3a3a 0%, #2d2d2d 100%);
     border: 1px solid #5a5a5a;
     color: #e5e7eb;
@@ -213,7 +330,18 @@ input, textarea {
     font-size: 1rem;
 }
 
-input:focus, textarea:focus {
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23e5e7eb" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    padding-right: 40px;
+}
+
+input:focus, select:focus, textarea:focus {
     border-color: #8B4513;
     box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.2);
     outline: none;
