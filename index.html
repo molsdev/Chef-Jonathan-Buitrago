@@ -6,19 +6,19 @@
     <meta http-equiv="content-language" content="es">
     <title>Chef Jonathan Buitrago - Cursos y Asesorías Gastronómicas</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="img/principal.jpg" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <!-- Agregamos animate.css para animaciones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <!-- Header elegante -->
-    <header class="sticky top-0 z-50 shadow-lg">
+    <header class="shadow-lg">
         <div class="container mx-auto px-6 py-5 flex justify-between items-center">
             <div class="flex items-center space-x-4">
                 <h1 class="text-3xl font-bold bg-gradient-to-r from-yellow-500 to-amber-600 bg-clip-text text-transparent">
                     <a href="index.html">Chef Jonathan Buitrago</a>
                 </h1>
-                <span class="text-sm text-gray-400 hidden md:block">Cursos y Asesorías Gastronómicas</span>
             </div>
         <div class="hidden md:flex items-center space-x-10">
             <nav class="space-x-10">
@@ -48,16 +48,16 @@
         </div>
     </header>
 
-    <!-- Encabezado hero mejorado con imagen de fondo -->
-    <section id="inicio" class="hero-bg text-center py-24 relative" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/chef.jpg'); background-size: cover; background-position: center;">
+    <!-- Encabezado hero mejorado -->
+    <section id="inicio" class="hero-bg text-center py-24 relative">
         <div class="container mx-auto px-6 relative z-10">
-            <h2 class="text-3xl sm:text-4xl md:text-7xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-6 sm:mb-8 animate__animated animate__fadeInDown">
+            <h2 class="text-3xl sm:text-4xl md:text-7xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-6 sm:mb-8 fade-in">
                 Bienvenidos a Chef Jonathan Buitrago
             </h2>
-            <p class="text-base sm:text-lg md:text-2xl text-gray-300 mb-6 sm:mb-10 animate__animated animate__fadeInUp animate__delay-1s max-w-full sm:max-w-3xl mx-auto px-4 sm:px-0">
+            <p class="text-base sm:text-lg md:text-2xl text-gray-300 mb-6 sm:mb-10 fade-in max-w-full sm:max-w-3xl mx-auto px-4 sm:px-0" style="animation-delay: 0.3s;">
                 Descubre el arte de la gastronomía con nuestros cursos especializados y asesorías personalizadas, donde el conocimiento y la pasión se unen en cada experiencia culinaria
             </p>
-            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 md:space-x-8 animate__animated animate__fadeInUp animate__delay-2s">
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 md:space-x-8 fade-in" style="animation-delay: 0.6s;">
                 <a href="catalogo.html" class="bg-gradient-to-r from-amber-600 to-orange-600 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-full font-semibold shadow-xl transform hover:scale-110 transition-all">
                     Ver Nuestros Cursos
                 </a>
@@ -67,126 +67,85 @@
                     </button>
                 </a>
             </div>
+            <div class="mt-12 sm:mt-16 fade-in" style="animation-delay: 0.9s;">
         </div>
     </section>
 
-    <!-- Sección de Cursos Destacados con imágenes -->
+    <!-- Sección de Cursos Destacados -->
     <section class="py-24 bg-gray-900">
         <div class="container mx-auto px-6">
-            <h3 class="text-4xl font-bold text-center mb-16 text-white animate__animated animate__fadeInUp">Nuestros Cursos Populares</h3>
+            <h3 class="text-4xl font-bold text-center mb-16 text-white">Nuestros Cursos Populares</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <!-- Curso 1 -->
-                <div class="product-card bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-xl shadow-xl animate__animated animate__fadeInUp">
-                    <div class="mb-4 overflow-hidden rounded-lg">
-                        <img src="img/chef_jonathan_buitrago_post_1_11_2019_10_17_482167628441391144723.jpg" alt="Chocolatería Avanzada" class="w-full h-48 object-cover transform hover:scale-110 transition-transform duration-500">
-                    </div>
+                <div class="product-card bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-xl shadow-xl fade-in">
                     <h4 class="text-2xl font-semibold mb-4 text-white">Chocolatería Avanzada</h4>
                     <p class="text-gray-300 mb-6">Domina las técnicas más sofisticadas del chocolate, desde el templado perfecto hasta la creación de bombones de autor.</p>
                     <a href="catalogo.html" class="text-amber-500 font-semibold hover:text-amber-400">Ver más detalles</a>
                 </div>
                 <!-- Curso 2 -->
-                <div class="product-card bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-xl shadow-xl animate__animated animate__fadeInUp animate__delay-1s">
-                    <div class="mb-4 overflow-hidden rounded-lg">
-                        <img src="img/chef_jonathan_buitrago_post_1_8_2019_10_18_582100949666859784443.jpg" alt="Pastelería de Vanguardia" class="w-full h-48 object-cover transform hover:scale-110 transition-transform duration-500">
-                    </div>
+                <div class="product-card bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-xl shadow-xl fade-in" style="animation-delay: 0.2s;">
                     <h4 class="text-2xl font-semibold mb-4 text-white">Pastelería de Vanguardia</h4>
                     <p class="text-gray-300 mb-6">Explora las últimas tendencias de la pastelería mundial, aplicando técnicas innovadoras y creativas a tus postres.</p>
                     <a href="catalogo.html" class="text-amber-500 font-semibold hover:text-amber-400">Ver más detalles</a>
                 </div>
                 <!-- Curso 3 -->
-                <div class="product-card bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-xl shadow-xl animate__animated animate__fadeInUp animate__delay-2s">
-                    <div class="mb-4 overflow-hidden rounded-lg">
-                        <img src="img/chef_jonathan_buitrago_post_10_5_2022_10_22_072835149063106197541.jpg" alt="Gestión de Emprendimientos Gastronómicos" class="w-full h-48 object-cover transform hover:scale-110 transition-transform duration-500">
-                    </div>
+                <div class="product-card bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-xl shadow-xl fade-in" style="animation-delay: 0.4s;">
                     <h4 class="text-2xl font-semibold mb-4 text-white">Gestión de Emprendimientos Gastronómicos</h4>
                     <p class="text-gray-300 mb-6">Aprende a crear y gestionar tu propio negocio de pastelería, desde la planificación del menú hasta la estrategia de marketing.</p>
                     <a href="catalogo.html" class="text-amber-500 font-semibold hover:text-amber-400">Ver más detalles</a>
                 </div>
             </div>
             <div class="text-center mt-12">
-                <a href="catalogo.html" class="inline-block bg-gradient-to-r from-amber-600 to-orange-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:opacity-90 transition-opacity animate__animated animate__fadeInUp animate__delay-3s">
+                <a href="catalogo.html" class="inline-block bg-gradient-to-r from-amber-600 to-orange-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:opacity-90 transition-opacity">
                     Ver Todos los Cursos
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Sección de Misión con imagen de fondo -->
-    <section class="py-24" style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('img/chef_jonathan_buitrago_post_10_1_2019_9_40_511953801005171047268.jpg'); background-size: cover; background-position: center;">
+    <!-- Sección de Misión -->
+    <section class="py-24 bg-gradient-to-r from-gray-800 to-gray-900">
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto text-center">
-                <h3 class="text-4xl font-bold mb-8 text-white animate__animated animate__fadeInUp">Nuestra Misión</h3>
-                <p class="text-xl text-gray-300 mb-8 animate__animated animate__fadeInUp animate__delay-1s">
+                <h3 class="text-4xl font-bold mb-8 text-white">Nuestra Misión</h3>
+                <p class="text-xl text-gray-300 mb-8">
                     Continuar innovando y creando experiencias gastronómicas únicas, apoyando y asesorando a emprendedores del sector gastronómico para que alcancen el éxito.
                 </p>
-                <a href="informacion.html" class="inline-block border-2 border-amber-600 text-amber-500 hover:bg-amber-600 hover:text-white px-8 py-3 rounded-full font-semibold shadow-lg transition-colors animate__animated animate__fadeInUp animate__delay-2s">
+                <a href="informacion.html" class="inline-block border-2 border-amber-600 text-amber-500 hover:bg-amber-600 hover:text-white px-8 py-3 rounded-full font-semibold shadow-lg transition-colors">
                     Conoce Más Sobre Nosotros
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Sección de testimonios -->
-    <section class="py-24 bg-gray-900">
-        <div class="container mx-auto px-6">
-            <h3 class="text-4xl font-bold text-center mb-16 text-white animate__animated animate__fadeInUp">Lo que dicen nuestros estudiantes</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Testimonio 1 -->
-                <div class="product-card p-6 rounded-xl animate__animated animate__fadeInUp">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold mr-4">
-                            M
-                        </div>
-                        <div>
-                            <p class="text-white font-semibold">María González</p>
-                            <p class="text-amber-500 text-sm">Estudiante de Chocolatería</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 italic">"Los cursos del Chef Jonathan son excepcionales. Aprendí técnicas profesionales que han transformado mi manera de trabajar en la pastelería."</p>
-                </div>
-                
-                <!-- Testimonio 2 -->
-                <div class="product-card p-6 rounded-xl animate__animated animate__fadeInUp animate__delay-1s">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold mr-4">
-                            C
-                        </div>
-                        <div>
-                            <p class="text-white font-semibold">Carlos Rodríguez</p>
-                            <p class="text-amber-500 text-sm">Emprendedor Gastronómico</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 italic">"La asesoría que recibí me ayudó a lanzar mi propio negocio de repostería. Las herramientas y conocimientos que adquirí fueron fundamentales para mi éxito."</p>
-                </div>
-                
-                <!-- Testimonio 3 -->
-                <div class="product-card p-6 rounded-xl animate__animated animate__fadeInUp animate__delay-2s">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold mr-4">
-                            A
-                        </div>
-                        <div>
-                            <p class="text-white font-semibold">Ana Martínez</p>
-                            <p class="text-amber-500 text-sm">Pastelera Profesional</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 italic">"La metodología de enseñanza es única. El Chef combina teoría y práctica de una manera que hace que cada clase sea una experiencia inolvidable."</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer elegante -->
-    <footer class="py-12">
-        <div class="container mx-auto px-4 text-center">
-            <p class="text-2xl font-bold bg-gradient-to-r from-amber-400 to-orange-600 bg-clip-text text-transparent mb-8">Chef Jonathan Buitrago</p>
-            <div class="decorative-line mx-auto w-32"></div>
-            <p class="text-gray-400 mt-8 mb-6">© 2023 Chef Jonathan Buitrago. Todos los derechos reservados.</p>
-            <div class="flex justify-center space-x-8">
-                <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Facebook</a>
-                <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Instagram</a>
-                <a href="https://wa.me/573001234567" target="_blank" class="text-gray-400 hover:text-amber-500 transition-colors">Youtube</a>
-            </div>
+    <!-- Footer actualizado con íconos de redes sociales -->
+    <footer class="bg-white rounded-lg shadow-sm m-4 dark:bg-gray-800">
+        <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="index.html" class="hover:underline">Chef Jonathan Buitrago</a>. Todos los derechos reservados.
+            </span>
+            <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+                <li>
+                    <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors me-4 md:me-6">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/chef_jonathan_buitrago" target="_blank" class="text-gray-400 hover:text-amber-500 transition-colors me-4 md:me-6">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.644-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/channel/UC123456789" target="_blank" class="text-gray-400 hover:text-amber-500 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19.615 3.184C18.403 2.75 12 2.75 12 2.75s-6.403 0-7.615.434C3.403 3.568 3 5.25 3 5.25s0 2.25.25 4.5c.25 2.25.75 4.5.75 4.5s.403 1.682 1.615 2.066C5.597 16.75 12 16.75 12 16.75s6.403 0 7.615-.434c1.212-.384 1.615-2.066 1.615-2.066s.5-2.25.75-4.5c.25-2.25.25-4.5.25-4.5s-.403-1.682-1.615-2.066zM10 14.25V7.25l6 3.5-6 3.5z"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
         </div>
     </footer>
 
