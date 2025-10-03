@@ -32,9 +32,9 @@ input[type="date"].custom-date::-webkit-datetime-edit {
     color: #ffb86b44;
 }
 input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(1) sepia(1) saturate(5) hue-rotate(10deg);
-  background-color: #ffb86b44;
-  border-radius: 50%;
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(10deg);
+    background-color: #ffb86b44;
+    border-radius: 50%;
 }
 input[type="date"].custom-date {
     color-scheme: dark;
@@ -162,11 +162,6 @@ footer {
     border: 0px solid rgba(30, 30, 30, 0.7);
     position: relative;
 }
-
-.seccion-header {
-      height: 50px; /* Reduce la altura a 200 píxeles */
-      background-color: #90eed600;
-    }
 
 .product-card {
     background: linear-gradient(145deg, #2d2d2d 0%, #1f1f1f 100%);
