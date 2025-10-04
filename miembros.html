@@ -10,36 +10,40 @@
 </head>
 <body>
     <!-- Header elegante -->
-    <header class="shadow-lg">
+    <header class="shadow-lg rounded-lg">
         <div class="container mx-auto px-6 py-5 flex justify-between items-center">
             <div class="flex items-center space-x-4">
                 <h1 class="text-3xl font-bold bg-gradient-to-r from-yellow-500 to-amber-600 bg-clip-text text-transparent">
                     <a href="index.html">Chef Jonathan Buitrago</a>
                 </h1>
             </div>
-        <div class="hidden md:flex items-center space-x-10">
-            <nav class="space-x-10">
-                <a href="index.html">Inicio</a>
-                <a href="informacion.html">Información</a>
-                <a href="catalogo.html">Catalogo</a>
-                <a href="registro.html">Mi Cuenta</a>
+            <nav class="hidden md:flex items-center space-x-10">
+                <a href="index.html" class="text-white hover:text-amber-500 transition-colors">Inicio</a>
+                <a href="informacion.html" class="text-white hover:text-amber-500 transition-colors">Información</a>
+                <a href="catalogo.html" class="text-white hover:text-amber-500 transition-colors">Catálogo</a>
+                <a href="registro.html" class="text-white hover:text-amber-500 transition-colors">Mi Cuenta</a>
             </nav>
-            
-        </div>
-            <button onclick="toggleMobileMenu()" class="md:hidden text-white focus:outline-none p-2">
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none p-2">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
         </div>
-        <!-- Menú móvil elegante -->
-        <div id="mobile-menu" class="hidden bg-gradient-to-b from-gray-800 to-gray-900 border-t border-gray-600 py-5 px-6 md:hidden">
-            <a href="index.html" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">Inicio</a>
-            <a href="informacion.html" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">Información</a>
-            <a href="catalogo.html" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">Catalogo</a>
-            <a href="registro.html" class="block py-3 px-4 text-white rounded-lg hover:bg-gray-700 transition-all">Mi Cuenta</a>
+        <div id="mobile-menu" class="rounded-lg md:hidden">
+            <a href="index.html" class="block py-3 px-4 text-white hover:bg-gray-700 transition-all">Inicio</a>
+            <a href="informacion.html" class="block py-3 px-4 text-white hover:bg-gray-700 transition-all">Información</a>
+            <a href="catalogo.html" class="block py-3 px-4 text-white hover:bg-gray-700 transition-all">Catálogo</a>
+            <a href="registro.html" class="block py-3 px-4 text-white hover:bg-gray-700 transition-all">Mi Cuenta</a>
         </div>
     </header>
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 
     <!-- Área de Miembros -->
     <section class="py-12 bg-gray-900 min-h-screen" style="background-image: url('img/chef_jonathan_buitrago_post_10_5_2019_12_28_342040858511489146865.jpg'); background-size: cover; background-position: center;">

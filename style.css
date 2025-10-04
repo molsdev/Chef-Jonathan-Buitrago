@@ -130,7 +130,7 @@ h1, h2, h3, h4 {
 }
 
 /* Estilos para modo oscuro más bonito con efecto acrílico */
-header {
+header, .mobile-menu {
     background: rgba(30, 30, 30, 0.7);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
