@@ -1,5 +1,5 @@
 /* Unificación de animación y modo oscuro para selects y date */
-.custom-select, .custom-date .custom-textarea, input[type="date"], input[type="text"], input[type="email"], input[type="tel"], textarea {
+.custom-select, .custom-date .custom-textarea, input[type="date"], input[type="password"], input[type="text"], input[type="email"], input[type="tel"], textarea {
     background: linear-gradient(90deg, #232526 0%, #414345 100%);
     color: #ffb86b44;
     border: 1px solid #ffb86b44;
@@ -11,7 +11,7 @@
     transition: border 0.2s, box-shadow 0.2s, background 0.3s;
     outline: none;
 }
-.custom-select:focus, .custom-date:focus, input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, textarea:focus {
+.custom-select:focus, .custom-date:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="tel"]:focus, textarea:focus {
     border-color: #ffb86b44;
     box-shadow: 0 0 0 2px #ffb86b44;
     background: linear-gradient(90deg, #232526 0%, #232526 100%);
@@ -131,7 +131,7 @@ h1, h2, h3, h4 {
 
 /* Estilos para modo oscuro más bonito con efecto acrílico */
 header, .mobile-menu {
-    background: rgba(30, 30, 30, 0.7);
+    background: #1e1e1eb3;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
@@ -155,12 +155,21 @@ header.scrolled {
 }
 
 footer {
-    background: rgba(30, 30, 30, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    margin: 20px;
-    border: 0px solid rgba(30, 30, 30, 0.7);
+    background-color: #1e1e1eb3;
+    border: none;
     position: relative;
+    font-size: 0.75rem;
+    padding: 0.5rem 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+footer ul {
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+}
+footer ul li a svg {
+    width: 0rem;
+    height: 0rem;
 }
 
 .product-card {
@@ -415,11 +424,6 @@ button {
     
     h3 {
         font-size: 2rem;
-    }
-    
-    header, footer {
-        margin: 10px;
-        /* Eliminado border-radius para mantener forma rectangular en dispositivos móviles */
     }
 }
 

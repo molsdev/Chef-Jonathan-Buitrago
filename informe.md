@@ -81,3 +81,8 @@ Basado en el análisis de su modelo actual, se identifican varias oportunidades 
 *   **Servicios de Consultoría:** Su enfoque en el emprendimiento es un activo valioso. Formalizar y monetizar este conocimiento a través de consultorías personalizadas para aspirantes a dueños de pastelerías o emprendedores gastronómicos sería una extensión lógica de su marca. Esto no solo generaría un nuevo flujo de ingresos, sino que también reforzaría su posicionamiento como estratega de negocios en el sector culinario.
 
 Estas recomendaciones se basan en la premisa de que la fortaleza de su marca radica en su capacidad para educar y profesionalizar. La expansión debe seguir esta misma lógica, capitalizando su conocimiento en nuevos formatos y mercados para maximizar el valor y el alcance de su marca.
+
+(Chef pastelero chocolatero campeón en pastelería juvenil 2015 y Campeón en chocolatería 2018. Nominado a premios la barra a mejor pastelero de Bogotá 2019. Ha trabajado en reconocidos restaurantes como El Cielo del chef Juan Manuel Barrientos en la línea de repostería creativa. Maneja su empresa Cacao y sus talleres en Pastelería de Autor y Cacao Master Class.
+
+otro curso:
+Curso está enfocado para EMPRENDEDORES o futuros emprendedores del sector GASTRONOMICO (restaurante, pastelería, catering, comidas rápidas, ets) son cupos limitados por ser un curso virtual en vivo. estaremos manejando un formato de Excel modificable para los costos. el curso quedara gravado y se enviara al correo para que lo puedan descargar)
