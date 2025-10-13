@@ -1,134 +1,226 @@
-/* Agregar esta regla al inicio del archivo para definir la fuente Parisienne */
+/*
+ * ARCHIVO DE ESTILOS PRINCIPAL
+ * 
+ * Contiene todos los estilos personalizados del sitio web Chef Jonathan Buitrago
+ * Organizado en secciones para facilitar el mantenimiento
+ */
+
+/* 
+ * =============================================================================
+ * FONTS
+ * Estilos para fuentes personalizadas
+ * =============================================================================
+ */
+
+/* Fuente Parisienne para el nombre del chef */
 .parisienne-font {
     font-family: 'Parisienne', cursive;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    margin-bottom: 2.5rem;
-    padding: 10px 0 15px 0;
     line-height: 1.4;
     overflow: visible;
 }
 
-/* Unificación de animación y modo oscuro para selects y date */
-.custom-select, .custom-date .custom-textarea, input[type="date"], input[type="password"], input[type="text"], input[type="email"], input[type="tel"], textarea {
-    background: linear-gradient(90deg, #232526 0%, #414345 100%);
-    color: #ffb86b44;
-    border: 1px solid #ffb86b44;
+/* 
+ * =============================================================================
+ * FORM ELEMENTS
+ * Estilos para formularios y elementos de entrada
+ * =============================================================================
+ */
+
+/* Estilos unificados para selects, inputs de fecha y áreas de texto */
+.custom-select, 
+.custom-date, 
+.custom-textarea, 
+input[type="date"], 
+input[type="password"], 
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+textarea {
+    background: linear-gradient(145deg, #2d3748 0%, #1a202c 100%);
+    border: 1px solid #5ACD69;
     border-radius: 0.75rem;
     padding: 0.75rem 1rem;
-    font-size: 1.1rem;
     font-family: inherit;
-    box-shadow: 0 2px 8px rgba(251,191,36,0.08);
+    box-shadow: 0 2px 8px rgba(90, 205, 105, 0.08);
     transition: border 0.2s, box-shadow 0.2s, background 0.3s;
     outline: none;
 }
-.custom-select:focus, .custom-date:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="tel"]:focus, textarea:focus {
-    border-color: #ffb86b44;
-    box-shadow: 0 0 0 2px #ffb86b44;
-    background: linear-gradient(90deg, #232526 0%, #232526 100%);
-}
-.custom-select option {
-    color: #232526;
-    background: #ffb86b44;
+
+.custom-select:focus, 
+.custom-date:focus, 
+input[type="text"]:focus, 
+input[type="password"]:focus, 
+input[type="email"]:focus, 
+input[type="tel"]:focus, 
+textarea:focus {
+    border-color: #5ACD69;
+    box-shadow: 0 0 0 2px #5ACD69;
+    background: linear-gradient(90deg, #1a1a2e 0%, #1a1a2e 100%);
 }
 
-/* Forzar modo oscuro en el calendario nativo (Chrome/Edge/Webkit) */
-input[type="date"].custom-date::-webkit-calendar-picker-indicator {
-    filter: invert(1) brightness(0.8) sepia(1) hue-rotate(20deg) saturate(3);
+.custom-select option {
+    color: #1a1a2e;
+    background: #5ACD69;
 }
-input[type="date"].custom-date::-webkit-input-placeholder {
-    color: #ffb86b44;
-}
-input[type="date"].custom-date::-webkit-datetime-edit {
-    color: #ffb86b44;
-}
-input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(1) sepia(1) saturate(5) hue-rotate(10deg);
-    background-color: #ffb86b44;
-    border-radius: 50%;
-}
-input[type="date"].custom-date {
-    color-scheme: dark;
-}
-/* Selectores personalizados para reservas */
-.custom-select {
-    background: linear-gradient(90deg, #232526 0%, #414345 100%);
-    color: #ffb86b44;
-    border: 1.5px solid #ffb86b44;
-    border-radius: 0.75rem;
-    padding: 0.75rem 1rem;
-    font-size: 1.1rem;
-    font-family: inherit;
-    box-shadow: 0 2px 8px rgba(251,191,36,0.08);
-    transition: border 0.2s, box-shadow 0.2s;
-    appearance: none;
-    outline: none;
-}
+
 .custom-select:focus {
-    border-color: #ffb86b44;
-    box-shadow: 0 0 0 1px #fbbf24;
+    border-color: #5ACD69;
+    box-shadow: 0 0 0 1px #6A5ACD;
 }
+
 .custom-select option {
-    color: #ffb86b44;
-    background: #232526;
+    color: #5ACD69;
+    background: #1a1a2e;
 }
 
-.custom-textarea {
-    background: linear-gradient(90deg, #232526 0%, #414345 100%);
-    color: #ffb86b44;
-    border: 1.5px solid #ffb86b44;
-    border-radius: 0.75rem;
-    padding: 0.75rem 1rem;
-    font-size: 1.1rem;
-    font-family: inherit;
-    box-shadow: 0 2px 8px rgba(251,191,36,0.08);
-    transition: border 0.2s, box-shadow 0.2s;
-    appearance: none;
-    outline: none;
-}
-
-/* Calendario input de fecha personalizado */
-.custom-date {
-    background: linear-gradient(90deg, #232526 0%, #414345 100%);
-    color: #ffb86b44;
-    border: 0.3px solid #ffb86b44;
-    border-radius: 0.75rem;
-    padding: 0.75rem 1rem;
-    font-size: 1.1rem;
-    font-family: inherit;
-    box-shadow: 0 2px 8px rgba(251,191,36,0.08);
-    transition: border 0.2s, box-shadow 0.2s;
-    outline: none;
-}
 .custom-date:focus {
-    border-color: #ffb86b44;
-    box-shadow: 0 0 0 1px #ffb86b44;
+    border-color: #5ACD69;
+    box-shadow: 0 0 0 1px #5ACD69;
 }
-/* FAQ animación y accesibilidad */
+
+/* Estilos base para inputs, selects y textareas */
+input, select, textarea {
+    background: linear-gradient(145deg, #2d3748 0%, #1a202c 100%);
+    border: 1px solid #4a5568;
+    color: #e2e8f0;
+    transition: all 0.3s ease;
+    padding: 12px 16px;
+    border-radius: 8px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #5ACD69;
+    box-shadow: 0 0 0 3px rgba(90, 205, 105, 0.2);
+    outline: none;
+}
+
+/* 
+ * =============================================================================
+ * BUTTONS
+ * Estilos para botones
+ * =============================================================================
+ */
+
+button {
+    background: linear-gradient(145deg, #6A5ACD 0%, #CD695A 100%);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+/* Botones con degradado morado */
+.purple-gradient-button {
+    background: linear-gradient(145deg, #6A5ACD 0%, #CD695A 100%);
+    color: white;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.purple-gradient-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Botones con borde morado */
+.purple-border-button {
+    border: 2px solid #6A5ACD;
+    color: #6A5ACD;
+    background: transparent;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.purple-border-button:hover {
+    background: #6A5ACD;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Estilos para los botones de filtro */
+.filter-btn, .menu-filter {
+    border: 2px solid #4a5568;
+    color: #cbd5e0;
+    background: linear-gradient(145deg, #2d3748 0%, #1a202c 100%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.filter-btn:hover, .menu-filter:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.filter-btn.active, .menu-filter.active {
+    background: linear-gradient(145deg, #6A5ACD 0%, #CD695A 100%);
+    color: #ffffff;
+    border-color: #6A5ACD;
+    transform: translateY(-2px);
+}
+
+/* 
+ * =============================================================================
+ * FAQ SECTION
+ * Estilos para la sección de preguntas frecuentes
+ * =============================================================================
+ */
+
 .faq-answer {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
     will-change: max-height;
+    background: rgba(26, 32, 44, 0.7);
+    border-top: 1px solid #4a5568;
 }
-.faq-open {
-    max-height: 500px !important;
+
+.faq-question {
+    background: linear-gradient(145deg, #1a202c 0%, #1a1c2a 100%);
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    color: #e2e8f0;
+    cursor: pointer;
 }
-.faq-question:focus {
-    outline: 2px solid #f59e42;
-    outline-offset: 2px;
+
+.faq-question:hover {
+    background: linear-gradient(145deg, #2d3748 0%, #1a202c 100%);
 }
-.rotate-180 {
-    transform: rotate(180deg);
-    transition: transform 0.3s;
-}
-/* Estilos base */
+
+/* 
+ * =============================================================================
+ * BASE STYLES
+ * Estilos base para el sitio
+ * =============================================================================
+ */
 
 body {
     font-family: 'Inter', sans-serif;
-    background: #1f2937;
-    color: #e5e7eb;
+    background: #1a202c;
+    color: #e2e8f0;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -137,9 +229,38 @@ body {
     -ms-text-size-adjust: 100%;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif;
+a {
+    color: #cbd5e0;
+    transition: all 0.3s ease;
+    position: relative;
+    text-decoration: none;
 }
+
+a:hover {
+    color: #5ACD69;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #5ACD69;
+    transition: width 0.3s ease;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+/* 
+ * =============================================================================
+ * HEADER & FOOTER
+ * Estilos para encabezado y pie de página
+ * =============================================================================
+ */
 
 /* Estilos para modo oscuro más bonito con efecto acrílico */
 header, .mobile-menu {
@@ -167,26 +288,33 @@ header.scrolled {
 }
 
 footer {
-    background-color: #1e1e1eb3;
-    border: none;
+    background: linear-gradient(145deg, #2d3748 0%, #1a202c 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     position: relative;
-    font-size: 0.75rem;
-    padding: 0.5rem 0;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-}
-footer ul {
-    margin-top: 0.25rem;
-    margin-bottom: 0;
-}
-footer ul li a svg {
-    width: 0rem;
-    height: 0rem;
+    padding: 1rem 0;
 }
 
+footer ul li a {
+    color: #5ACD69;
+    transition: all 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #6A5ACD;
+}
+
+/* 
+ * =============================================================================
+ * CARDS & CONTAINERS
+ * Estilos para tarjetas y contenedores
+ * =============================================================================
+ */
+
 .product-card {
-    background: linear-gradient(145deg, #2d2d2d 0%, #1f1f1f 100%);
-    border: 1px solid #404040;
+    background: linear-gradient(145deg, #1a202c 0%, #1a1c2a 100%);
+    border: 1px solid #4a5568;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
     overflow: hidden;
@@ -195,31 +323,35 @@ footer ul li a svg {
     hyphens: auto;
     max-width: 100%;
     box-sizing: border-box;
-}
-
-.product-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(139, 69, 19, 0.1), transparent);
-    transition: left 0.5s;
-}
-
-.product-card:hover::before {
-    left: 100%;
+    padding: 2rem;
+    border-radius: 1rem;
 }
 
 .product-card:hover {
     transform: translateY(-12px) scale(1.03);
     box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-    border-color: #8B4513;
+    border-color: #6A5ACD;
 }
 
+/* Etiquetas de categoría con fondo morado */
+.purple-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: #CD695A;
+    color: #e8eaf6;
+    border-radius: 9999px;
+    font-weight: 500;
+}
+
+/* 
+ * =============================================================================
+ * HERO SECTION
+ * Estilos para la sección hero
+ * =============================================================================
+ */
+
 .hero-bg {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    background: linear-gradient(135deg, #2d2d2d 0%, #CD695A 100%);
     position: relative;
     overflow: hidden;
     padding: 4rem 1rem;
@@ -239,211 +371,164 @@ footer ul li a svg {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at center, rgba(139, 69, 19, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle at center, rgba(106, 90, 205, 0.1) 0%, transparent 70%);
     backdrop-filter: blur(10px);
 }
 
-@keyframes pulse {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 1; }
+/* 
+ * =============================================================================
+ * 3D CARD GALLERY
+ * Galería de tarjetas en perspectiva isométrica
+ * =============================================================================
+ */
+
+.perspective-container {
+    perspective: 2000px;
+    perspective-origin: center center;
 }
 
-@keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-.fade-in {
-    animation: fadeInUp 1s ease-out;
-}
-
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(40px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.menu-filter {
-    border: 2px solid #5a5a5a;
-    color: #d1d5db;
-    background: linear-gradient(145deg, #3a3a3a 0%, #2d2d2d 100%);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    white-space: normal;
-    word-wrap: break-word;
-    max-width: 100%;
-    box-sizing: border-box;
-    padding: 10px 20px;
-    border-radius: 50px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.menu-filter:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-
-.menu-filter.active {
-    background: linear-gradient(145deg, #8B4513 0%, #654321 100%);
-    color: #ffffff;
-    border-color: #8B4513;
-    transform: translateY(-2px);
-}
-
-.parallax {
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    filter: contrast(1.1) brightness(0.8);
-}
-
-a {
-    color: #d1d5db;
-    transition: all 0.3s ease;
-    position: relative;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #8B4513;
-}
-
-a::after {
-    content: '';
+.card-3d {
     position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #8B4513;
-    transition: width 0.3s ease;
+    transform-style: preserve-3d;
 }
 
-a:hover::after {
-    width: 100%;
+.card-3d img {
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    width: 200px;
+    height: 280px;
+    object-fit: cover;
 }
 
-/* Estilos para formularios */
-input, select, textarea {
-    background: linear-gradient(145deg, #3a3a3a 0%, #2d2d2d 100%);
-    border: 1px solid #5a5a5a;
-    color: #e5e7eb;
-    transition: all 0.3s ease;
-    padding: 12px 16px;
-    border-radius: 8px;
-    max-width: 100%;
-    box-sizing: border-box;
-    font-size: 1rem;
+.card-3d:hover {
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
 }
 
-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23e5e7eb" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 12px;
-    padding-right: 40px;
+/* Responsive para tablets */
+@media (max-width: 1024px) {
+    .perspective-container {
+        height: 500px !important;
+    }
+    
+    .card-3d img {
+        width: 150px;
+        height: 210px;
+    }
+    
+    /* Ajustar posiciones para tablets */
+    .card-3d:nth-child(1) { transform: rotateX(55deg) rotateZ(-45deg) translateX(300px) translateY(120px) translateZ(-80px) !important; }
+    .card-3d:nth-child(2) { transform: rotateX(55deg) rotateZ(-45deg) translateX(40px) translateY(350px) translateZ(-70px) !important; }
+    .card-3d:nth-child(3) { transform: rotateX(55deg) rotateZ(-45deg) translateX(200px) translateY(330px) translateZ(-55px) !important; }
+    .card-3d:nth-child(4) { transform: rotateX(55deg) rotateZ(-45deg) translateX(90px) translateY(110px) translateZ(-70px) !important; }
+    .card-3d:nth-child(5) { transform: rotateX(55deg) rotateZ(-45deg) translateX(-70px) translateY(160px) translateZ(-80px) !important; }
 }
 
-input:focus, select:focus, textarea:focus {
-    border-color: #8B4513;
-    box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.2);
-    outline: none;
-}
-
-button {
-    background: linear-gradient(145deg, #8B4513 0%, #654321 100%);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    color: #ffffff;
-}
-
-/* Estilos adicionales para los botones de filtro */
-.filter-btn {
-    border: 2px solid #5a5a5a;
-    color: #d1d5db;
-    background: linear-gradient(145deg, #3a3a3a 0%, #2d2d2d 100%);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    white-space: normal;
-    word-wrap: break-word;
-    max-width: 100%;
-    box-sizing: border-box;
-    padding: 10px 20px;
-    border-radius: 50px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.filter-btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-
-.filter-btn.active {
-    background: linear-gradient(145deg, #8B4513 0%, #654321 100%);
-    color: #ffffff;
-    border-color: #8B4513;
-    transform: translateY(-2px);
-}
-
-/* Estilos para las preguntas frecuentes */
-.faq-question {
-    background: linear-gradient(145deg, #2d2d2d 0%, #1f1f1f 100%);
-    border: none;
-    width: 100%;
-    text-align: left;
-}
-
-.faq-question:hover {
-    background: linear-gradient(145deg, #3a3a3a 0%, #2d2d2d 100%);
-}
-
-.faq-answer {
-    background: rgba(30, 30, 30, 0.7);
-    border-top: 1px solid #404040;
-}
-
-/* Decorative line */
-.decorative-line {
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #8B4513, transparent);
-}
-
-/* Responsive fixes */
+/* Responsive para móviles */
 @media (max-width: 768px) {
-    .hero-bg {
-        min-height: 80vh;
+    .perspective-container {
+        height: 350px !important;
     }
     
-    .product-card {
-        max-width: 100%;
+    .card-3d img {
+        width: 100px;
+        height: 140px;
     }
     
-    h3 {
-        font-size: 2rem;
+    /* Ajustar posiciones para móviles - más compactas */
+    .card-3d:nth-child(1) { transform: rotateX(55deg) rotateZ(-45deg) translateX(200px) translateY(80px) translateZ(-50px) !important; }
+    .card-3d:nth-child(2) { transform: rotateX(55deg) rotateZ(-45deg) translateX(30px) translateY(240px) translateZ(-45px) !important; }
+    .card-3d:nth-child(3) { transform: rotateX(55deg) rotateZ(-45deg) translateX(135px) translateY(225px) translateZ(-35px) !important; }
+    .card-3d:nth-child(4) { transform: rotateX(55deg) rotateZ(-45deg) translateX(60px) translateY(75px) translateZ(-45px) !important; }
+    .card-3d:nth-child(5) { transform: rotateX(55deg) rotateZ(-45deg) translateX(-45px) translateY(110px) translateZ(-50px) !important; }
+}
+
+/* Responsive para móviles pequeños */
+@media (max-width: 480px) {
+    .perspective-container {
+        height: 250px !important;
     }
+    
+    .card-3d img {
+        width: 70px;
+        height: 100px;
+    }
+    
+    /* Posiciones aún más compactas */
+    .card-3d:nth-child(1) { transform: rotateX(55deg) rotateZ(-45deg) translateX(140px) translateY(60px) translateZ(-35px) !important; }
+    .card-3d:nth-child(2) { transform: rotateX(55deg) rotateZ(-45deg) translateX(20px) translateY(170px) translateZ(-30px) !important; }
+    .card-3d:nth-child(3) { transform: rotateX(55deg) rotateZ(-45deg) translateX(95px) translateY(160px) translateZ(-25px) !important; }
+    .card-3d:nth-child(4) { transform: rotateX(55deg) rotateZ(-45deg) translateX(42px) translateY(55px) translateZ(-30px) !important; }
+    .card-3d:nth-child(5) { transform: rotateX(55deg) rotateZ(-45deg) translateX(-30px) translateY(80px) translateZ(-35px) !important; }
 }
 
-/* Animaciones adicionales */
+/* 
+ * =============================================================================
+ * UTILITY CLASSES
+ * Clases de utilidad
+ * =============================================================================
+ */
 
-/* Estilos para el área de miembros */
-.progress-bar {
-    height: 8px;
-    background-color: #4b5563;
-    border-radius: 4px;
-    overflow: hidden;
-}
-
+/* Barra de progreso */
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #8B4513, #654321);
+    background: linear-gradient(90deg, #6A5ACD, #CD695A);
     border-radius: 4px;
     transition: width 0.3s ease;
 }
 
+/* Colores */
+.text-purple-light {
+    color: #5ACD69;
+}
+
+.text-purple-medium {
+    color: #6A5ACD;
+}
+
+.text-purple-dark {
+    color: #CD695A;
+}
+
+/* Fondos */
+.bg-purple-light {
+    background-color: #5ACD69;
+}
+
+.bg-purple-medium {
+    background-color: #6A5ACD;
+}
+
+.bg-purple-dark {
+    background-color: #CD695A;
+}
+
+/* Colores Degradados */
+.text-gradient-purple-light {
+    color: #5ACD69;
+}
+
+.text-gradient-purple-medium {
+    color: #6A5ACD;
+}
+
+.text-gradient-purple-dark {
+    color: #CD695A;
+}
+
+/* Fondos Degradados */
+.bg-gradient-purple {
+    background: linear-gradient(145deg, #6A5ACD 0%, #5ACD69 100%);
+}
+
+.bg-gradient-purple-light {
+    background: linear-gradient(145deg, #5ACD69 0%, #6A5ACD 100%);
+}
+
+.bg-gradient-purple-dark {
+    background: linear-gradient(145deg, #5ACD69 0%, #6A5ACD 100%);
+}
+
+/* Enlaces con efecto hover morado */
+.hover-text-purple:hover {
+    color: #6A5ACD;
+}
