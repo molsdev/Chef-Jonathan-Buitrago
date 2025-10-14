@@ -31,7 +31,7 @@
         <div id="mobile-menu" class="hidden rounded-lg md:hidden ">
             <a href="informacion.html" class="block py-3 px-4 hover:bg-gray-700 transition-all">Información</a>
             <a href="catalogo.html" class="block py-3 px-4 hover:bg-gray-700 transition-all">Catálogo</a>
-            <a href="registro.html" class="block py-3 px-4 hover:bg-gray-700 transition-all">Inicio de Sesión</a>
+            <a href="registro.html" class="block py-3 px-4 hover:bg-gray-700 transition-all">Mi Cuenta</a>
         </div>
     </header>
     <script>
@@ -41,13 +41,13 @@
     </script>
 
     <!-- HERO con 5 imágenes acostadas en perspectiva -->
-    <section class="relative py-20 overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
+    <section class="relative py-36 overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12">
             <!-- Texto -->
-            <div class="max-w-xl text-center lg:text-left z-10">
+            <div class="max-w-xl text-center lg:text-left">
                 <h1 class="text-4xl sm:text-5xl font-bold text-white leading-tight">
                     Bienvenidos a<br>
-                    <span class="py-24 parisienne-font text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-green-400 text-5xl sm:text-6xl">Chef Jonathan Buitrago</span>
+                    <span class="parisienne-font text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-green-400 text-5xl sm:text-6xl">Chef Jonathan Buitrago</span>
                 </h1>
                 <p class="mt-6 text-gray-300 text-base leading-relaxed">
                     Cursos especializados y asesorías personalizadas, donde el conocimiento y la pasión se unen en cada experiencia culinaria.
@@ -62,31 +62,32 @@
                 </div>
             </div>
 
-            <!-- Imágenes 3D en perspectiva isométrica -->
-            <div class="relative w-full lg:w-1/2 h-[600px] perspective-container">
-                <!-- Imagen 3 - Centro (la más adelante) -->
-                <div class="card-3d" style="transform: rotateX(55deg) rotateZ(-45deg) translateX(400px) translateY(150px) translateZ(-100px);">
-                    <img src="img/chef_jonathan_buitrago_post_6_5_2020_16_55_032303361445882305805.jpg" alt="Foto pintando choco" />
+
+            <!-- Imágenes 3D -->
+            <div class="relative w-full lg:w-1/2 h-[500px] perspective-1000">
+                <div class="absolute bottom-0 left-0 tilt" style="transform: rotateX(60deg) rotateY(-15deg) rotateZ(-25deg) translateX(-200px) translateY(50px) translateZ(100px);">
+                    <img src="img/chef_jonathan_buitrago_post_12_5_2024_10_07_303366402308047578586.jpg"
+                        alt="Foto 1" class="rounded-xl shadow-2xl w-48 sm:w-56 lg:w-64" />
                 </div>
 
-                <!-- Imagen 2 - Centro izquierda -->
-                <div class="card-3d" style="transform: rotateX(55deg) rotateZ(-45deg) translateX(50px) translateY(450px) translateZ(-90px);">
-                    <img src="img/chef_jonathan_buitrago_post_31_1_2019_8_14_541968978031674666525.jpg" alt="Foto pincel" />
+                <div class="absolute bottom-0 left-0 tilt" style="transform: rotateX(60deg) rotateY(-15deg) rotateZ(-25deg) translateX(-100px) translateY(50px) translateZ(50px);">
+                    <img src="img/chef_jonathan_buitrago_post_10_1_2019_9_40_511953801005171047268.jpg"
+                        alt="Foto 2" class="rounded-xl shadow-2xl w-48 sm:w-60 lg:w-64" />
                 </div>
 
-                <!-- Imagen 1 - Izquierda atrás -->
-                <div class="card-3d" style="transform: rotateX(55deg) rotateZ(-45deg) translateX(270px) translateY(430px) translateZ(-70px);">
-                    <img src="img/chef_jonathan_buitrago_post_12_5_2024_10_07_303366402308047578586.jpg" alt="Foto grupo" />
+                <div class="absolute bottom-0 left-0 tilt" style="transform: rotateX(60deg) rotateY(-15deg) rotateZ(-25deg) translateX(0px) translateY(50px) translateZ(150px);">
+                    <img src="img/chef_jonathan_buitrago_post_26_12_2020_9_43_492472741914821278266.jpg"
+                        alt="Foto 3" class="rounded-xl shadow-2xl w-44 sm:w-56 lg:w-64" />
                 </div>
 
-                <!-- Imagen 4 - Centro derecha -->
-                <div class="card-3d" style="transform: rotateX(55deg) rotateZ(-45deg) translateX(120px) translateY(140px) translateZ(-90px);">
-                    <img src="img/chef_jonathan_buitrago_post_26_12_2020_9_43_492472741914821278266.jpg" alt="Foto mapis" />
+                <div class="absolute bottom-0 left-0 tilt" style="transform: rotateX(60deg) rotateY(-15deg) rotateZ(-25deg) translateX(100px) translateY(50px) translateZ(0px);">
+                    <img src="img/chef_jonathan_buitrago_post_6_5_2020_16_55_032303361445882305805.jpg"
+                        alt="Foto 4" class="rounded-xl shadow-2xl w-48 sm:w-60 lg:w-64" />
                 </div>
 
-                <!-- Imagen 5 - Derecha atrás -->
-                <div class="card-3d" style="transform: rotateX(55deg) rotateZ(-45deg) translateX(-90px) translateY(200px) translateZ(-100px);">
-                    <img src="img/496111223_17856154635425468_7343611633678842645_n.jpeg" alt="Foto mordisco" />
+                <div class="absolute bottom-0 left-0 tilt" style="transform: rotateX(60deg) rotateY(-15deg) rotateZ(-25deg) translateX(200px) translateY(50px) translateZ(200px);">
+                    <img src="img/496111223_17856154635425468_7343611633678842645_n.jpeg"
+                        alt="Foto 5" class="rounded-xl shadow-2xl w-44 sm:w-56 lg:w-64" />
                 </div>
             </div>
         </div>
@@ -122,15 +123,15 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer simplificado -->
     <footer class="border-t border-white-700 py-4">
         <div class="w-full mx-auto max-w-screen-xl p-2 flex flex-col sm:flex-row items-center justify-between">
             <span class="text-xs text-gray-400">
-                © 2025 <a href="index.html" class="text-white parisienne-font hover:text-purple-500">Chef Jonathan Buitrago</a>. Todos los derechos reservados.
+                © 2025 <a href="index.html" class="hover:text-purple-500">Chef Jonathan Buitrago</a>. Todos los derechos reservados.
             </span>
             <ul class="flex space-x-4 items-center mt-2 sm:mt-0 text-xs">
                 <!--Instagram-->
-                <li><a href="https://www.instagram.com/chef_jonathan_buitrago/" target="_blank" class="text-gray-400 hover:text-amber-500 transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441c.795 0 1.439-.645 1.439-1.441s-.644-1.44-1.439-1.44z"/></svg></a></li>                
+                <li><a href="https://www.instagram.com/chef_jonathan_buitrago/" target="_blank" class="text-gray-400 hover:text-purple-500 transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441c.795 0 1.439-.645 1.439-1.441s-.644-1.44-1.439-1.44z"/></svg></a></li>
                 <!--Facebook-->
                 <li><a href="https://www.facebook.com/jonathan.buitrago.5851?locale=es_LA" target="_blank" class="text-gray-400 hover:text-purple-500 transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 320 512"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg></a></li>
                 <!--WhatsApp-->
@@ -140,7 +141,6 @@
             </ul>
         </div>
     </footer>
-    
     <script src="script.js"></script>
 </body>
 </html>

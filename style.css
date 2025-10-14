@@ -40,11 +40,11 @@ input[type="email"],
 input[type="tel"], 
 textarea {
     background: linear-gradient(145deg, #2d3748 0%, #1a202c 100%);
-    border: 1px solid #5ACD69;
+    border: 1px solid #00520b;
     border-radius: 0.75rem;
     padding: 0.75rem 1rem;
     font-family: inherit;
-    box-shadow: 0 2px 8px rgba(90, 205, 105, 0.08);
+    box-shadow: 0 2px 8px #00520b14;
     transition: border 0.2s, box-shadow 0.2s, background 0.3s;
     outline: none;
 }
@@ -56,30 +56,17 @@ input[type="password"]:focus,
 input[type="email"]:focus, 
 input[type="tel"]:focus, 
 textarea:focus {
-    border-color: #5ACD69;
-    box-shadow: 0 0 0 2px #5ACD69;
+    border-color: #00520b;
+    box-shadow: 0 0 0 2px #1f1080;
     background: linear-gradient(90deg, #1a1a2e 0%, #1a1a2e 100%);
 }
 
 .custom-select option {
     color: #1a1a2e;
-    background: #5ACD69;
+    background: #00520b;
 }
 
-.custom-select:focus {
-    border-color: #5ACD69;
-    box-shadow: 0 0 0 1px #6A5ACD;
-}
 
-.custom-select option {
-    color: #5ACD69;
-    background: #1a1a2e;
-}
-
-.custom-date:focus {
-    border-color: #5ACD69;
-    box-shadow: 0 0 0 1px #5ACD69;
-}
 
 /* Estilos base para inputs, selects y textareas */
 input, select, textarea {
@@ -94,7 +81,7 @@ input, select, textarea {
 }
 
 input:focus, select:focus, textarea:focus {
-    border-color: #5ACD69;
+    border-color: #00520b;
     box-shadow: 0 0 0 3px rgba(90, 205, 105, 0.2);
     outline: none;
 }
@@ -107,7 +94,7 @@ input:focus, select:focus, textarea:focus {
  */
 
 button {
-    background: linear-gradient(145deg, #6A5ACD 0%, #CD695A 100%);
+    background: linear-gradient(145deg, #1f1080 0%, #962b1b 100%);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -120,7 +107,7 @@ button {
 
 /* Botones con degradado morado */
 .purple-gradient-button {
-    background: linear-gradient(145deg, #6A5ACD 0%, #CD695A 100%);
+    background: linear-gradient(145deg, #1f1080 0%, #962b1b 100%);
     color: white;
     font-weight: 600;
     border-radius: 0.5rem;
@@ -136,8 +123,8 @@ button {
 
 /* Botones con borde morado */
 .purple-border-button {
-    border: 2px solid #6A5ACD;
-    color: #6A5ACD;
+    border: 2px solid #5040b9;
+    color: white;
     background: transparent;
     font-weight: 600;
     border-radius: 0.5rem;
@@ -145,7 +132,8 @@ button {
 }
 
 .purple-border-button:hover {
-    background: #6A5ACD;
+    border: 2px solid #1f1080;
+    background: #1f1080;
     color: white;
     transform: translateY(-2px);
 }
@@ -174,9 +162,9 @@ button {
 }
 
 .filter-btn.active, .menu-filter.active {
-    background: linear-gradient(145deg, #6A5ACD 0%, #CD695A 100%);
+    background: transparent;
     color: #ffffff;
-    border-color: #6A5ACD;
+    border-color: #7c7c7c;
     transform: translateY(-2px);
 }
 
@@ -231,24 +219,15 @@ body {
 
 a {
     color: #cbd5e0;
-    transition: all 0.3s ease;
     position: relative;
     text-decoration: none;
 }
 
 a:hover {
-    color: #5ACD69;
-}
-
-a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #5ACD69;
-    transition: width 0.3s ease;
+    font-style: italic;
+    transform: scale(1.05);
+    color: #00520b;
+    transition: all 0.8s ease;
 }
 
 a:hover::after {
@@ -288,21 +267,12 @@ header.scrolled {
 }
 
 footer {
-    background: linear-gradient(145deg, #2d3748 0%, #1a202c 100%);
+    background: #1e1e1eb3;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.08);
     position: relative;
     padding: 1rem 0;
-}
-
-footer ul li a {
-    color: #5ACD69;
-    transition: all 0.3s ease;
-}
-
-footer ul li a:hover {
-    color: #6A5ACD;
 }
 
 /* 
@@ -321,7 +291,7 @@ footer ul li a:hover {
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     word-wrap: break-word;
     hyphens: auto;
-    max-width: 100%;
+    max-height: 100%;
     box-sizing: border-box;
     padding: 2rem;
     border-radius: 1rem;
@@ -329,15 +299,15 @@ footer ul li a:hover {
 
 .product-card:hover {
     transform: translateY(-12px) scale(1.03);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-    border-color: #6A5ACD;
+    box-shadow: 0 10px 20px #1f1080;
+    border-color: #1f1080;
 }
 
 /* Etiquetas de categoría con fondo morado */
 .purple-tag {
     display: inline-block;
     padding: 0.25rem 0.75rem;
-    background: #CD695A;
+    background: #962b1b;
     color: #e8eaf6;
     border-radius: 9999px;
     font-weight: 500;
@@ -351,7 +321,7 @@ footer ul li a:hover {
  */
 
 .hero-bg {
-    background: linear-gradient(135deg, #2d2d2d 0%, #CD695A 100%);
+    background: linear-gradient(135deg, #2d2d2d 0%, #962b1b 100%);
     position: relative;
     overflow: hidden;
     padding: 4rem 1rem;
@@ -471,64 +441,107 @@ footer ul li a:hover {
 /* Barra de progreso */
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #6A5ACD, #CD695A);
+    background: linear-gradient(90deg, #1f1080, #962b1b);
     border-radius: 4px;
     transition: width 0.3s ease;
 }
 
 /* Colores */
-.text-purple-light {
-    color: #5ACD69;
+.text-green {
+    color: #00520b;
 }
 
-.text-purple-medium {
-    color: #6A5ACD;
+.text-purple {
+    color: #1f1080;
 }
 
-.text-purple-dark {
-    color: #CD695A;
+.text-red {
+    color: #962b1b;
 }
 
 /* Fondos */
-.bg-purple-light {
-    background-color: #5ACD69;
+.bg-green {
+    background-color: #00520b;
 }
 
-.bg-purple-medium {
-    background-color: #6A5ACD;
+.bg-purple {
+    background-color: #1f1080;
 }
 
-.bg-purple-dark {
-    background-color: #CD695A;
+.bg-red {
+    background-color: #962b1b;
 }
 
 /* Colores Degradados */
-.text-gradient-purple-light {
-    color: #5ACD69;
+.text-gradient-green-to-purple {
+    background: linear-gradient(145deg, #00520b 0%, #1f1080 100%);
 }
 
-.text-gradient-purple-medium {
-    color: #6A5ACD;
+.text-gradient-green-to-red {
+    background: linear-gradient(145deg, #00520b 0%, #962b1b 100%);
 }
 
-.text-gradient-purple-dark {
-    color: #CD695A;
+.text-gradient-purple-to-green {
+    background: linear-gradient(145deg, #1f1080 0%, #00520b 100%);
+}
+
+.text-gradient-purple-to-red {
+    background: linear-gradient(145deg, #1f1080 0%, #962b1b 100%);
+}
+
+.text-gradient-red-to-green {
+    background: linear-gradient(145deg, #962b1b 0%, #00520b 100%);
+}
+
+.text-gradient-red-to-purple {
+    background: linear-gradient(145deg, #962b1b 0%, #1f1080 100%);
 }
 
 /* Fondos Degradados */
-.bg-gradient-purple {
-    background: linear-gradient(145deg, #6A5ACD 0%, #5ACD69 100%);
+.bg-gradient-green-purple-green {
+    background: linear-gradient(145deg, #00520b 0%, #1f1080 100%);
 }
 
-.bg-gradient-purple-light {
-    background: linear-gradient(145deg, #5ACD69 0%, #6A5ACD 100%);
+.bg-gradient-green-to-purple {
+    background: linear-gradient(145deg, #00520b 0%, #1f1080 100%);
 }
 
-.bg-gradient-purple-dark {
-    background: linear-gradient(145deg, #5ACD69 0%, #6A5ACD 100%);
+.bg-gradient-green-to-red {
+    background: linear-gradient(145deg, #00520b 0%, #962b1b 100%);
 }
 
-/* Enlaces con efecto hover morado */
-.hover-text-purple:hover {
-    color: #6A5ACD;
+.bg-gradient-purple-to-green {
+    background: linear-gradient(145deg, #1f1080 0%, #00520b 100%);
+}
+
+.bg-gradient-purple-to-red {
+    background: linear-gradient(145deg, #1f1080 0%, #962b1b 100%);
+}
+
+.bg-gradient-red-to-green {
+    background: linear-gradient(145deg, #962b1b 0%, #00520b 100%);
+}
+
+.bg-gradient-red-to-purple {
+    background: linear-gradient(145deg, #962b1b 0%, #1f1080 100%);
+}
+
+/* Enlaces con efecto hover */
+.text-green:hover {
+    color: #1f1080;
+}
+
+.text-purple:hover {
+    color: #962b1b;
+}
+
+.text-red:hover {
+    color: #00520b;
+}
+
+.video-container{
+    width: 560px;
+    height: 315px;
+    border-radius: 0.75rem;
+    position: center;
 }

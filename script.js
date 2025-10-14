@@ -23,18 +23,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const reservationType = document.getElementById('reservation-type');
     const courseSelection = document.getElementById('course-selection');
     const advisorySelection = document.getElementById('advisory-selection');
+    const eventSelection = document.getElementById('event-selection');
 
     if (reservationType) {
         reservationType.addEventListener('change', function() {
             if (this.value === 'curso') {
                 courseSelection.style.display = 'block';
                 advisorySelection.style.display = 'none';
+                eventSelection.style.display = 'none';
             } else if (this.value === 'asesoria') {
                 courseSelection.style.display = 'none';
                 advisorySelection.style.display = 'block';
+                eventSelection.style.display = 'none';
+            } else if (this.value === 'evento') {
+                courseSelection.style.display = 'none';
+                advisorySelection.style.display = 'none';
+                eventSelection.style.display = 'block';
             } else {
                 courseSelection.style.display = 'none';
                 advisorySelection.style.display = 'none';
+                eventSelection.style.display = 'none';
             }
         });
     }
