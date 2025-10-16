@@ -41,7 +41,7 @@
     </script>
 
     <!-- HERO con 5 imágenes acostadas en perspectiva -->
-    <section class="relative py-36 overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
+    <section class="hero-bg relative py-36 overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12">
             <!-- Texto -->
             <div class="max-w-xl text-center lg:text-left">
@@ -63,31 +63,31 @@
             </div>
 
 
-            <!-- Imágenes 3D -->
-            <div class="relative w-full lg:w-1/2 h-[500px] perspective-1000">
-                <div class="absolute bottom-0 left-0 tilt" style="transform: rotateX(60deg) rotateY(-15deg) rotateZ(-25deg) translateX(-200px) translateY(50px) translateZ(100px);">
-                    <img src="img/chef_jonathan_buitrago_post_12_5_2024_10_07_303366402308047578586.jpg"
-                        alt="Foto 1" class="rounded-xl shadow-2xl w-48 sm:w-56 lg:w-64" />
+              <!-- Imágenes 3D en perspectiva isométrica -->
+            <div class="relative w-full lg:w-1/2 h-[600px] perspective-container">
+                <!-- Imagen 3 - Centro (la más adelante) -->
+                <div class="card-3d" style="transform: rotateX(55deg) rotateZ(-45deg) translateX(400px) translateY(150px) translateZ(-100px);">
+                    <img src="img/chef_jonathan_buitrago_post_6_5_2020_16_55_032303361445882305805.jpg" alt="Foto pintando choco" />
                 </div>
 
-                <div class="absolute bottom-0 left-0 tilt" style="transform: rotateX(60deg) rotateY(-15deg) rotateZ(-25deg) translateX(-100px) translateY(50px) translateZ(50px);">
-                    <img src="img/chef_jonathan_buitrago_post_10_1_2019_9_40_511953801005171047268.jpg"
-                        alt="Foto 2" class="rounded-xl shadow-2xl w-48 sm:w-60 lg:w-64" />
+                <!-- Imagen 2 - Centro izquierda -->
+                <div class="card-3d" style="transform: rotateX(55deg) rotateZ(-45deg) translateX(50px) translateY(450px) translateZ(-90px);">
+                    <img src="img/chef_jonathan_buitrago_post_31_1_2019_8_14_541968978031674666525.jpg" alt="Foto pincel" />
                 </div>
 
-                <div class="absolute bottom-0 left-0 tilt" style="transform: rotateX(60deg) rotateY(-15deg) rotateZ(-25deg) translateX(0px) translateY(50px) translateZ(150px);">
-                    <img src="img/chef_jonathan_buitrago_post_26_12_2020_9_43_492472741914821278266.jpg"
-                        alt="Foto 3" class="rounded-xl shadow-2xl w-44 sm:w-56 lg:w-64" />
+                <!-- Imagen 1 - Izquierda atrás -->
+                <div class="card-3d" style="transform: rotateX(55deg) rotateZ(-45deg) translateX(270px) translateY(430px) translateZ(-70px);">
+                    <img src="img/chef_jonathan_buitrago_post_12_5_2024_10_07_303366402308047578586.jpg" alt="Foto grupo" />
                 </div>
 
-                <div class="absolute bottom-0 left-0 tilt" style="transform: rotateX(60deg) rotateY(-15deg) rotateZ(-25deg) translateX(100px) translateY(50px) translateZ(0px);">
-                    <img src="img/chef_jonathan_buitrago_post_6_5_2020_16_55_032303361445882305805.jpg"
-                        alt="Foto 4" class="rounded-xl shadow-2xl w-48 sm:w-60 lg:w-64" />
+                <!-- Imagen 4 - Centro derecha -->
+                <div class="card-3d" style="transform: rotateX(55deg) rotateZ(-45deg) translateX(120px) translateY(140px) translateZ(-90px);">
+                    <img src="img/chef_jonathan_buitrago_post_26_12_2020_9_43_492472741914821278266.jpg" alt="Foto mapis" />
                 </div>
 
-                <div class="absolute bottom-0 left-0 tilt" style="transform: rotateX(60deg) rotateY(-15deg) rotateZ(-25deg) translateX(200px) translateY(50px) translateZ(200px);">
-                    <img src="img/496111223_17856154635425468_7343611633678842645_n.jpeg"
-                        alt="Foto 5" class="rounded-xl shadow-2xl w-44 sm:w-56 lg:w-64" />
+                <!-- Imagen 5 - Derecha atrás -->
+                <div class="card-3d" style="transform: rotateX(55deg) rotateZ(-45deg) translateX(-90px) translateY(200px) translateZ(-100px);">
+                    <img src="img/496111223_17856154635425468_7343611633678842645_n.jpeg" alt="Foto mordisco" />
                 </div>
             </div>
         </div>
