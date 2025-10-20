@@ -420,6 +420,177 @@ footer {
 
 /* 
  * =============================================================================
+ * RESPONSIVE CURSOS DESTACADOS
+ * Layout especial: 2 arriba, 1 abajo en móviles - TODO más pequeño
+ * =============================================================================
+ */
+
+/* Móviles - 2 arriba, 1 abajo */
+@media (max-width: 768px) {
+    /* Cambiar el grid a 2 columnas */
+    .grid.md\:grid-cols-3 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem !important;
+    }
+    
+    /* Hacer TODO más pequeño */
+    .product-card {
+        padding: 0.75rem !important;
+    }
+    
+    .product-card h4 {
+        font-size: 1rem !important;
+        margin-bottom: 0.5rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    .product-card p {
+        font-size: 0.75rem !important;
+        margin-bottom: 0.5rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    .product-card img {
+        height: auto !important;
+        position: center;
+        object-fit: cover;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    /* Badges más pequeños */
+    .product-card span.inline-block {
+        font-size: 0.65rem !important;
+        padding: 0.15rem 0.5rem !important;
+    }
+    
+    /* Precio y duración más pequeños */
+    .product-card .text-amber-500 {
+        font-size: 0.875rem !important;
+    }
+    
+    .product-card .text-gray-400 {
+        font-size: 0.7rem !important;
+    }
+    
+    /* Iconos y detalles más pequeños */
+    .product-card svg {
+        height: 0.875rem !important;
+        width: 0.875rem !important;
+    }
+    
+    .product-card .flex.items-center {
+        font-size: 0.7rem !important;
+        margin-bottom: 0.25rem !important;
+    }
+    
+    /* Botones más pequeños */
+    .product-card .flex.space-x-3 {
+        gap: 0.5rem !important;
+    }
+    
+    .product-card a {
+        padding: 0.5rem 0.25rem !important;
+        font-size: 0.75rem !important;
+    }
+    
+    /* Espaciados generales */
+    .product-card .mb-4 {
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .product-card .mb-3 {
+        margin-bottom: 0.5rem !important;
+    }
+    
+    /* Título de sección */
+    .text-4xl {
+        font-size: 1.5rem !important;
+    }
+    
+    .py-24 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    .mb-16 {
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .container.mx-auto {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+
+/* Móviles pequeños - Aún más compacto */
+@media (max-width: 480px) {
+    .product-card {
+        padding: 0.5rem !important;
+    }
+    
+    .product-card h4 {
+        font-size: 0.875rem !important;
+    }
+    
+    .product-card p {
+        font-size: 0.7rem !important;
+    }
+    
+    .product-card img {
+        height: auto !important;
+    }
+    
+    .product-card a {
+        padding: 0.4rem 0.2rem !important;
+        font-size: 0.7rem !important;
+    }
+    
+    .product-card .text-amber-500 {
+        font-size: 0.8rem !important;
+    }
+    
+    .product-card span.inline-block {
+        font-size: 0.6rem !important;
+        padding: 0.1rem 0.4rem !important;
+    }
+}
+
+/* Tablets - más compacto */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Iconos y detalles más pequeños */
+    .product-card svg {
+        height: 0.875rem !important;
+        width: 0.875rem !important;
+    }
+    
+    .product-card .flex.items-center {
+        font-size: 0.7rem !important;
+        margin-bottom: 0.25rem !important;
+    }
+    
+    /* Botones más pequeños */
+    .product-card .flex.space-x-3 {
+        gap: auto !important;
+    }.product-card {
+        padding: 1rem !important;
+    }
+    
+    .product-card img {
+        height: auto !important;
+        object-fit: cover;
+    }
+    
+    .product-card h4 {
+        font-size: 1.25rem !important;
+    }
+    
+    .product-card p {
+        font-size: 0.875rem !important;
+    }
+}
+
+/* 
+ * =============================================================================
  * UTILITY CLASSES
  * Clases de utilidad
  * =============================================================================
