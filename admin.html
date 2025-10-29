@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-language" content="es">
+    <title>Chef Jonathan Buitrago - Panel de Administración</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="shadow-lg rounded-lg backdrop-blur">
+        <div class="container mx-auto px-6 py-5 flex justify-between items-center">
+            <h1 class="text-2xl parisienne-font bg-gradient-to-r from-purple-900 to-purple-600 bg-clip-text">
+                <a href="index.html">Chef Jonathan Buitrago</a>
+            </h1>
+            <nav class="hidden md:flex items-center space-x-10">
+                <a href="index.html" class="hover:text-purple-500 transition-colors">Inicio</a>
+                <a href="registro.html" class="hover:text-purple-500 transition-colors">Cerrar Sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Dashboard -->
+    <section class="py-24 bg-gray-900 min-h-screen">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center mb-16 text-white">Panel de Administración</h3>
+
+            <!-- Módulo 1: Gestión de Usuarios -->
+            <div class="mb-12">
+                <h4 class="text-2xl font-semibold mb-6 text-purple-400">Módulo 1: Gestión de Usuarios</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h5 class="text-lg font-semibold mb-4">Crear Usuario</h5>
+                        <form id="create-user-form">
+                            <input type="text" placeholder="Nombre" class="w-full mb-2 p-2 bg-gray-700 rounded" required>
+                            <input type="email" placeholder="Email" class="w-full mb-2 p-2 bg-gray-700 rounded" required>
+                            <input type="password" placeholder="Contraseña" class="w-full mb-4 p-2 bg-gray-700 rounded" required>
+                            <button type="submit" class="w-full bg-purple-600 py-2 rounded hover:bg-purple-700">Crear</button>
+                        </form>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h5 class="text-lg font-semibold mb-4">Consultar Usuarios</h5>
+                        <button class="w-full bg-purple-600 py-2 rounded hover:bg-purple-700" onclick="alert('Lista de usuarios simulada')">Consultar</button>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h5 class="text-lg font-semibold mb-4">Modificar Usuario</h5>
+                        <form id="modify-user-form">
+                            <input type="text" placeholder="ID Usuario" class="w-full mb-2 p-2 bg-gray-700 rounded" required>
+                            <input type="text" placeholder="Nuevo Nombre" class="w-full mb-4 p-2 bg-gray-700 rounded" required>
+                            <button type="submit" class="w-full bg-purple-600 py-2 rounded hover:bg-purple-700">Modificar</button>
+                        </form>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h5 class="text-lg font-semibold mb-4">Inactivar Usuario</h5>
+                        <form id="inactivate-user-form">
+                            <input type="text" placeholder="ID Usuario" class="w-full mb-4 p-2 bg-gray-700 rounded" required>
+                            <button type="submit" class="w-full bg-red-600 py-2 rounded hover:bg-red-700">Inactivar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 2: Gestión de Entrada de Cursos y Asesorías -->
+            <div class="mb-12">
+                <h4 class="text-2xl font-semibold mb-6 text-purple-400">Módulo 2: Gestión de Entrada de Cursos y Asesorías</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h5 class="text-lg font-semibold mb-4">Registrar Inscripción</h5>
+                        <form id="register-inscription-form">
+                            <input type="text" placeholder="ID Usuario" class="w-full mb-2 p-2 bg-gray-700 rounded" required>
+                            <select class="w-full mb-2 p-2 bg-gray-700 rounded" required>
+                                <option value="">Seleccionar Servicio</option>
+                                <option value="curso">Curso</option>
+                                <option value="asesoria">Asesoría</option>
+                            </select>
+                            <input type="text" placeholder="ID Servicio" class="w-full mb-4 p-2 bg-gray-700 rounded" required>
+                            <button type="submit" class="w-full bg-purple-600 py-2 rounded hover:bg-purple-700">Registrar</button>
+                        </form>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h5 class="text-lg font-semibold mb-4">Consultar Inscripciones</h5>
+                        <button class="w-full bg-purple-600 py-2 rounded hover:bg-purple-700" onclick="alert('Lista de inscripciones simulada')">Consultar</button>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h5 class="text-lg font-semibold mb-4">Modificar Inscripción</h5>
+                        <form id="modify-inscription-form">
+                            <input type="text" placeholder="ID Inscripción" class="w-full mb-2 p-2 bg-gray-700 rounded" required>
+                            <input type="text" placeholder="Nuevo Detalle" class="w-full mb-4 p-2 bg-gray-700 rounded" required>
+                            <button type="submit" class="w-full bg-purple-600 py-2 rounded hover:bg-purple-700">Modificar</button>
+                        </form>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h5 class="text-lg font-semibold mb-4">Cancelar Inscripción</h5>
+                        <form id="cancel-inscription-form">
+                            <input type="text" placeholder="ID Inscripción" class="w-full mb-4 p-2 bg-gray-700 rounded" required>
+                            <button type="submit" class="w-full bg-red-600 py-2 rounded hover:bg-red-700">Cancelar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 3: Gestión de Dependencias -->
+            <div class="mb-12">
+                <h4 class="text-2xl font-semibold mb-6 text-purple-400">Módulo 3: Gestión de Dependencias</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h5 class="text-lg font-semibold mb-4">Crear Servicio</h5>
+                        <form id="create-service-form">
+                            <input type="text" placeholder="Nombre" class="w-full mb-2 p-2 bg-gray-700 rounded" required>
+                            <select class="w-full mb-2 p-2 bg-gray-700 rounded" required>
+                                <option value="">Tipo</option>
+                                <option value="curso">Curso</option>
+                                <option value="asesoria">Asesoría</option>
+                            </select>
+                            <input type="number" placeholder="Precio" class="w-full mb-4 p-2 bg-gray-700 rounded" required>
+                            <button type="submit" class="w-full bg-purple-600 py-2 rounded hover:bg-purple-700">Crear</button>
+                        </form>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h5 class="text-lg font-semibold mb-4">Consultar Servicios</h5>
+                        <button class="w-full bg-purple-600 py-2 rounded hover:bg-purple-700" onclick="alert('Lista de servicios simulada')">Consultar</button>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h5 class="text-lg font-semibold mb-4">Modificar Servicio</h5>
+                        <form id="modify-service-form">
+                            <input type="text" placeholder="ID Servicio" class="w-full mb-2 p-2 bg-gray-700 rounded" required>
+                            <input type="text" placeholder="Nuevo Nombre" class="w-full mb-4 p-2 bg-gray-700 rounded" required>
+                            <button type="submit" class="w-full bg-purple-600 py-2 rounded hover:bg-purple-700">Modificar</button>
+                        </form>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h5 class="text-lg font-semibold mb-4">Inactivar Servicio</h5>
+                        <form id="inactivate-service-form">
+                            <input type="text" placeholder="ID Servicio" class="w-full mb-4 p-2 bg-gray-700 rounded" required>
+                            <button type="submit" class="w-full bg-red-600 py-2 rounded hover:bg-red-700">Inactivar</button>
+                        </form>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h5 class="text-lg font-semibold mb-4">Reporte Disponibilidad</h5>
+                        <button class="w-full bg-green-600 py-2 rounded hover:bg-green-700" onclick="alert('Generando reporte PDF simulado')">Generar PDF</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 4: Gestión de Salida de Cursos y Asesorías -->
+            <div class="mb-12">
+                <h4 class="text-2xl font-semibold mb-6 text-purple-400">Módulo 4: Gestión de Salida de Cursos y Asesorías</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h5 class="text-lg font-semibold mb-4">Registrar Finalización</h5>
+                        <form id="register-completion-form">
+                            <input type="text" placeholder="ID Inscripción" class="w-full mb-4 p-2 bg-gray-700 rounded" required>
+                            <button type="submit" class="w-full bg-purple-600 py-2 rounded hover:bg-purple-700">Registrar</button>
+                        </form>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h5 class="text-lg font-semibold mb-4">Generar Certificado</h5>
+                        <form id="generate-certificate-form">
+                            <input type="text" placeholder="ID Inscripción" class="w-full mb-4 p-2 bg-gray-700 rounded" required>
+                            <button type="submit" class="w-full bg-green-600 py-2 rounded hover:bg-green-700">Generar PDF</button>
+                        </form>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h5 class="text-lg font-semibold mb-4">Generar Factura</h5>
+                        <form id="generate-invoice-form">
+                            <input type="text" placeholder="ID Inscripción" class="w-full mb-4 p-2 bg-gray-700 rounded" required>
+                            <button type="submit" class="w-full bg-green-600 py-2 rounded hover:bg-green-700">Generar PDF</button>
+                        </form>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h5 class="text-lg font-semibold mb-4">Consultar Certificados/Facturas</h5>
+                        <button class="w-full bg-purple-600 py-2 rounded hover:bg-purple-700" onclick="alert('Lista de certificados y facturas simulada')">Consultar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

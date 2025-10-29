@@ -112,9 +112,18 @@ document.addEventListener('DOMContentLoaded', function() {
     if (loginForm) {
         loginForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            // Simulación de login
-            alert('Inicio de sesión exitoso. Serás redirigido al área de miembros.');
-            window.location.href = 'miembros.html';
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+
+            // Verificar credenciales de administrador
+            if ((email === 'juandachacon56@gmail.com' || email === 'edwinalexandermolinasanabria@gmail.com') && password === '1234') {
+                alert('Inicio de sesión de administrador exitoso.');
+                window.location.href = 'admin.html';
+            } else {
+                // Simulación de login normal
+                alert('Inicio de sesión exitoso. Serás redirigido al área de miembros.');
+                window.location.href = 'miembros.html';
+            }
         });
     }
 
@@ -128,6 +137,25 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = 'registro.html';
         });
     }
+
+    // Formularios de administración
+    const adminForms = [
+        'create-user-form', 'modify-user-form', 'inactivate-user-form',
+        'register-inscription-form', 'modify-inscription-form', 'cancel-inscription-form',
+        'create-service-form', 'modify-service-form', 'inactivate-service-form',
+        'register-completion-form', 'generate-certificate-form', 'generate-invoice-form'
+    ];
+
+    adminForms.forEach(formId => {
+        const form = document.getElementById(formId);
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Operación realizada exitosamente (simulada).');
+                form.reset();
+            });
+        }
+    });
 
     // Funcionalidad de FAQ
     const faqQuestions = document.querySelectorAll('.faq-question');
