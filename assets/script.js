@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
         registerForm.addEventListener('submit', function(e) {
             e.preventDefault();
             // Simulación de registro
-            window.location.href = 'registro.html';
+            window.location.href = 'views/registro.html';
         });
     }
 
