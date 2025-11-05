@@ -22,8 +22,24 @@
                 <a href="admin-inscripciones.html" class="hover:text-purple-500 transition-colors">Inscripciones</a>
                 <a href="admin-servicios.html" class="hover:text-purple-500 transition-colors">Servicios</a>
                 <a href="admin-salidas.html" class="hover:text-purple-500 transition-colors">Salidas</a>
+                <a href="admin-visitas.html" class="hover:text-purple-500 transition-colors">Visitas</a>
+                <a href="admin-vendedores.html" class="hover:text-purple-500 transition-colors">Vendedores</a>
                 <a href="../../index.html" class="hover:text-purple-500 transition-colors">Cerrar Sesión</a>
             </nav>
+            <button id="mobile-menu-button" onclick="toggleMobileMenu()" class="md:hidden text-purple-900 focus:outline-none p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden rounded-lg md:hidden bg-white">
+            <a href="admin-usuarios.html" class="block py-3 px-4 hover:text-purple-500 transition-colors">Usuarios</a>
+            <a href="admin-inscripciones.html" class="block py-3 px-4 hover:text-purple-500 transition-colors">Inscripciones</a>
+            <a href="admin-servicios.html" class="block py-3 px-4 hover:text-purple-500 transition-colors">Servicios</a>
+            <a href="admin-salidas.html" class="block py-3 px-4 hover:text-purple-500 transition-colors">Salidas</a>
+            <a href="admin-visitas.html" class="block py-3 px-4 hover:text-purple-500 transition-colors">Visitas</a>
+            <a href="admin-vendedores.html" class="block py-3 px-4 hover:text-purple-500 transition-colors">Vendedores</a>
+            <a href="../../index.html" class="block py-3 px-4 hover:text-purple-500 transition-colors">Cerrar Sesión</a>
         </div>
     </header>
 
@@ -48,7 +64,7 @@
         <div class="container mx-auto px-6">
             <h3 class="text-4xl font-bold text-center mb-16 text-white">Panel de Administración</h3>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <a href="admin-usuarios.html" class="bg-gray-800 p-8 rounded-lg text-center hover:bg-purple-700 transition-all transform hover:scale-105">
                     <h4 class="text-2xl font-semibold mb-4 text-purple-400">Módulo 1</h4>
                     <p class="text-xl">Gestión de Usuarios</p>
@@ -67,6 +83,16 @@
                 <a href="admin-salidas.html" class="bg-gray-800 p-8 rounded-lg text-center hover:bg-purple-700 transition-all transform hover:scale-105">
                     <h4 class="text-2xl font-semibold mb-4 text-purple-400">Módulo 4</h4>
                     <p class="text-xl">Gestión de Salida</p>
+                </a>
+
+                <a href="admin-visitas.html" class="bg-gray-800 p-8 rounded-lg text-center hover:bg-purple-700 transition-all transform hover:scale-105">
+                    <h4 class="text-2xl font-semibold mb-4 text-purple-400">Módulo 5</h4>
+                    <p class="text-xl">Control de Visitas</p>
+                </a>
+
+                <a href="admin-vendedores.html" class="bg-gray-800 p-8 rounded-lg text-center hover:bg-purple-700 transition-all transform hover:scale-105">
+                    <h4 class="text-2xl font-semibold mb-4 text-purple-400">Módulo 6</h4>
+                    <p class="text-xl">Control de Vendedores</p>
                 </a>
             </div>
             
