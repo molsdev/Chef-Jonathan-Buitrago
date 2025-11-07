@@ -117,10 +117,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Verificar credenciales de administrador
             if ((email === 'juandachacon56@gmail.com' || email === 'edwinalexandermolinasanabria@gmail.com') && password === '1234') {
-                window.location.href = 'admin/admin.html';
+                // admin pages live under views/admin/
+                window.location.href = 'views/admin/admin.html';
             } else {
-                // Simulación de login normal
-                window.location.href = 'user/miembros.html';
+                // Simulación de login normal -> user pages under views/user/
+                window.location.href = 'views/user/miembros.html';
             }
         });
     }
