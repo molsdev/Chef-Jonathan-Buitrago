@@ -284,8 +284,8 @@ function toggleFAQ(button) {
                 <td class="py-3"><span class="px-2 py-1 bg-green-900 text-green-300 rounded-full text-xs">Activo</span></td>
                 <td class="py-3">
                     <div class="flex space-x-1">
-                        <button class="px-2 py-1 bg-amber-600 text-white rounded hover:bg-amber-700 text-xs">Modificar</button>
-                        <button class="px-2 py-1 bg-red-600 text-white rounded hover:bg-red-700 text-xs">Inactivar</button>
+                        <button data-id="${u.id}" class="btn-edit-user px-2 py-1 bg-amber-600 text-white rounded hover:bg-amber-700 text-xs">Editar</button>
+                        <button data-id="${u.id}" class="btn-delete-user px-2 py-1 bg-red-600 text-white rounded hover:bg-red-700 text-xs">Eliminar</button>
                     </div>
                 </td>
             `;
@@ -310,7 +310,7 @@ function toggleFAQ(button) {
                 <td class="p-4 text-gray-300">${escapeHtml(c.phone || '')}</td>
                 <td class="p-4 text-gray-300">${escapeHtml(c.city || '')}</td>
                 <td class="p-4"><div class="flex flex-wrap gap-2">${chips}</div></td>
-                <td class="p-4"><div class="flex space-x-2"><button class="text-amber-500 hover:text-amber-400">Ver</button><button class="text-purple-500 hover:text-purple-400">Editar</button></div></td>
+                <td class="p-4"><div class="flex space-x-2"><button data-id="${c.id}" class="btn-view-client text-amber-500 hover:text-amber-400">Ver</button><button data-id="${c.id}" class="btn-edit-client text-purple-500 hover:text-purple-400">Editar</button><button data-id="${c.id}" class="btn-delete-client text-red-500 hover:text-red-400">Eliminar</button></div></td>
             `;
             tbody.appendChild(tr);
         });
@@ -331,7 +331,7 @@ function toggleFAQ(button) {
                 <td class="p-4 text-gray-300">${escapeHtml(s.service || '')}</td>
                 <td class="p-4 text-green-500">${s.amount ? ('$' + Number(s.amount).toLocaleString('es-CO')) : ''}</td>
                 <td class="p-4"><span class="px-2 py-1 bg-green-900 text-green-300 rounded-full text-sm">Completada</span></td>
-                <td class="p-4"><div class="flex space-x-2"><button class="text-amber-500 hover:text-amber-400">Ver</button><button class="text-purple-500 hover:text-purple-400">Editar</button></div></td>
+                <td class="p-4"><div class="flex space-x-2"><button data-id="${s.id}" class="btn-view-sale text-amber-500 hover:text-amber-400">Ver</button><button data-id="${s.id}" class="btn-edit-sale text-purple-500 hover:text-purple-400">Editar</button><button data-id="${s.id}" class="btn-delete-sale text-red-500 hover:text-red-400">Eliminar</button></div></td>
             `;
             tbody.appendChild(tr);
         });
@@ -465,6 +465,67 @@ function toggleFAQ(button) {
             saleForm._bound = true;
         }
     }
+
+    // --- Validation helpers ---
+    function isEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(v||'')); }
+    function isPhone(v){ return /^[0-9+\s-]{7,20}$/.test(String(v||'')); }
+    function isNumeric(v){ return !isNaN(Number(v)) && v !== ''; }
+
+    // --- Edit/Delete event delegation ---
+    document.addEventListener('click', function(e){
+        const t = e.target;
+
+        // Users
+        if(t.matches('.btn-edit-user')){
+            const id = t.getAttribute('data-id');
+            const db = loadLocalDB(); if(!db) return;
+            const idx = (db.users||[]).findIndex(x => String(x.id) === String(id));
+            if(idx === -1) return alert('Usuario no encontrado');
+            const user = db.users[idx];
+            const name = prompt('Nombre:', user.name || '');
+            if(name === null) return;
+            const email = prompt('Email:', user.email || '');
+            if(email === null) return;
+            if(!name.trim()){ return alert('El nombre es requerido'); }
+            if(!isEmail(email)){ return alert('Email no válido'); }
+            user.name = name.trim(); user.email = email.trim(); user.updatedAt = new Date().toISOString();
+            db.users[idx] = user; saveLocalDB(db); try{ renderUsers(); }catch(e){}
+            return;
+        }
+        if(t.matches('.btn-delete-user')){
+            const id = t.getAttribute('data-id');
+            if(!confirm('Eliminar usuario?')) return;
+            const db = loadLocalDB(); db.users = (db.users||[]).filter(x => String(x.id) !== String(id)); saveLocalDB(db); try{ renderUsers(); }catch(e){}
+            return;
+        }
+
+        // Clients
+        if(t.matches('.btn-edit-client')){
+            const id = t.getAttribute('data-id'); const db = loadLocalDB(); const idx = (db.clients||[]).findIndex(x => String(x.id) === String(id)); if(idx===-1) return alert('Cliente no encontrado');
+            const client = db.clients[idx];
+            const name = prompt('Nombre:', client.name||''); if(name===null) return; if(!name.trim()) return alert('Nombre requerido');
+            const email = prompt('Email:', client.email||''); if(email===null) return; if(email && !isEmail(email)) return alert('Email no válido');
+            const phone = prompt('Teléfono:', client.phone||''); if(phone===null) return; if(phone && !isPhone(phone)) return alert('Teléfono no válido');
+            client.name = name.trim(); client.email = email.trim(); client.phone = phone.trim(); client.updatedAt = new Date().toISOString(); db.clients[idx]=client; saveLocalDB(db); try{ renderClients(); }catch(e){}
+            return;
+        }
+        if(t.matches('.btn-delete-client')){
+            const id = t.getAttribute('data-id'); if(!confirm('Eliminar cliente?')) return; const db = loadLocalDB(); db.clients = (db.clients||[]).filter(x => String(x.id)!==String(id)); saveLocalDB(db); try{ renderClients(); }catch(e){}; return;
+        }
+
+        // Sales
+        if(t.matches('.btn-edit-sale')){
+            const id = t.getAttribute('data-id'); const db = loadLocalDB(); const idx = (db.sales||[]).findIndex(x => String(x.id) === String(id)); if(idx===-1) return alert('Venta no encontrada');
+            const sale = db.sales[idx];
+            const client = prompt('Cliente:', sale.client||''); if(client===null) return; if(!client.trim()) return alert('Cliente requerido');
+            const service = prompt('Servicio:', sale.service||''); if(service===null) return; const amount = prompt('Monto:', sale.amount||''); if(amount===null) return; if(amount && !isNumeric(amount)) return alert('Monto inválido');
+            sale.client = client.trim(); sale.service = service.trim(); sale.amount = amount; sale.updatedAt = new Date().toISOString(); db.sales[idx]=sale; saveLocalDB(db); try{ renderSales(); }catch(e){}
+            return;
+        }
+        if(t.matches('.btn-delete-sale')){
+            const id = t.getAttribute('data-id'); if(!confirm('Eliminar venta?')) return; const db = loadLocalDB(); db.sales = (db.sales||[]).filter(x => String(x.id)!==String(id)); saveLocalDB(db); try{ renderSales(); }catch(e){}; return;
+        }
+    });
 
     // Attach now and also on DOMContentLoaded to be safe
     try{ attachFormHandlers(); }catch(e){}
