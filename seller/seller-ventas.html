@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="content-language" content="es">
+        <title>Gestión de Ventas - Vendedor</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="../assets/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="../img/icono.png">
+    </head>
+    <body>
+        <header class="shadow-lg rounded-lg backdrop-blur">
+            <div class="container mx-auto px-6 py-5 flex justify-between items-center">
+                <h1 class="text-2xl parisienne-font"><a href="../index.html">Chef Jonathan Buitrago</a></h1>
+                <nav class="hidden md:flex items-center space-x-10">
+                    <a href="seller.html" class="hover:text-purple-500 transition-colors">Panel Principal</a>
+                    <a href="seller-clientes.html" class="hover:text-purple-500 transition-colors">Clientes</a>
+                    <a href="seller-comisiones.html" class="hover:text-purple-500 transition-colors">Comisiones</a>
+                    <a href="../index.html" class="hover:text-purple-500 transition-colors">Cerrar Sesión</a>
+                </nav>
+            </div>
+        </header>
+
+        <section class="py-24 bg-gray-900 min-h-screen">
+            <div class="container mx-auto px-6 pt-24">
+                <h3 class="text-4xl font-bold text-center mb-16 text-white">Gestión de Ventas</h3>
+                <div class="max-w-6xl mx-auto">
+                    <div class="product-card rounded-xl overflow-hidden">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="text-left bg-gray-800">
+                                    <th class="p-4 text-gray-300">Fecha</th>
+                                    <th class="p-4 text-gray-300">Cliente</th>
+                                    <th class="p-4 text-gray-300">Servicio</th>
+                                    <th class="p-4 text-gray-300">Monto</th>
+                                    <th class="p-4 text-gray-300">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="sales-tbody" class="bg-gray-800 bg-opacity-90">
+                                <!-- Rendered by script -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="border-t border-white-700 py-4">
+            <div class="w-full mx-auto max-w-screen-xl p-2 flex flex-col sm:flex-row items-center justify-between">
+                <span class="text-xs text-gray-400">© 2025 <a href="../index.html" class="text-white parisienne-font">Chef Jonathan Buitrago</a></span>
+            </div>
+        </footer>
+
+        <script src="../assets/script.js"></script>
+    </body>
+</html>
