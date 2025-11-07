@@ -115,8 +115,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const email = document.getElementById('login-email').value;
             const password = document.getElementById('login-password').value;
 
-            // Verificar credenciales de administrador
-            if ((email === 'juandachacon56@gmail.com' || email === 'edwinalexandermolinasanabria@gmail.com') && password === '1234') {
+            // Verificar credenciales específicas
+            // Seller: edwinalexandermolinasanabria@gmail.com / 0000
+            if (email === 'edwinalexandermolinasanabria@gmail.com' && password === '0000') {
+                // seller pages live under views/seller/
+                window.location.href = 'views/seller/seller.html';
+            }
+            // Admin: juandachacon56@gmail.com / 1234
+            else if (email === 'juandachacon56@gmail.com' && password === '1234') {
                 // admin pages live under views/admin/
                 window.location.href = 'views/admin/admin.html';
             } else {
