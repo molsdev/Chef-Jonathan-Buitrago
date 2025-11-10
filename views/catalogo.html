@@ -21,7 +21,7 @@
                 <a href="informacion.html" class="hover:text-purple-500 transition-colors">Información</a>
                 <a href="registro.html" class="hover:text-purple-500 transition-colors">Inicio de Sesión</a>
             </nav>
-            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none p-2">
+            <button id="mobile-menu-button" onclick="toggleMobileMenu()" class="md:hidden text-white focus:outline-none p-2">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -32,12 +32,6 @@
             <a href="registro.html" class="block py-3 px-4 hover:bg-gray-700 transition-all">Inicio de Sesión</a>
         </div>
     </header>
-    <script>
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-        </script>
-
     <!-- Catálogo de Cursos -->
     <section id="categories" class="py-24 bg-gray-900 min-h-screen" style="background-image: url('img/chef_jonathan_buitrago_post_10_8_2018_17_33_481843148363035598609.jpg'); background-size: cover; background-position: center;">
         <div class="container mx-auto px-6 pt-12">
@@ -556,76 +550,6 @@
         </div>
     </div>
     
-    <script>
-    function showCourseDetails(courseName) {
-        // Definir detalles para cada curso
-        const courseDetails = {
-            "Chocolatería Avanzada": "Domina las técnicas más sofisticadas del chocolate, desde el templado perfecto hasta la creación de bombones de autor. Incluye técnicas profesionales y consejos para trabajar con chocolate de alta calidad.",
-            
-            "Pastelería de Vanguardia": "Explora las últimas tendencias de la pastelería mundial, aplicando técnicas innovadoras y creativas a tus postres. Aprende sobre ingredientes modernos y presentaciones artísticas.",
-            
-            "Gestión de Emprendimientos Gastronómicos": "Aprende a crear y gestionar tu propio negocio de pastelería, desde la planificación del menú hasta la estrategia de marketing. Incluye aspectos financieros y de gestión.",
-            
-            "Pastelería Vegana": "Aprende a crear postres deliciosos sin ingredientes de origen animal, utilizando alternativas vegetales innovadoras. Cubre técnicas para sustituir huevos, lácteos y otros ingredientes animales.",
-            
-            "Pastelería Libre de Gluten": "Descubre cómo hacer postres increíbles sin gluten, utilizando harinas alternativas y técnicas especializadas. Ideal para personas con intolerancia al gluten.",
-            
-            "Bases de Pastelería": "Domina los fundamentos esenciales de la pastelería, desde las técnicas básicas hasta recetas clásicas perfeccionadas. Ideal para principiantes.",
-            
-            "Chocolatería": "Iníciate en el mundo del chocolate y aprende a trabajar con él, desde la selección del cacao hasta la creación de piezas artesanales. Cubre temperado, moldeado y decoración con chocolate.",
-            
-            "Bombonería": "Crea bombones artesanales con diferentes rellenos y acabados, dominando las técnicas profesionales de la chocolatería fina. Aprende sobre rellenos, coberturas y decoración detallada.",
-            
-            "Pastelería Keto": "Elabora postres bajos en carbohidratos y deliciosos, perfectos para dietas cetogénicas sin sacrificar el sabor. Incluye recetas y técnicas para pastelería baja en carbohidratos.",
-            
-            "Cata de Cacao": "Una experiencia sensorial para descubrir los secretos del cacao, identificando notas y orígenes de distintas variedades. Incluye degustación y análisis sensorial del cacao."
-        };
-        
-        // Mostrar el modal
-        document.getElementById('courseTitle').textContent = courseName;
-        document.getElementById('courseDetailsContent').textContent = courseDetails[courseName] || "Detalles no disponibles.";
-        document.getElementById('courseDetailsModal').classList.remove('hidden');
-    }
-    
-    function closeCourseDetails() {
-        // Ocultar el modal
-        document.getElementById('courseDetailsModal').classList.add('hidden');
-    }
-    
-    // Cerrar el modal al hacer clic fuera del contenido
-    document.getElementById('courseDetailsModal').addEventListener('click', function(e) {
-        if (e.target === this) {
-            closeCourseDetails();
-        }
-    });
-    </script>
-
-    <!-- Otros scripts o contenido -->
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const courses = document.querySelectorAll('.product-card[data-category]');
-        
-        filterButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                // Remover clase activa de todos los botones
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Agregar clase activa al botón clickeado
-                this.classList.add('active');
-                
-                const filter = this.getAttribute('data-filter');
-                
-                courses.forEach(course => {
-                    const categories = course.getAttribute('data-category').split(' ');
-                    if (filter === 'all' || categories.includes(filter)) {
-                        course.style.display = 'block';
-                    } else {
-                        course.style.display = 'none';
-                    }
-                });
-            });
-        });
-    });
-    </script>
+    <script src="../assets/script.js"></script>
 </body>
 </html>

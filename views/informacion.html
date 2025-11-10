@@ -19,28 +19,20 @@
                     <a href="../index.html">Chef Jonathan Buitrago</a>
                 </h1>
                 <nav class="hidden md:flex items-center space-x-10">
-                    <a href="./catalogo.html" class="hover:text-purple-500 transition-colors">Catálogo</a>
-                    <a href="./registro.html" class="hover:text-purple-500 transition-colors">Inicio de Sesión</a>
+                    <a href="catalogo.html" class="hover:text-purple-500 transition-colors">Catálogo</a>
+                    <a href="registro.html" class="hover:text-purple-500 transition-colors">Inicio de Sesión</a>
                 </nav>
-                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none p-2">
+                <button id="mobile-menu-button" onclick="toggleMobileMenu()" class="md:hidden text-white focus:outline-none p-2">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
-            <div id="mobile-menu" class="hidden rounded-lg md:hidden ">
-                <a href="./catalogo.html" class="block py-3 px-4 hover:bg-gray-700 transition-all">Catálogo</a>
-                <a href="./registro.html" class="block py-3 px-4 hover:bg-gray-700 transition-all">Inicio de Sesión</a>
+            <div id="mobile-menu" class="hidden rounded-lg md:hidden container mx-auto px-6">
+                <a href="catalogo.html" class="block py-3 px-4 hover:bg-gray-700 transition-all">Catálogo</a>
+                <a href="registro.html" class="block py-3 px-4 hover:bg-gray-700 transition-all">Inicio de Sesión</a>
             </div>
         </header>
-        <script>
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        </script>
 
         <!-- Sección de Información -->
         <section class="py-24 bg-gradient-purple-to-green min-h-screen" >

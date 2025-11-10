@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-
-    // Mobile menu toggle
-    const mobileMenuButton = document.querySelector('button[onclick="toggleMobileMenu()"]');
+    // Mobile menu toggle for all pages
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
+    
     if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', function() {
+        mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
     }
@@ -16,6 +16,66 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.add('hidden');
             }
+        });
+    }
+
+    // Formulario de edición de perfil
+    const editProfileBtn = document.getElementById('edit-profile');
+    const cancelEditBtn = document.getElementById('cancel-edit');
+    const actionButtons = document.getElementById('action-buttons');
+    const profileForm = document.getElementById('profile-form');
+
+    if (editProfileBtn && profileForm) {
+        const profileInputs = profileForm.querySelectorAll('input');
+        
+        editProfileBtn.addEventListener('click', () => {
+            profileInputs.forEach(input => input.disabled = false);
+            actionButtons.classList.remove('hidden');
+            editProfileBtn.classList.add('hidden');
+        });
+        
+        cancelEditBtn.addEventListener('click', () => {
+            profileInputs.forEach(input => input.disabled = true);
+            actionButtons.classList.add('hidden');
+            editProfileBtn.classList.remove('hidden');
+            profileForm.reset();
+        });
+        
+        profileForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Aquí iría la lógica para guardar los cambios
+            profileInputs.forEach(input => input.disabled = true);
+            actionButtons.classList.add('hidden');
+            editProfileBtn.classList.remove('hidden');
+        });
+    }
+    
+    // Formulario de cambio de contraseña
+    const passwordForm = document.getElementById('password-form');
+    if (passwordForm) {
+        passwordForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Aquí iría la lógica para cambiar la contraseña
+            passwordForm.reset();
+        });
+    }
+
+    // Formulario de asesoría
+    const advisoryForm = document.getElementById('advisory-form');
+    const successMessage = document.getElementById('success-message');
+    
+    if (advisoryForm && successMessage) {
+        advisoryForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulación de envío
+            successMessage.classList.remove('hidden');
+            
+            // Reset form y ocultar mensaje después de 3 segundos
+            setTimeout(() => {
+                successMessage.classList.add('hidden');
+                advisoryForm.reset();
+            }, 3000);
         });
     }
 
@@ -88,7 +148,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-
     // Scroll reveal animation
     function reveal() {
         const reveals = document.querySelectorAll('.reveal');
@@ -119,15 +178,15 @@ document.addEventListener('DOMContentLoaded', function() {
             // Seller: edwinalexandermolinasanabria@gmail.com / 0000
             if (email === 'edwinalexandermolinasanabria@gmail.com' && password === '0000') {
                 // seller pages live under views/seller/
-                window.location.href = 'views/seller/seller.html';
+                window.location.href = '../views/seller/seller.html';
             }
-            // Admin: juandachacon56@gmail.com / 1234
-            else if (email === 'juandachacon56@gmail.com' && password === '1234') {
+            // Admin: juandachacon56@gmail.com, edwinalexandermolinasanabria@gmail.com/ 1234
+            else if ((email === 'juandachacon56@gmail.com' || email === 'edwinalexandermolinasanabria@gmail.com') && password === '1234') {
                 // admin pages live under views/admin/
-                window.location.href = 'views/admin/admin.html';
+                window.location.href = '../views/admin/admin.html';
             } else {
                 // Simulación de login normal -> user pages under views/user/
-                window.location.href = 'views/user/miembros.html';
+                window.location.href = '../views/user/user.html';
             }
         });
     }
@@ -191,13 +250,50 @@ document.addEventListener('DOMContentLoaded', function() {
                 const filter = this.getAttribute('data-filter');
                 
                 courses.forEach(course => {
-                    if (filter === 'all' || course.getAttribute('data-category') === filter) {
+                    const categories = course.getAttribute('data-category').split(' ');
+                    if (filter === 'all' || categories.includes(filter)) {
                         course.style.display = 'block';
                     } else {
                         course.style.display = 'none';
                     }
                 });
             });
+        });
+    }
+
+    // Funcionalidad del modal de detalles del curso
+    window.showCourseDetails = function(courseName) {
+        // Definir detalles para cada curso
+        const courseDetails = {
+            "Chocolatería Avanzada": "Domina las técnicas más sofisticadas del chocolate, desde el templado perfecto hasta la creación de bombones de autor. Incluye técnicas profesionales y consejos para trabajar con chocolate de alta calidad.",
+            "Pastelería de Vanguardia": "Explora las últimas tendencias de la pastelería mundial, aplicando técnicas innovadoras y creativas a tus postres. Aprende sobre ingredientes modernos y presentaciones artísticas.",
+            "Gestión de Emprendimientos Gastronómicos": "Aprende a crear y gestionar tu propio negocio de pastelería, desde la planificación del menú hasta la estrategia de marketing. Incluye aspectos financieros y de gestión.",
+            "Pastelería Vegana": "Aprende a crear postres deliciosos sin ingredientes de origen animal, utilizando alternativas vegetales innovadoras. Cubre técnicas para sustituir huevos, lácteos y otros ingredientes animales.",
+            "Pastelería Libre de Gluten": "Descubre cómo hacer postres increíbles sin gluten, utilizando harinas alternativas y técnicas especializadas. Ideal para personas con intolerancia al gluten.",
+            "Bases de Pastelería": "Domina los fundamentos esenciales de la pastelería, desde las técnicas básicas hasta recetas clásicas perfeccionadas. Ideal para principiantes.",
+            "Chocolatería": "Iníciate en el mundo del chocolate y aprende a trabajar con él, desde la selección del cacao hasta la creación de piezas artesanales. Cubre temperado, moldeado y decoración con chocolate.",
+            "Bombonería": "Crea bombones artesanales con diferentes rellenos y acabados, dominando las técnicas profesionales de la chocolatería fina. Aprende sobre rellenos, coberturas y decoración detallada.",
+            "Pastelería Keto": "Elabora postres bajos en carbohidratos y deliciosos, perfectos para dietas cetogénicas sin sacrificar el sabor. Incluye recetas y técnicas para pastelería baja en carbohidratos.",
+            "Cata de Cacao": "Una experiencia sensorial para descubrir los secretos del cacao, identificando notas y orígenes de distintas variedades. Incluye degustación y análisis sensorial del cacao."
+        };
+        
+        // Mostrar el modal
+        document.getElementById('courseTitle').textContent = courseName;
+        document.getElementById('courseDetailsContent').textContent = courseDetails[courseName] || "Detalles no disponibles.";
+        document.getElementById('courseDetailsModal').classList.remove('hidden');
+    };
+    
+    window.closeCourseDetails = function() {
+        document.getElementById('courseDetailsModal').classList.add('hidden');
+    };
+
+    // Cerrar el modal al hacer clic fuera del contenido
+    const courseDetailsModal = document.getElementById('courseDetailsModal');
+    if (courseDetailsModal) {
+        courseDetailsModal.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCourseDetails();
+            }
         });
     }
     
@@ -373,6 +469,55 @@ function toggleFAQ(button) {
 
 })();
 
+// --- Mobile menu handling for all pages ---
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu handling for all pages with toggleMobileMenu button
+    const mobileMenuButtons = document.querySelectorAll('button[id="mobile-menu-button"]');
+    mobileMenuButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetMenuId = this.getAttribute('data-target') || 'mobile-menu';
+            const mobileMenu = document.getElementById(targetMenuId);
+            if (mobileMenu) {
+                mobileMenu.classList.toggle('hidden');
+            }
+        });
+    });
+
+    // FAQ questions handling
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const allAnswers = document.querySelectorAll('.faq-answer');
+            const allIcons = document.querySelectorAll('.faq-question svg');
+            const answer = this.nextElementSibling;
+            const icon = this.querySelector('svg');
+            const isHidden = answer.classList.contains('hidden');
+
+            // Cerrar todas las otras respuestas
+            allAnswers.forEach(ans => {
+                if (ans !== answer) {
+                    ans.classList.add('hidden');
+                }
+            });
+
+            allIcons.forEach(ic => {
+                if (ic !== icon) {
+                    ic.classList.remove('rotate-180');
+                }
+            });
+
+            // Toggle the clicked answer
+            if (isHidden) {
+                answer.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                answer.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        });
+    });
+});
+
 // --- Immediate save helpers and form handlers (attach safely) ---
 (function(){
     const STORAGE_KEY = 'chef_localDB_v1';
@@ -411,7 +556,7 @@ function toggleFAQ(button) {
                 const email = document.getElementById('user-email') ? document.getElementById('user-email').value.trim() : '';
                 const password = document.getElementById('user-password') ? document.getElementById('user-password').value : '';
                 const db = loadLocalDB(); ensureCollections(db);
-                const obj = { id: Date.now(), name, email, password, createdAt: new Date().toISOString() };
+                const obj = { id: `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`, name, email, password, createdAt: new Date().toISOString() };
                 db.users = db.users || [];
                 db.users.push(obj);
                 saveLocalDB(db);

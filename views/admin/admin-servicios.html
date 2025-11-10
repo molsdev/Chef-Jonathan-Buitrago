@@ -18,12 +18,28 @@
                 <a href="../../index.html">Chef Jonathan Buitrago</a>
             </h1>
             <nav class="hidden md:flex items-center space-x-10">
-                <a href="admin.html" class="hover:text-purple-500 transition-colors">Panel de Administración</a>
+                <a href="admin.html" class="hover:text-purple-500 transition-colors">Panel Principal</a>
                 <a href="admin-usuarios.html" class="hover:text-purple-500 transition-colors">Usuarios</a>
                 <a href="admin-inscripciones.html" class="hover:text-purple-500 transition-colors">Inscripciones</a>
                 <a href="admin-salidas.html" class="hover:text-purple-500 transition-colors">Salidas</a>
+                <a href="admin-visitas.html" class="hover:text-purple-500 transition-colors">Visitas</a>
+                <a href="admin-vendedores.html" class="hover:text-purple-500 transition-colors">Vendedores</a>
                 <a href="../../index.html" class="hover:text-purple-500 transition-colors">Cerrar Sesión</a>
             </nav>
+            <button id="mobile-menu-button" onclick="toggleMobileMenu()" class="md:hidden text-white focus:outline-none p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden rounded-lg md:hidden container mx-auto px-6">
+            <a href="admin.html" class="block py-3 px-4 hover:text-purple-500 transition-all">Panel Principal</a>
+            <a href="admin-usuarios.html" class="block py-3 px-4 hover:text-purple-500 transition-all">Usuarios</a>
+            <a href="admin-inscripciones.html" class="block py-3 px-4 hover:text-purple-500 transition-all">Inscripciones</a>
+            <a href="admin-salidas.html" class="block py-3 px-4 hover:text-purple-500 transition-all">Salidas</a>
+            <a href="admin-visitas.html" class="block py-3 px-4 hover:text-purple-500 transition-all">Visitas</a>
+            <a href="admin-vendedores.html" class="block py-3 px-4 hover:text-purple-500 transition-all">Vendedores</a>
+            <a href="../../index.html" class="block py-3 px-4 hover:text-purple-500 transition-all">Cerrar Sesión</a>
         </div>
     </header>
 
