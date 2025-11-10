@@ -34,49 +34,57 @@
                 </div>
             </div>
             <div id="mobile-menu" class="hidden rounded-lg items-center md:hidden container mx-auto px-6">
-                <a href="../../views/informacion.html" class="block py-3 px-6 transition-all">Información</a>
-                <a href="../../views/catalogo.html" class="block py-3 px-6 transition-all">Catálogo</a>
+                <a href="mis-cursos.html" class="block py-3 px-6 transition-all">Cursos</a>
+                    <a href="historial.html" class="block py-3 px-6 transition-all">Historial</a>
+                    <a href="agendar.html" class="block py-3 px-6 transition-all">Agendar</a>
+                    <a href="certificados.html" class="block py-3 px-6 transition-all">Certificados</a>
             </div>
         </header>
         <!-- Bienvenida de Usuarios -->
-        <section class="pt-24 py-12 bg-gray-900 min-h-screen" style="background-image: url('../../img/chef_jonathan_buitrago_post_10_5_2019_12_28_342040858511489146865.jpg'); background-size: cover; background-position: center;">
-                <div class="container mx-auto px-6 pt-12">
-                <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
-                    <!-- Contenido principal (Bienvenida) -->
-                    <div class="lg:col-span-3">
-                        <div class="product-card p-12 rounded-xl bg-gray-800 bg-opacity-90 text-center">
-                            <h3 class="text-4xl font-bold mb-4 text-white">Bienvenido de nuevo</h3>
-                            <p class="text-gray-300 mb-8">Nos alegra verte por aquí. Desde tu panel puedes acceder a tus cursos, historial, certificados y agendar asesorías con Chef Jonathan.</p>
-
-                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-3xl mx-auto">
-                                <a href="mis-cursos.html" class="block p-5 bg-gradient-to-br from-gray-700 to-gray-600 rounded-lg hover:shadow-lg">
-                                    <h5 class="text-white font-semibold mb-1">Mis Cursos</h5>
-                                    <p class="text-gray-300 text-sm">Continuar con tus clases y ver tu progreso.</p>
-                                </a>
-
-                                <a href="historial.html" class="block p-5 bg-gradient-to-br from-gray-700 to-gray-600 rounded-lg hover:shadow-lg">
-                                    <h5 class="text-white font-semibold mb-1">Historial</h5>
-                                    <p class="text-gray-300 text-sm">Revisa compras y facturas.</p>
-                                </a>
-
-                                <a href="agendar.html" class="block p-5 bg-gradient-to-br from-gray-700 to-gray-600 rounded-lg hover:shadow-lg">
-                                    <h5 class="text-white font-semibold mb-1">Agendar Asesoría</h5>
-                                    <p class="text-gray-300 text-sm">Solicita una asesoría personalizada.</p>
-                                </a>
-
-                                <a href="certificados.html" class="block p-5 bg-gradient-to-br from-gray-700 to-gray-600 rounded-lg hover:shadow-lg">
-                                    <h5 class="text-white font-semibold mb-1">Certificados</h5>
-                                    <p class="text-gray-300 text-sm">Descarga tus diplomas y certificados.</p>
-                                </a>
-
-                                <a href="perfil.html" class="block p-5 bg-gradient-to-br from-gray-700 to-gray-600 rounded-lg hover:shadow-lg">
-                                    <h5 class="text-white font-semibold mb-1">Mi Perfil</h5>
-                                    <p class="text-gray-300 text-sm">Actualiza tu información y preferencias.</p>
-                                </a>
-                            </div>
-                        </div>
+        <section class="pt-48 pb-12 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="pb-12 text-5xl md:text-6xl font-bold text-white mb-4">Bienvenido<br></h2>
+                    <span class="parisienne-font text-7xl md:text-8xl">Usuario</span>
+                    <p class="pt-24 pb-12 text-2xl text-gray-300">Nos alegra verte por aquí. Desde tu panel puedes acceder a tus cursos, historial, certificados y agendar asesorías con Chef Jonathan.</p>
+                    <div class="flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-down text-white animate-bounce" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
+                        </svg>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Dashboard -->
+        <section class="py-12 bg-gray-900 min-h-screen">
+            <div class="container mx-auto px-6">
+                <h3 class="text-4xl font-bold text-center mb-16 text-white">Panel de Administración</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                        <a href="mis-cursos.html" class="bg-gray-800 p-8 rounded-lg text-center hover:bg-purple-700 transition-all transform hover:scale-105">
+                            <h4 class="text-2xl font-semibold mb-4 text-purple-400">Mis Cursos</h4>
+                            <p class="text-xl">Continuar con tus clases y ver tu progreso.</p>
+                        </a>
+                    
+                        <a href="historial.html" class="bg-gray-800 p-8 rounded-lg text-center hover:bg-purple-700 transition-all transform hover:scale-105">
+                            <h4 class="text-2xl font-semibold mb-4 text-purple-400">Historial</h4>
+                            <p class="text-xl">Revisa compras y facturas.</p>
+                        </a>
+                    
+                        <a href="agendar.html" class="bg-gray-800 p-8 rounded-lg text-center hover:bg-purple-700 transition-all transform hover:scale-105">
+                            <h4 class="text-2xl font-semibold mb-4 text-purple-400">Agendar Asesoría</h4>
+                            <p class="text-xl">Solicita una asesoría personalizada.</p>
+                        </a>
+                    
+                        <a href="certificados.html" class="bg-gray-800 p-8 rounded-lg text-center hover:bg-purple-700 transition-all transform hover:scale-105">
+                            <h4 class="text-2xl font-semibold mb-4 text-purple-400">Certificados</h4>
+                            <p class="text-xl">Descarga tus diplomas y certificados.</p>
+                        </a>
+                    </div>
+
+                    <div class="mt-20 text-center">
+                        <p class="text-gray-400 text-lg">Seleccione un módulo para comenzar a gestionar el sistema</p>
+                    </div>
             </div>
         </section>
     

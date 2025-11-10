@@ -18,12 +18,14 @@
                     <a href="../../index.html">Chef Jonathan Buitrago</a>
                 </h1>
                 <nav class="hidden md:flex items-center space-x-10">
-                    <a href="../../views/informacion.html" class="hover:text-purple-500 transition-colors">Información</a>
-                    <a href="../../views/catalogo.html" class="hover:text-purple-500 transition-colors">Catálogo</a>
+                    <a href="user.html" class="hover:text-purple-500 transition-colors">Panel Principal</a>
+                    <a href="mis-cursos.html" class="hover:text-purple-500 transition-colors">Cursos</a>
+                    <a href="agendar.html" class="hover:text-purple-500 transition-colors">Agendar</a>
+                    <a href="certificados.html" class="hover:text-purple-500 transition-colors">Certificados</a>
                     <a href="perfil.html" class="w-10 h-10 rounded-full bg-purple-800 hover:bg-purple-500 flex items-center justify-center">U</a>
                 </nav>
                 <div class="flex md:hidden items-center space-x-3">
-                    <button id="mobile-menu-button"onclick="toggleMobileMenu()" class="text-white focus:outline-none p-1">
+                    <button id="mobile-menu-button" onclick="toggleMobileMenu()" class="text-white focus:outline-none p-1">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -32,8 +34,10 @@
                 </div>
             </div>
             <div id="mobile-menu" class="hidden rounded-lg items-center md:hidden container mx-auto px-6">
-                <a href="../../views/informacion.html" class="block py-3 px-6 transition-all">Información</a>
-                <a href="../../views/catalogo.html" class="block py-3 px-6 transition-all">Catálogo</a>
+                <a href="user.html" class="block py-3 px-6 transition-all">Panel Principal</a>
+                <a href="mis-cursos.html" class="block py-3 px-6 transition-all">Cursos</a>
+                <a href="agendar.html" class="block py-3 px-6 transition-all">Agendar</a>
+                <a href="certificados.html" class="block py-3 px-6 transition-all">Certificados</a>
             </div>
         </header>
 
@@ -42,19 +46,9 @@
         <section class="pt-24 py-12 bg-gray-900 min-h-screen" style="background-image: url('../../img/chef_jonathan_buitrago_post_10_5_2019_12_28_342040858511489146865.jpg'); background-size: cover; background-position: center;">
             <div class="container mx-auto px-6 pt-12">
                 <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
-                    <!-- Tarjeta de perfil compacta (sidebar reducido) -->
-                    <div class="lg:col-span-1">
-                        <div class="product-card p-6 rounded-xl bg-gray-800 bg-opacity-90 text-center">
-                            <div class="flex items-center justify-center mb-6">
-                                <div class="w-14 h-14 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold mr-4">U</div>
-                            </div>
-                            <p class="text-white font-semibold">Usuario</p>
-                            <p class="text-gray-400 text-sm mb-4">usuario@ejemplo.com</p>
-                            <a href="perfil.html" class="inline-block px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors text-sm">Ver Mi Perfil</a>
-                        </div>
-                    </div>
+
                     <!-- Contenido principal -->
-                    <div class="lg:col-span-3">
+                    <div class="lg:col-span-4">
                         <div class="product-card p-8 rounded-xl bg-gray-800 bg-opacity-90">
                             <h4 class="text-2xl font-semibold mb-6 text-white">Mi Historial Completo</h4>
                             
